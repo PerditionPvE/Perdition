@@ -1,0 +1,38 @@
+module Base
+{
+    recipe Make Stone Axe
+    {
+        TreeBranch/MetalPipe,
+        SharpedStone,
+        RippedSheets/Twine/RippedSheetsDirty/DenimStrips/DenimStripsDirty,
+
+        Result:AxeStone,
+        Time:80.0,
+        Category:Survivalist
+    }
+
+    recipe Chip Stone
+    {
+        Stone,
+        keep [Recipe.GetItemTypes.Blunt],
+
+        Result:SharpedStone,
+		Sound:Hammering,
+        Time:80.0,
+        Category:Survivalist
+    }
+
+    recipe Build Baseball Bat
+	{
+	   Log,
+	   keep HuntingKnife/IcePick/Machete/MeatCleaver,
+
+	   SkillRequired:Woodwork=2,
+	   Result:BaseballBat,
+	   Sound:Hammering,
+	   Time:450.0,
+	   Category:Perdition - Crafting,
+	   OnGiveXP:Recipe.OnGiveXP.WoodWork5,
+	   NeedToBeLearn:false,
+	}
+}

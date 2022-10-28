@@ -5,44 +5,6 @@ module Perdition
         Base
     }
 
-    recipe Make Alternative Stone Axe
-    {
-        MetalPipe,
-        SharpedStone,
-        RippedSheets/Twine=1/RippedSheetsDirty/DenimStrips/DenimStripsDirty,
-
-        Result:AxeStone,
-		Sound:Hammering,
-        Time:80.0,
-        Category:Perdition - Crafting,
-		NeedToBeLearn:false,
-    }
-
-    recipe Chip Stone
-    {
-        Stone,
-        keep Hammer/BallPeenHammer,
-
-        Result:SharpedStone,
-		Sound:Hammering,
-        Time:80.0,
-        Category:Perdition - Crafting,
-		NeedToBeLearn:false,
-    }
-
-	recipe Build Baseball Bat
-	{
-	   Log,
-	   keep HuntingKnife/IcePick/Machete/MeatCleaver,
-
-	   SkillRequired:Woodwork=2,
-	   Result:BaseballBat,
-	   Sound:Hammering,
-	   Time:450.0,
-	   Category:Perdition - Crafting,
-	   OnGiveXP:Recipe.OnGiveXP.WoodWork5,
-	   NeedToBeLearn:false,
-	}
 
 	recipe Make Charcoal
 	{
