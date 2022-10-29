@@ -48,6 +48,19 @@ module Base
         OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
 	}
 
+    recipe Make Barbed Wire
+    {
+        Wire=10,Wire=4/Nail=20,
+        keep Pliers,
+
+        Result:BarbedWire,
+        Time:400.0,
+        SkillRequired:MetalWelding=2,
+        CanBeDoneFromFloor:true,
+        OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
+        Category:Survivalist,
+    }
+
     recipe Make Rubber Duck
 	{
         RubberBand=20,
