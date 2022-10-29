@@ -8,7 +8,7 @@ module Base
 
         Result:AxeStone,
         Time:80.0,
-        Category:Survivalist
+        Category:Survivalist,
     }
 
     recipe Chip Stone
@@ -19,7 +19,7 @@ module Base
         Result:SharpedStone,
 		Sound:Hammering,
         Time:80.0,
-        Category:Survivalist
+        Category:Survivalist,
     }
 
 	recipe Make Charcoal
@@ -31,7 +31,7 @@ module Base
         Result:Charcoal,
         Time:1000.0,
         Category:Survivalist,
-        OnGiveXP:Recipe.OnGiveXP.MetalWelding10
+        OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
 	}
 
 	recipe Make Tongs
@@ -45,7 +45,7 @@ module Base
         Time:1000.0
         Category:Perdition - Crafting,
         CanBeDoneFromFloor:true,
-        OnGiveXP:Recipe.OnGiveXP.MetalWelding10
+        OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
 	}
 
     recipe Build Baseball Bat
@@ -59,6 +59,6 @@ module Base
 	   Time:450.0,
 	   Category:Perdition - Crafting,
 	   OnGiveXP:Recipe.OnGiveXP.WoodWork5,
-	   NeedToBeLearn:false
+	   NeedToBeLearn:false,
 	}
 }
