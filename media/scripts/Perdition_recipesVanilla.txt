@@ -4,7 +4,7 @@ module Base
     {
         TreeBranch/MetalPipe,
         SharpedStone,
-        RippedSheets/Twine/RippedSheetsDirty/DenimStrips/DenimStripsDirty,
+        RippedSheets/Twine=2/RippedSheetsDirty/DenimStrips/DenimStripsDirty,
 
         Result:AxeStone,
         Time:80.0,
@@ -48,6 +48,17 @@ module Base
         OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
 	}
 
+    recipe Make Rubber Duck
+	{
+        RubberBand=20,
+        keep Matches/Lighter=2,
+        CanBeDoneFromFloor:true,
+
+        Result:Rubberducky,
+        Time:10.0,
+        Category:Survivalist,
+	}
+
     recipe Build Baseball Bat
 	{
 	   Log,
@@ -62,3 +73,4 @@ module Base
 	   NeedToBeLearn:false,
 	}
 }
+
