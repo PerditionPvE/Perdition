@@ -43,7 +43,7 @@ module Base
         SkillRequired:MetalWelding=2,
         Result=Tongs,
         Time:1000.0
-        Category:Perdition - Crafting,
+        Category:Metalworking,
         CanBeDoneFromFloor:true,
         OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
 	}
@@ -81,9 +81,8 @@ module Base
 	   Result:BaseballBat,
 	   Sound:Hammering,
 	   Time:450.0,
-	   Category:Perdition - Crafting,
+	   Category:Carpentry,
 	   OnGiveXP:Recipe.OnGiveXP.WoodWork5,
-	   NeedToBeLearn:false,
 	}
 }
 

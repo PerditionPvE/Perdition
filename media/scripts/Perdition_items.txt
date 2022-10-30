@@ -46,7 +46,7 @@ module Perdition
             MinDamage                 = 0.7,
             MaxDamage                 = 1.15,
             BaseSpeed                 = 1,
-            TwoHandWeapon             = true,
+            TwoHandWeapon             = TRUE,
             WeaponLength              = 0.4,
             AttachmentType            = BigBlade,
             Tags = Crowbar;RemoveBarricade,

@@ -15,7 +15,7 @@ module Perdition
 
         Result:SuperCrowbar,
         Time:1000.0,
-        Category:Perdition - Crafting,
+        Category:Metalworking,
         SkillRequired:MetalWelding=8,
         OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
         OnCreate:BSItem_OnCreate,
