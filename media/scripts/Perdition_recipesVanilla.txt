@@ -4,7 +4,7 @@ module Base
     {
         TreeBranch/MetalPipe,
         SharpedStone,
-        RippedSheets/Twine=2/RippedSheetsDirty/DenimStrips/DenimStripsDirty,
+        RippedSheets/Twine/RippedSheetsDirty/DenimStrips/DenimStripsDirty,
 
         Result:AxeStone,
         Time:80.0,
