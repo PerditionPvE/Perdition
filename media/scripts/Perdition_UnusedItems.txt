@@ -35,4 +35,27 @@ recipe Smith Box Of Screws
     Category:Perdition - Crafting,
     OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
     SkillRequired:MetalWelding=6,
-    }    
+    }
+
+recipe Tailor T-Shirt
+    {
+    RippedSheets/RippedSheetsDirty=12,Thread=5,
+    Keep Needle,
+
+    Result:Tshirt_WhiteTINT,
+    Time:700.0,
+    Category:Tailoring,
+    SkillRequired:Tailoring=4,
+    }
+
+recipe Tailor Belt
+    {
+    LeatherStrips/LeatherStripsDirty=10,Thread=4,
+    Keep Hammer/BallPeenHammer,
+    Keep Needle,
+
+    Result:Belt,
+    Time:920.0,
+    Category:Tailoring,
+    SkillRequired:Tailoring=7,
+    }
