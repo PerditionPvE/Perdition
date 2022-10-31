@@ -9,13 +9,13 @@ module Perdition
         {
         MetalBar,
         Charcoal=1,
-        keep Matches/Lighter=2,
+       	Matches/Lighter=2,
         keep Hammer/BallPeenHammer,
         keep Tongs,
 
         Result:SuperCrowbar,
         Time:1000.0,
-        Category:Metalworking,
+        Category:Perdition,
         SkillRequired:MetalWelding=8,
         OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
         OnCreate:BSItem_OnCreate,

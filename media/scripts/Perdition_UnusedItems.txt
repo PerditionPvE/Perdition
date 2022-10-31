@@ -1,6 +1,8 @@
+/**
 recipe Make 4 Hinges
     {
-    ScrapMetal=6,Screws=12,
+    ScrapMetal=6,
+    Screws=12,
     keep Screwdriver,
     keep Hammer/BallPeenHammer,
 
@@ -110,4 +112,4 @@ recipe Tailor Military Pants
     Time:720.0,
     Category:Tailoring,
     SkillRequired:Tailoring=6,
-    }
+    } **/
