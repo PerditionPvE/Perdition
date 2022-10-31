@@ -14,7 +14,7 @@ module Base
     recipe Chip Stone
     {
         Stone,
-        keep [Recipe.GetItemTypes.Blunt],
+        keep Hammer/BallPeenHammer,
 
         Result:SharpedStone,
 		Sound:Hammering,
@@ -23,22 +23,22 @@ module Base
     }
 
 	recipe Make Charcoal
-	{
+    {
         Log=5,
-        keep Matches/Lighter=2,
+        Lighter=2,
         CanBeDoneFromFloor:true,
 
         Result:Charcoal,
         Time:1000.0,
         Category:Survivalist,
         OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
-	}
+    }
 
 	recipe Make Tongs
 	{
         Charcoal=10/WeldingRods=1,
         MetalBar=2,
-        keep Matches/Lighter=2,
+        Lighter=2,
 
         SkillRequired:MetalWelding=2,
         Result=Tongs,
@@ -64,7 +64,7 @@ module Base
     recipe Make Rubber Duck
 	{
         RubberBand=20,
-        keep Matches/Lighter=2,
+        Lighter=2,
         CanBeDoneFromFloor:true,
 
         Result:Rubberducky,
@@ -84,5 +84,5 @@ module Base
 	   Category:Carpentry,
 	   OnGiveXP:Recipe.OnGiveXP.WoodWork5,
 	}
-} 
+}
 
