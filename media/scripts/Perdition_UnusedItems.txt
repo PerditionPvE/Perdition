@@ -35,4 +35,79 @@ recipe Smith Box Of Screws
     Category:Perdition - Crafting,
     OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
     SkillRequired:MetalWelding=6,
-    }    
+    }
+
+recipe Tailor T-Shirt
+    {
+    RippedSheets/RippedSheetsDirty=24,Thread=5,
+    Keep Needle,
+    Keep Scissors,
+
+    Result:Tshirt_WhiteTINT,
+    Time:600.0,
+    Category:Tailoring,
+    SkillRequired:Tailoring=3,
+    }
+
+recipe Tailor Belt
+    {
+    LeatherStrips/LeatherStripsDirty=10,Thread=4,
+    Keep Hammer/BallPeenHammer,
+    Keep Needle,
+    Keep Scissors,
+    Keep HolePuncher,
+
+    Result:Belt,
+    Time:920.0,
+    Category:Tailoring,
+    SkillRequired:Tailoring=7,
+    }
+
+recipe Tailor Medical Mask
+    {
+    LeatherStrips/LeatherStripsDirty=4,Thread=4,Twine=1,
+    Keep Needle,
+    Keep Scissors,
+
+    Result:Hat_SurgicalMask_Blue/Hat_SurgicalMask_Green,
+    Time:300.0,
+    Category:Tailoring,
+    SkillRequired:Tailoring=7,
+    }
+
+recipe Tailor Military T-shirt
+    {
+    RippedSheets/RippedSheetsDirty=24,Thread=5,
+    Keep Needle,
+    Keep Scissors,
+
+    Result:Tshirt_ArmyGreen,
+    Time:600.0,
+    Category:Tailoring,
+    SkillRequired:Tailoring=3,
+    }
+
+recipe Tailor Military Shirt
+    {
+    RippedSheets/RippedSheetsDirty=42,Thread=8,
+    Keep Needle,
+    Keep Scissors,
+    Keep HolePuncher,
+
+    Result:Shirt_CamoGreen,
+    Time:700.0,
+    Category:Tailoring,
+    SkillRequired:Tailoring=6,
+    }
+
+recipe Tailor Military Pants
+    {
+    RippedSheets/RippedSheetsDirty=38,Thread=6,
+    Keep Needle,
+    Keep Scissors,
+
+    Result:Trousers_CamoGreen,
+    Time:720.0,
+    Category:Tailoring,
+    SkillRequired:Tailoring=6,
+    }
