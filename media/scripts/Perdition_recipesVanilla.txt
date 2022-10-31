@@ -112,5 +112,18 @@ module Base
 	   Category:Carpentry,
 	   OnGiveXP:Recipe.OnGiveXP.WoodWork5,
 	}
+
+    recipe Spin Twine
+	{
+	    RippedSheets=5,
+	    keep Scissors,
+
+	    SkillRequired:Tailoring=2,
+	    Result:BaseballBat,
+	    Sound:Twine,
+	    Time:600.0,
+	    Category:Tailoring,
+	}
+
 }
 
