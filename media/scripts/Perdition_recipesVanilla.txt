@@ -84,5 +84,5 @@ module Base
 	   Category:Carpentry,
 	   OnGiveXP:Recipe.OnGiveXP.WoodWork5,
 	}
-}
+} 
 
