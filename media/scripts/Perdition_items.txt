@@ -7,7 +7,7 @@ module Perdition
 
     item SuperCrowbar
         {
-            DisplayName	              = Masterwork Crowbar,
+            DisplayName	              = Lambda Crowbar,
             DisplayCategory           = ToolWeapon,
             MaxRange	              = 1.25,
             WeaponSprite              = Crowbar,
