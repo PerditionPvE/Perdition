@@ -21,4 +21,68 @@ module Perdition
         OnCreate:BSItem_OnCreate,
         NeedToBeLearn:true,
     }
+    recipe Masterwork Axe
+        {
+        MetalBar,
+        Charcoal=1,
+        Matches/Lighter=1,
+        keep Hammer/BallPeenHammer,
+        keep Tongs,
+
+        Result:SuperAxe,
+        Time:1000.0,
+        Category:Perdition,
+        SkillRequired:MetalWelding=9,
+        OnGiveXP:Recipe.OnGiveXP.MetalWelding35,
+        OnCreate:BSItem_OnCreate,
+        NeedToBeLearn:true,
+        }
+    recipe Masterwork Katana
+        {
+        MetalBar,
+        Charcoal=1,
+        Matches/Lighter=1,
+        keep Hammer/BallPeenHammer,
+        keep Tongs,
+
+        Result:SuperKatana,
+        Time:1000.0,
+        Category:Perdition,
+        SkillRequired:MetalWelding=10,
+        OnGiveXP:Recipe.OnGiveXP.MetalWelding35,
+        OnCreate:BSItem_OnCreate,
+        NeedToBeLearn:true,
+        }
+    recipe Masterwork Pickaxe
+        {
+        MetalBar,
+        Charcoal=1,
+        Matches/Lighter=1,
+        keep Hammer/BallPeenHammer,
+        keep Tongs,
+
+        Result:SuperPickaxe,
+        Time:1000.0,
+        Category:Perdition,
+        SkillRequired:MetalWelding=8,
+        OnGiveXP:Recipe.OnGiveXP.MetalWelding35,
+        OnCreate:BSItem_OnCreate,
+        NeedToBeLearn:true,
+        }
+    recipe Masterwork Machete
+        {
+        MetalBar,
+        Charcoal=1,
+        Matches/Lighter=1,
+        keep Hammer/BallPeenHammer,
+        keep Tongs,
+
+        Result:SuperMachete,
+        Time:1000.0,
+        Category:Perdition,
+        SkillRequired:MetalWelding=9,
+        OnGiveXP:Recipe.OnGiveXP.MetalWelding35,
+        OnCreate:BSItem_OnCreate,
+        NeedToBeLearn:true,
+            }
 }
