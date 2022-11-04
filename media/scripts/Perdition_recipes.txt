@@ -84,5 +84,5 @@ module Perdition
         OnGiveXP:Recipe.OnGiveXP.MetalWelding35,
         OnCreate:BSItem_OnCreate,
         NeedToBeLearn:true,
-            }
+        }
 }
