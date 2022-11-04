@@ -54,6 +54,7 @@ module Perdition
 
     item SuperAxe
 	{
+	    DisplayName = Helmsplitter,
 	    DisplayCategory = ToolWeapon,
 		MaxRange	=	1.8,
 		WeaponSprite	=	FireAxe,
@@ -73,7 +74,6 @@ module Perdition
 		DoorDamage	=	65,
 		IdleAnim	=	Idle_Weapon2,
 		SwingAnim	=	Bat,
-		DisplayName	=	Helmsplitter,
 		MinRange	=	0.67,
 		SwingTime	=	2.5,
 		HitAngleMod	=	-30,
@@ -104,6 +104,7 @@ module Perdition
 
     item SuperKatana
         {
+            DisplayName = Dragonforged Katana,
             MaxRange	=	1.4,
             WeaponSprite	=	Katana,
             MinAngle	=	0.8,
@@ -127,7 +128,6 @@ module Perdition
             SwingAnim	=	Bat,
             CriticalChance	=	35,
             CritDmgMultiplier = 6,
-            DisplayName	=	Katana,
             MinRange	=	0.61,
             SwingTime	=	3,
             HitAngleMod	=	-30,
@@ -147,5 +147,48 @@ module Perdition
             TwoHandWeapon = TRUE,
             WeaponLength = 0.4,
             AttachmentType = BigBlade,
+        }
+    item SuperPickAxe
+        {
+            MaxRange	=	1.6,
+            WeaponSprite	=	PickAxe,
+            MinAngle	=	0.65,
+            Type	=	Weapon,
+            MinimumSwingTime	=	3.0,
+            KnockBackOnNoDeath	=	TRUE,
+            SwingAmountBeforeImpact	=	0.002,
+            Categories	=	Axe,
+            ConditionLowerChanceOneIn	=	90,
+            Weight	=	3,
+            SplatNumber	=	3,
+            PushBackMod	=	0.3,
+            SubCategory	=	Swinging,
+            ConditionMax	=	13,
+            MaxHitCount	=	2,
+            DoorDamage	=	35,
+            IdleAnim	=	Idle_Weapon2,
+            SwingAnim	=	Bat,
+            DisplayName	=	PickAxe,
+            MinRange	=	0.61,
+            SwingTime	=	3.0,
+            HitAngleMod	=	-30,
+            SplatSize	=	5,
+            KnockdownMod	=	2,
+            SplatBloodOnNoDeath	=	TRUE,
+            Icon	=	PickAxe,
+            RunAnim	=	Run_Weapon2,
+            TwoHandWeapon = TRUE,
+            BreakSound  =   BreakWoodItem,
+            TreeDamage  =   35,
+            MetalValue = 120,
+            CriticalChance	=	25,
+            CritDmgMultiplier = 9,
+            MinDamage	=	1,
+            MaxDamage	=	2.2,
+            BaseSpeed = 0.8,
+            DamageCategory = Slash,
+            DamageMakeHole = TRUE,
+            AttachmentType = BigBlade,
+            Tags = DigPlow,
         }
 }
