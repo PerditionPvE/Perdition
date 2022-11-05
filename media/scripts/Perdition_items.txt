@@ -11,49 +11,46 @@ module Perdition
         DisplayName	              = Lambda Crowbar,
         DisplayCategory           = ToolWeapon,
         WeaponSprite              = Crowbar,
+        Icon                      = Crowbar,
         Type                      = Weapon,
         Categories                = Blunt,
         SubCategory	              = Swinging,
         TwoHandWeapon             = TRUE,
+        Weight                    = 2,
         Tags = Crowbar;RemoveBarricade,
 
                 /* Damage */
-        CriticalChance            = 20,
-        CritDmgMultiplier         = 2.5,
         MinDamage                 = 0.7,
         MaxDamage                 = 1.15,
+        DoorDamage                = 8,
+        TreeDamage                = 0,
+        CriticalChance            = 35,
+        CritDmgMultiplier         = 6,
+        KnockBackOnNoDeath        = TRUE,
+        PushBackMod	              = 0.5,
+        KnockdownMod              = 0,
 
+                /* Range */
+        WeaponLength              = 0.4,
+        MinRange                  = 0.61,
         MaxRange	              = 1.25,
         MinAngle                  = 0.75,
+        HitAngleMod               = -30,
         MaxHitCount	              = 3,
 
+                /* Speed */
         BaseSpeed                 = 1,
+        SwingTime                 = 3,
         MinimumSwingTime          = 3,
         SwingAmountBeforeImpact	  = 0.02,
-        KnockBackOnNoDeath        = TRUE,
-        TreeDamage                = 0,
-
-        Weight                    = 2,
-
-        PushBackMod	              = 0.5,
-
-                /* Animation */
-        RunAnim	                  = Run_Weapon2,
 
                 /* Durability */
         ConditionMax              = 22,
         ConditionLowerChanceOneIn = 90,
 
-        DoorDamage                = 8,
+                /* Animation */
+        RunAnim	                  = Run_Weapon2,
         SwingAnim                 = Bat,
-        CriticalChance            = 35,
-        CritDmgMultiplier         = 6,
-
-        MinRange                  = 0.61,
-        SwingTime                 = 3,
-        HitAngleMod               = -30,
-        KnockdownMod              = 0,
-        Icon                      = Crowbar,
 
                 /* Sound */
         BreakSound                = CrowbarBreak,
@@ -62,10 +59,9 @@ module Perdition
         HitFloorSound             = CrowbarHit,
         SwingSound                = CrowbarSwing,
 
+                /* Other */
         MetalValue                = 150,
-        WeaponLength              = 0.4,
         AttachmentType            = BigBlade,
-
     }
 
     item SuperAxe
