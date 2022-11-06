@@ -492,6 +492,7 @@ module Perdition
         Tags = FishingSpear,
     }
 /****************************** Money ******************************/
+    
     {
     item 10bill
 		Weight		= 0.01,
