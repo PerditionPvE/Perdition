@@ -4,7 +4,7 @@ module Perdition
     {
         Base
     }
-
+/****************************** Masterwork weapons ******************************/
 	recipe Masterwork Crowbar
         {
         MetalBar,

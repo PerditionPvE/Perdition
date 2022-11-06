@@ -1,4 +1,6 @@
 /**
+
+/****************************** BANK ******************************/
 recipe Make 4 Hinges
     {
     ScrapMetal=6,
@@ -113,3 +115,4 @@ recipe Tailor Military Pants
     Category:Tailoring,
     SkillRequired:Tailoring=6,
     } **/
+

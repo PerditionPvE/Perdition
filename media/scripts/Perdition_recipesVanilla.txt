@@ -1,5 +1,6 @@
 module Base
 {
+/****************************** Tools Recipe ******************************/
     recipe Make Stone Axe
     {
         TreeBranch/MetalPipe,
@@ -11,30 +12,7 @@ module Base
         Category:Survivalist,
     }
 
-    recipe Chip Stone
-    {
-        Stone,
-        keep Hammer/BallPeenHammer,
-
-        Result:SharpedStone,
-		Sound:Hammering,
-        Time:80.0,
-        Category:Survivalist,
-    }
-
-	recipe Make Charcoal
-    {
-        Log=5,
-        Matches/Lighter=1,
-        CanBeDoneFromFloor:true,
-
-        Result:Charcoal,
-        Time:1000.0,
-        Category:Survivalist,
-        OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
-    }
-
-	recipe Make Tongs
+    recipe Make Tongs
 	{
         WeldingRods=1,
         MetalBar=2,
@@ -62,6 +40,56 @@ module Base
         OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
     }
 
+recipe Build Baseball Bat
+	{
+	   Log,
+	   keep HuntingKnife/IcePick/Machete/MeatCleaver,
+
+	   SkillRequired:Woodwork=2,
+	   Result:BaseballBat,
+	   Sound:Hammering,
+	   Time:450.0,
+	   Category:Carpentry,
+	   OnGiveXP:Recipe.OnGiveXP.WoodWork5,
+	}
+
+/****************************** Item Recipes ******************************/
+    recipe Spin Twine
+	{
+	    RippedSheets=5,
+	    keep Scissors,
+
+	    SkillRequired:Tailoring=2,
+	    Result:BaseballBat,
+	    Sound:Twine,
+	    Time:600.0,
+	    Category:Tailoring,
+	}
+
+    recipe Chip Stone
+    {
+        Stone,
+        keep Hammer/BallPeenHammer,
+
+        Result:SharpedStone,
+		Sound:Hammering,
+        Time:80.0,
+        Category:Survivalist,
+    }
+
+	recipe Make Charcoal
+    {
+        Log=5,
+        Matches/Lighter=1,
+        CanBeDoneFromFloor:true,
+
+        Result:Charcoal,
+        Time:1000.0,
+        Category:Survivalist,
+        OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
+    }
+
+	
     /*recipe Make Barbed Wire
     {
         Wire=4,
@@ -88,7 +116,7 @@ module Base
         OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
         Category:Welding,
     }*/
-
+/****************************** Misc Recipes ******************************/
     recipe Make Rubber Duck
 	{
         RubberBand=20,
@@ -99,31 +127,5 @@ module Base
         Time:10.0,
         Category:Quacc,
 	}
-
-    recipe Build Baseball Bat
-	{
-	   Log,
-	   keep HuntingKnife/IcePick/Machete/MeatCleaver,
-
-	   SkillRequired:Woodwork=2,
-	   Result:BaseballBat,
-	   Sound:Hammering,
-	   Time:450.0,
-	   Category:Carpentry,
-	   OnGiveXP:Recipe.OnGiveXP.WoodWork5,
-	}
-
-    recipe Spin Twine
-	{
-	    RippedSheets=5,
-	    keep Scissors,
-
-	    SkillRequired:Tailoring=2,
-	    Result:BaseballBat,
-	    Sound:Twine,
-	    Time:600.0,
-	    Category:Tailoring,
-	}
-
 }
 
