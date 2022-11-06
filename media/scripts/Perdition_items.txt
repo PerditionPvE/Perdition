@@ -491,7 +491,7 @@ module Perdition
         AttachmentType = Shovel,
         Tags = FishingSpear,
     }
-
+/****************************** Money ******************************/
     {
     item 10bill
 		Weight		= 0.01,
