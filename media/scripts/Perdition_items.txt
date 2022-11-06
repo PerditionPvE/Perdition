@@ -526,7 +526,7 @@ module Perdition
     }
 
     {
-    item 1000 bill
+    item 1000bill
 		Weight		= 0.01,
 		Type		= Normal,
 		DisplayName	= 1000$ Bill,
