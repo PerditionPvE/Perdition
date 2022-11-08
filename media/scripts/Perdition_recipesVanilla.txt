@@ -129,7 +129,7 @@ recipe Build Baseball Bat
     recipe Metal Bar
         {
         WoodenStick=4,
-        IronIngot=10,
+        ScrapMetal=10,
         keep Tongs,
         keep BallPeenHammer/ClubHammer/Hammer/HammerStone,
 
