@@ -65,7 +65,6 @@ recipe Build Baseball Bat
 	    Time:600.0,
 	    Category:Tailoring,
 	}
-
     recipe Chip Stone
     {
         Stone,
@@ -130,7 +129,7 @@ recipe Build Baseball Bat
     recipe Metal Bar
         {
         WoodenStick=4,
-        ScrapMetal=10,
+        IronIngot=10,
         keep Tongs,
         keep BallPeenHammer/ClubHammer/Hammer/HammerStone,
 
@@ -195,6 +194,359 @@ recipe Build Baseball Bat
         Time:1500.0,
         Category:General,
         NeedTobeLearn:True,
+        }
+    recipe Metal Pipe
+        {
+        IronIngot=15,
+        keep Tongs,
+        keep BallPeenHammer/ClubHammer/Hammer/HammerStone,
+
+        Result:MetalPipe,
+        Time: 200.0
+        Category:Metalwelding,
+        SkillRequired:MetalWelding=4/Carpentry=3,
+        OnGiveXP:Recipe.OnGiveXP.MetalWelding20,
+        NeedTobeLearn:false,
+        }
+    recipe Scrap
+        {
+        MetalPipe/MetalBar/WeldingRods/SheetMetal/LeadPipe,
+        keep BallPeenHammer/ClubHammer/Hammer/HammerStone,
+
+        Result:ScrapMetal=5,
+        OnGiveXP:Recipe.OnGiveXP.MetalWelding20,
+        NeedTobeLearn:false,
+        }
+    recipe Scrap
+        {
+        OldTire1/OldTire2/OldTire3/OldCarMuffler1/OldCarMuffler2/OldCarMuffler3,
+        keep BallPeenHammer/ClubHammer/Hammer/HammerStone,
+
+        Result:ScrapMetal=6,
+        OnGiveXP:Recipe.OnGiveXP.MetalWelding20,
+        NeedTobeLearn:false,
+        }
+    recipe Scrap
+        {
+        NormalTire1/NormalTire2/NormalTire3/NormalCarMuffler1/NormalCarMuffler2/NormalCarMuffler3/NormalSuspension1/NormalSuspension2/NormalSuspension3/EngineDoor1,
+        keep BallPeenHammer/ClubHammer/Hammer/HammerStone,
+
+        Result:ScrapMetal=7,
+        OnGiveXP:Recipe.OnGiveXP.MetalWelding20,
+        NeedTobeLearn:false,
+        }
+    recipe Scrap
+        {
+        ModernTire1/ModernTire2/ModernTire3/ModernCarMuffler1/ModernCarMuffler2/ModernCarMuffler3/ModernSuspension1/ModernSuspension2/ModernSuspension3/EngineDoor2/EngineDoor3,
+        keep BallPeenHammer/ClubHammer/Hammer/HammerStone,
+
+        Result:ScrapMetal=8,
+        OnGiveXP:Recipe.OnGiveXP.MetalWelding20,
+        NeedTobeLearn:false,
+        }
+    recipe Leather Strips
+        {
+        NormalCarSeat1/NormalCarSeat2/NormalCarSeat3,
+        keep BallPeenHammer/ClubHammer/Hammer/HammerStone,
+        keep Scissors
+
+        Result:LeatherStrips=6,
+        OnGiveXP:Recipe.OnGiveXP.Tailoring20,
+        NeedTobeLearn:false,
+        }
+    recipe Leather Strips
+        {
+        BigCarSeat1/BigCarSeat2/BigCarSeat3,
+        keep BallPeenHammer/ClubHammer/Hammer/HammerStone,
+        keep Scissors
+
+        Result:LeatherStrips=7,
+        OnGiveXP:Recipe.OnGiveXP.Tailoring20,
+        NeedTobeLearn:false,
+        }
+    recipe Leather Strips
+        {
+        SportCarSeat1/SportCarSeat2/SportCarSeat3,
+        keep BallPeenHammer/ClubHammer/Hammer/HammerStone,
+        keep Scissors
+
+        Result:LeatherStrips=8,
+        OnGiveXP:Recipe.OnGiveXP.Tailoring20,
+        NeedTobeLearn:false,
+        }
+    recipe Standard Car Hood
+        {
+        IronIngot=20,
+        Blowtorch=1,
+        keep WeldingMask,
+
+        Result:EngineDoor1,
+        Time:2000.0,
+        Category:Metalwelding,
+        OnGiveXP:Recipe.OnGiveXP.MetalWelding35,
+        NeedTobeLearn:false,
+        }
+    recipe Heavy Car Hood
+        {
+        IronIngot=25,
+        Blowtorch=1,
+        keep WeldingMask,
+
+        Result:EngineDoor2,
+        Time:2000.0,
+        Category:Metalwelding,
+        OnGiveXP:Recipe.OnGiveXP.MetalWelding40,
+        NeedTobeLearn:false,
+        }
+    recipe Sports Car Hood
+        {
+        IronIngot=30,
+        Blowtorch=1,
+        keep WeldingMask,
+
+        Result:EngineDoor3,
+        Time:2000.0,
+        Category:Metalwelding,
+        OnGiveXP:Recipe.OnGiveXP.MetalWelding45,
+        NeedTobeLearn:false,
+        }
+    recipe Standard Car Front Door
+        {
+        IronIngot=25,
+        Blowtorch=1,
+        keep WeldingMask,
+
+        Result:FrontCarDoor1,
+        Time:2000.0,
+        Category:Metalwelding,
+        OnGiveXP:Recipe.OnGiveXP.MetalWelding30,
+        NeedTobeLearn:false,
+        }
+    recipe Heavy Car Front Door
+        {
+        IronIngot=30,
+        Blowtorch=1,
+        keep WeldingMask,
+
+        Result:FrontCarDoor2,
+        Time:2000.0,
+        Category:Metalwelding,
+        OnGiveXP:Recipe.OnGiveXP.MetalWelding35,
+        NeedTobeLearn:false,
+        }
+    recipe Sports Car Front Door
+        {
+        IronIngot=35,
+        Blowtorch=1,
+        keep WeldingMask,
+
+        Result:FrontCarDoor3,
+        Time:2000.0,
+        Category:Metalwelding,
+        OnGiveXP:Recipe.OnGiveXP.MetalWelding40,
+        NeedTobeLearn:false,
+        }
+    recipe Standard Car Rear Door
+        {
+        IronIngot=25,
+        Blowtorch=1,
+        keep WeldingMask,
+
+        Result:RearCarDoor1,
+        Time:2000.0,
+        Category:Metalwelding,
+        OnGiveXP:Recipe.OnGiveXP.MetalWelding30,
+        NeedTobeLearn:false,
+        }
+    recipe Heavy Car Rear Door
+        {
+        IronIngot=30,
+        Blowtorch=1,
+        keep WeldingMask,
+
+        Result:RearCarDoor2,
+        Time:2000.0,
+        Category:Metalwelding,
+        OnGiveXP:Recipe.OnGiveXP.MetalWelding35,
+        NeedTobeLearn:false,
+        }
+    recipe Sports Car Rear Door
+        {
+        IronIngot=35,
+        Blowtorch=1,
+        keep WeldingMask,
+
+        Result:RearCarDoor3,
+        Time:2000.0,
+        Category:Metalwelding,
+        OnGiveXP:Recipe.OnGiveXP.MetalWelding40,
+        NeedTobeLearn:false,
+        }
+    recipe Standard Average Muffler
+        {
+        IronIngot=15,
+        Blowtorch=1,
+        keep WeldingMask,
+
+        Result:NormalCarMuffler1,
+        Time:2000.0,
+        Category:Metalwelding,
+        OnGiveXP:Recipe.OnGiveXP.MetalWelding20,
+        NeedTobeLearn:false,
+        }
+    recipe Heavy Average Muffler
+        {
+        IronIngot=20,
+        Blowtorch=1,
+        keep WeldingMask,
+
+        Result:NormalCarMuffler2,
+        Time:2000.0,
+        Category:Metalwelding,
+        OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
+        NeedTobeLearn:false,
+        }
+    recipe Sports Average Muffler
+        {
+        IronIngot=25,
+        Blowtorch=1,
+        keep WeldingMask,
+
+        Result:NormalCarMuffler3,
+        Time:2000.0,
+        Category:Metalwelding,
+        OnGiveXP:Recipe.OnGiveXP.MetalWelding30,
+        NeedTobeLearn:false,
+        }
+    recipe Standard Performance Muffler
+        {
+        IronIngot=25,
+        Blowtorch=1,
+        keep WeldingMask,
+
+        Result:ModernCarMuffler1,
+        Time:2000.0,
+        Category:Metalwelding,
+        OnGiveXP:Recipe.OnGiveXP.MetalWelding30,
+        NeedTobeLearn:false,
+        }
+    recipe Heavy Performance Muffler
+        {
+        IronIngot=30,
+        Blowtorch=1,
+        keep WeldingMask,
+
+        Result:ModernCarMuffler2,
+        Time:2000.0,
+        Category:Metalwelding,
+        OnGiveXP:Recipe.OnGiveXP.MetalWelding35,
+        NeedTobeLearn:false,
+        }
+    recipe Sports Performance Muffler
+        {
+        IronIngot=35,
+        Blowtorch=1,
+        keep WeldingMask,
+
+        Result:ModernCarMuffler3,
+        Time:2000.0,
+        Category:Metalwelding,
+        OnGiveXP:Recipe.OnGiveXP.MetalWelding40,
+        NeedTobeLearn:false,
+        }
+    recipe Standard Gas Tank
+        {
+        IronIngot=20,
+        Blowtorch=1,
+        keep WeldingMask,
+
+        Result:NormalGasTank1,
+        Time:2000.0,
+        Category:Metalwelding,
+        OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
+        NeedTobeLearn:false,
+        }
+    recipe Heavy Gas Tank
+        {
+        IronIngot=25,
+        Blowtorch=1,
+        keep WeldingMask,
+
+        Result:NormalGasTank2,
+        Time:2000.0,
+        Category:Metalwelding,
+        OnGiveXP:Recipe.OnGiveXP.MetalWelding30,
+        NeedTobeLearn:false,
+        }
+    recipe Sports Gas Tank
+        {
+        IronIngot=30,
+        Blowtorch=1,
+        keep WeldingMask,
+
+        Result:NormalGasTank3,
+        Time:2000.0,
+        Category:Metalwelding,
+        OnGiveXP:Recipe.OnGiveXP.MetalWelding30,
+        NeedTobeLearn:false,
+        }
+    recipe Big Standard Gas Tank
+        {
+        IronIngot=30,
+        Blowtorch=1,
+        keep WeldingMask,
+
+        Result:BigGasTank1,
+        Time:2000.0,
+        Category:Metalwelding,
+        OnGiveXP:Recipe.OnGiveXP.MetalWelding35,
+        NeedTobeLearn:false,
+        }
+    recipe Big Heavy Gas Tank
+        {
+        IronIngot=35,
+        Blowtorch=1,
+        keep WeldingMask,
+
+        Result:BigGasTank2,
+        Time:2000.0,
+        Category:Metalwelding,
+        OnGiveXP:Recipe.OnGiveXP.MetalWelding40,
+        NeedTobeLearn:false,
+        }
+    recipe Big Sports Gas Tank
+        {
+        IronIngot=40,
+        Blowtorch=1,
+        keep WeldingMask,
+
+        Result:BigGasTank3,
+        Time:2000.0,
+        Category:Metalwelding,
+        OnGiveXP:Recipe.OnGiveXP.MetalWelding45,
+        NeedTobeLearn:false,
+        }
+    recipe Scrap Gun Small
+        {
+        Pistol3/Pistol2/Pistol/Revolver_Short/Revolver/Revolver_Long
+        keep BallPeenHammer/ClubHammer/Hammer,
+
+        Result:ScrapMetal=4,
+        Time:1000.0,
+        Category:Metalwelding,
+        OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
+        NeedTobeLearn:false,
+        }
+    recipe Scrap Gun Large
+        {
+        DoubleBarrelShotgun/DoubleBarrelShotgunSawnoff/Shotgun/ShotgunSawnoff/AssaultRifle/AssaultRifle2/VarmintRifle/HuntingRifle
+        keep BallPeenHammer/ClubHammer/Hammer,
+
+        Result:ScrapMetal=6,
+        Time:1300.0,
+        Category:Metalwelding,
+        OnGiveXP:Recipe.OnGiveXP.MetalWelding20,
+        NeedTobeLearn:false,
         }
 }
 

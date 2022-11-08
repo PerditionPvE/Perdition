@@ -264,7 +264,8 @@ module Perdition
         }
     recipe Masterwork Machete
         {
-        MetalBar,
+        MetalBar=2,
+        IronIngot
         Charcoal=1,
         Matches/Lighter=1,
         keep Hammer/BallPeenHammer,
@@ -278,4 +279,4 @@ module Perdition
         OnCreate:BSItem_OnCreate,
         NeedToBeLearn:true,
         }
-}
+   }
