@@ -278,4 +278,4 @@ module Perdition
         OnCreate:BSItem_OnCreate,
         NeedToBeLearn:true,
         }
-   }
+}
