@@ -142,6 +142,37 @@ recipe Build Baseball Bat
         OnCreate:BSItem_OnCreate,
         NeedTobeLearn:false,
         }
+    recipe Gas Can from Compost
+        {
+        EmptyPetrolCan=2,
+        CompostBag=10,
+        SugarBrown/Sugar=5,
+        Glue=3,
+
+        Result:PetrolCan=2,
+        Time:1500.0
+        Category:General,
+        NeedTobeLearn:True,
+        }
+    recipe Gas Can from Lighter
+        {
+        Lighter=200,
+        EmptyPetrolCan,
+
+        Result:PetrolCan=1,
+        Time:1200.0,
+        Category:General,
+        NeedTobeLearn:false,
+         }
+    recipe Empty Gas Can
+        {
+        Glue=1,
+        BleachEmpty=3,
+
+        Result:EmptyPetrolCan,
+        Category:General,
+        NeedToBeLearn:false,
+        }
     recipe Workable Iron
         {
         UnusableMetal=3,
@@ -155,5 +186,15 @@ recipe Build Baseball Bat
         NeedTobeLearn:True,
         }
 
+    recipe Propane Tank
+        {
+        Lighter=10,
+        PetrolCan=15,
+
+        Result:PropaneTank,
+        Time:1500.0,
+        Category:General,
+        NeedTobeLearn:True,
+        }
 }
 
