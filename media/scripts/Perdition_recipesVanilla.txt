@@ -127,5 +127,33 @@ recipe Build Baseball Bat
         Time:10.0,
         Category:Quacc,
 	}
+    recipe Metal Bar
+        {
+        WoodenStick=4,
+        ScrapMetal=10,
+        keep Tongs,
+        keep BallPeenHammer/ClubHammer/Hammer/HammerStone,
+
+        Result:MetalBar,
+        Time: 200.0
+        Category:Metalwelding,
+        SkillRequired:MetalWelding=4/Carpentry=3,
+        OnGiveXP:Recipe.OnGiveXP.MetalWelding20,
+        OnCreate:BSItem_OnCreate,
+        NeedTobeLearn:false,
+        }
+    recipe Workable Iron
+        {
+        UnusableMetal=3,
+        BlowTorch=2,
+        keep WeldingMask,
+        keep Tongs,
+
+        Result:IronIngot,
+        Time:2000.0,
+        Category:Metalwelding,
+        NeedTobeLearn:True,
+        }
+
 }
 
