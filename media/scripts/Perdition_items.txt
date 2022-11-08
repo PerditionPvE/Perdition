@@ -64,6 +64,18 @@ module Perdition
         AttachmentType            = BigBlade,
     }
 
+    item CrowbarUpgradeManual
+        {
+        DisplayName = The Master's Forge: Crowbar,
+        DisplayCategory = Skillbook,
+        Type = Literature,
+        Weight = 0.5,
+        Icon = Book,
+        TeachedRecipes = Masterwork Crowbar,
+        StaticModel = Book,
+        WorldStaticModel = BookClosedGround,
+    }
+
     item SuperAxe
 	    {
 	            /* Metadata */
@@ -130,12 +142,41 @@ module Perdition
 		AttachmentType = BigWeapon,
     }
 
+    item AxeUpgradeManual
+        {
+        DisplayName = The Master's Forge: Axes,
+        DisplayCategory = Skillbook,
+        Type = Literature,
+        Weight = 0.5,
+        Icon = Book,
+        TeachedRecipes = Masterwork Axe,
+        StaticModel = Book,
+        WorldStaticModel = BookClosedGround,
+    }
+
     item SuperKatana
         {
+                /* Metadata */
         DisplayName = Dragonforged Katana,
-        MaxRange	=	1.4,
         WeaponSprite	=	Katana,
+
+                /* Damage */
+
+                /* Range */
+
+        MaxRange	=	1.4,
         MinAngle	=	0.8,
+
+                /* Speed */
+
+                /* Durability */
+
+                /* Animation */
+
+                /* Sound */
+
+                /* Other */
+
         Type	=	Weapon,
         MinimumSwingTime	=	3,
         HitFloorSound	=	KatanaHit,
@@ -176,6 +217,19 @@ module Perdition
         WeaponLength = 0.4,
         AttachmentType = BigBlade,
         }
+
+    item KatanaUpgradeManual
+        {
+        DisplayName = The Master's Forge: Katana,
+        DisplayCategory = Skillbook,
+        Type = Literature,
+        Weight = 0.5,
+        Icon = Book,
+        TeachedRecipes = Masterwork Katana,
+        StaticModel = Book,
+        WorldStaticModel = BookClosedGround,
+    }
+
     item SuperPickAxe
         {
         MaxRange	=	1.6,
@@ -219,6 +273,19 @@ module Perdition
         AttachmentType = BigBlade,
         Tags = DigPlow,
     }
+
+    item PickaxeUpgradeManual
+        {
+        DisplayName = The Master's Forge: Pickaxe,
+        DisplayCategory = Skillbook,
+        Type = Literature,
+        Weight = 0.5,
+        Icon = Book,
+        TeachedRecipes = Masterwork Pickaxe,
+        StaticModel = Book,
+        WorldStaticModel = BookClosedGround,
+    }
+
     item SuperMachete
         {
         MaxRange	=	1.23,
@@ -266,6 +333,19 @@ module Perdition
         BreakSound  =   MacheteBreak,
         SwingSound = MacheteSwing,
     }
+
+    item MacheteUpgradeManual
+        {
+        DisplayName = The Master's Forge: Machete,
+        DisplayCategory = Skillbook,
+        Type = Literature,
+        Weight = 0.5,
+        Icon = Book,
+        TeachedRecipes = Masterwork Machete,
+        StaticModel = Book,
+        WorldStaticModel = BookClosedGround,
+    }
+
     item SuperKnife
         {
         MaxRange			= 0.9,
@@ -315,6 +395,19 @@ module Perdition
         AttachmentType			= Knife,
         Tags				= CutPlant,
     }
+
+    item KnifeUpgradeManual
+        {
+        DisplayName = The Master's Forge: Knives,
+        DisplayCategory = Skillbook,
+        Type = Literature,
+        Weight = 0.5,
+        Icon = Book,
+        TeachedRecipes = Masterwork Knife,
+        StaticModel = Book,
+        WorldStaticModel = BookClosedGround,
+    }
+
     item SuperCleaver
     	{
     	MaxRange	=	1,
@@ -352,6 +445,19 @@ module Perdition
         DamageMakeHole = TRUE,
         AttachmentType = MeatCleaver,
     }
+
+    item CleaverUpgradeManual
+        {
+        DisplayName = The Master's Forge: Butchering,
+        DisplayCategory = Skillbook,
+        Type = Literature,
+        Weight = 0.5,
+        Icon = Book,
+        TeachedRecipes = Masterwork Cleaver,
+        StaticModel = Book,
+        WorldStaticModel = BookClosedGround,
+    }
+
     item SuperSledgehammer
     	{
         DisplayCategory = ToolWeapon,
@@ -400,6 +506,19 @@ module Perdition
         AttachmentType = BigBlade,
         Tags = Sledgehammer,
     	}
+
+    item SHammerUpgradeManual
+        {
+        DisplayName = The Master's Forge: The Maul,
+        DisplayCategory = Skillbook,
+        Type = Literature,
+        Weight = 0.5,
+        Icon = Book,
+        TeachedRecipes = Masterwork Sledgehammer,
+        StaticModel = Book,
+        WorldStaticModel = BookClosedGround,
+    }
+
     item SuperShovel
         {
         DisplayCategory 		= Gardening,
@@ -447,50 +566,19 @@ module Perdition
         AttachmentType			= Shovel,
         Tags				= ClearAshes;DigGrave;DigPlow;TakeDirt,
     }
-    item SpearHuntingKnife
+
+    item ShovelUpgradeManual
         {
-        MaxRange	=	1.48,
-        WeaponSprite	=	SpearHuntingKnife,
-        MinAngle	=	0.8,
-        Type	=	Weapon,
-        MinimumSwingTime	=	2,
-        KnockBackOnNoDeath	=	FALSE,
-        SwingAmountBeforeImpact	=	0.02,
-        Categories	=	Improvised;Spear,
-        ConditionLowerChanceOneIn	=	8,
-        Weight	=	1.5,
-        SplatNumber	=	1,
-        PushBackMod	=	0.3,
-        SubCategory	=	Spear,
-        ConditionMax	=	9,
-        MaxHitCount	=	2,
-        DoorDamage	=	7,
-        SwingAnim	=	Spear,
-        DisplayName	=	Spear With Hunting Knife,
-        MinRange	=	0.98,
-        SwingTime	=	2,
-        KnockdownMod	=	0,
-        SplatBloodOnNoDeath	=	FALSE,
-        Icon	=	SpearHuntingKnife,
-        RunAnim	=	Run_Weapon2,
-        IdleAnim	=	Idle_Weapon2,
-        TreeDamage  =   0,
-        TwoHandWeapon = TRUE,
-        CriticalChance	=	30,
-        CritDmgMultiplier = 10,
-        MinDamage	=	1.2,
-        MaxDamage	=	1.7,
-        DamageCategory = Slash,
-        DamageMakeHole = TRUE,
-        BreakSound  =   SpearHuntingKnifeBreak,
-        HitFloorSound	=	SpearHuntingKnifeHit,
-        ImpactSound	=	SpearHuntingKnifeHit,
-        DoorHitSound = SpearHuntingKnifeHit,
-        HitSound	=	SpearHuntingKnifeHit,
-        SwingSound	=	SpearHuntingKnifeSwing,
-        AttachmentType = Shovel,
-        Tags = FishingSpear,
+        DisplayName = The Master's Forge: Shovel,
+        DisplayCategory = Skillbook,
+        Type = Literature,
+        Weight = 0.5,
+        Icon = Book,
+        TeachedRecipes = Masterwork Shovel,
+        StaticModel = Book,
+        WorldStaticModel = BookClosedGround,
     }
+
 /****************************** Money ******************************/
     
     {
