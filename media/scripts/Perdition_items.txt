@@ -630,8 +630,8 @@ module Perdition
     }
 
 /********************************************** Ammo Crates **********************************************/
-    {
-    item Ammocrate_556
+    item Ammocrate556
+        {
 		Weight		= 11.3,
 		Type		= Drainable,
         UseDelta	=	0.2,
@@ -640,8 +640,9 @@ module Perdition
 		Tooltip     = 600 Rounds of 556 in  a Crate.
         Icon		= RifleAmmoBox,    
     }
-    {
-    item Ammocrate_9mm
+
+    item Ammocrate9mm
+        {
 		Weight		= 2.25,
 		Type		= Drainable,
         UseDelta	=	0.1,
@@ -650,8 +651,9 @@ module Perdition
 		Tooltip     = 300 Rounds of 9mm in  a Crate.
         Icon		= Bullets9mmBox,    
     }
-    {
-    item Ammocrate_45
+
+    item Ammocrate45
+        {
 		Weight		= 9,
 		Type		= Drainable,
         UseDelta	=	0.1,
@@ -659,9 +661,10 @@ module Perdition
         ConsolidateOption = ContextMenu_Merge,
 		Tooltip     = 300 Rounds of .45 in  a Crate.
         Icon		= Bullets45Box,    
-    }   
-    {
-    item Ammocrate_308
+    }
+
+    item Ammocrate308
+        {
 		Weight		= 6,
 		Type		= Drainable,
         UseDelta	=	0.1,
@@ -669,9 +672,10 @@ module Perdition
         ConsolidateOption = ContextMenu_Merge,
 		Tooltip     = 400 Rounds of .308 in  a Crate.
         Icon		= 308Box,    
-    }   
-    {
-    item Ammocrate_223
+    }
+
+    item Ammocrate223
+        {
 		Weight		= 2.25,
 		Type		= Drainable,
         UseDelta	=	0.13,
@@ -685,10 +689,11 @@ module Perdition
 /****************************** Boxing(not the sport like boxing stuff up) ******************************/
 
 item 100ScrapBox
-		Weight		= 5,
-		Type		= Normal,
-		DisplayName	= Box Of Scrap,
-		Icon		= Box,
+    {
+    Weight		= 5,
+    Type		= Normal,
+    DisplayName	= Box Of Scrap,
+    Icon		= Box,
     }
 
 
