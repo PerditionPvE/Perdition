@@ -695,19 +695,4 @@ item 100ScrapBox
     DisplayName	= Box Of Scrap,
     Icon		= Box,
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
