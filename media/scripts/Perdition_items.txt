@@ -637,7 +637,6 @@ module Perdition
         UseDelta	=	0.0016,
 		DisplayName	= 5.56 Munition Crate,
         ConsolidateOption = ContextMenu_Merge,
-		Tooltip     = 600 Rounds of 556 in a Crate.,
         Icon		= RifleAmmoBox,
     }
 
@@ -648,7 +647,6 @@ module Perdition
         UseDelta	=	0.0033,
 		DisplayName	= 9mm Munition Crate,
         ConsolidateOption = ContextMenu_Merge,
-		Tooltip     = 300 Rounds of 9mm in a Crate.,
         Icon		= Bullets9mmBox,
     }
 
@@ -659,7 +657,6 @@ module Perdition
         UseDelta	=  0.0033,
 		DisplayName	= .45 Munition Crate,
         ConsolidateOption = ContextMenu_Merge,
-		Tooltip     = 300 Rounds of .45 in a Crate.,
         Icon		= Bullets45Box,    
     }
 
@@ -670,7 +667,6 @@ module Perdition
         UseDelta	= 0.0025,
 		DisplayName	= .308 Munition Crate,
         ConsolidateOption = ContextMenu_Merge,
-		Tooltip     = 400 Rounds of .308 in a Crate.,
         Icon		= 308Box,    
     }
 
@@ -681,7 +677,6 @@ module Perdition
         UseDelta	=	0.0032,
 		DisplayName	= .223 Munition Crate,
         ConsolidateOption = ContextMenu_Merge,
-		Tooltip     = 312 Rounds of .223 in a Crate.,
         Icon		= 223Box,
     }   
       
