@@ -675,7 +675,7 @@ module Perdition
 		Weight		= 2.25,
 		Type		= Drainable,
         UseDelta	=	0.13,
-		DisplayName	= .308 Munition Crate,
+		DisplayName	= .223 Munition Crate,
         ConsolidateOption = ContextMenu_Merge,
 		Tooltip     = 312 Rounds of .223 in  a Crate.
         Icon		= 223Box,    
