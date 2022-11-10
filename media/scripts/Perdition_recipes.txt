@@ -289,13 +289,14 @@ module Perdition
        Time:50.0,
     }
    /****************************** Crating ******************************/
+   /*
     recipe Crate Gunpowder
         {
         GunPowder=600,
-        Result:Ammocrate_GunPowder,
+        Result:AmmocrateGunPowder,
         Time:500.0,
         }
-
+    */
 
     recipe Crate 5.56 Ammo
         {
