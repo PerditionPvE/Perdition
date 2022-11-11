@@ -6,6 +6,7 @@ module Base
 		Type		= Normal,
 		DisplayName	= 10$ Bill,
 		Icon		= Money,
+		DisplayCategory = Economy,
     }
 
     item 20bill
@@ -14,6 +15,7 @@ module Base
 		Type		= Normal,
 		DisplayName	= 20$ Bill,
 		Icon		= Money,
+        DisplayCategory = Economy,
     }
 
     item 50bill
@@ -22,6 +24,7 @@ module Base
 		Type		= Normal,
 		DisplayName	= 50$ Bill,
 		Icon		= Money,
+        DisplayCategory = Economy,
     }
 
     item 100bill
@@ -30,6 +33,7 @@ module Base
 		Type		= Normal,
 		DisplayName	= 100$ Bill,
 		Icon		= Money,
+        DisplayCategory = Economy,
     }
 
     item 1000bill
@@ -38,6 +42,7 @@ module Base
 		Type		= Normal,
 		DisplayName	= 1000$ Bill,
 		Icon		= Money,
+        DisplayCategory = Economy,
     }
 
     item 10000bill
@@ -46,5 +51,6 @@ module Base
 		Type		= Normal,
 		DisplayName	= 10000$ Bill,
 		Icon		= Money,
+        DisplayCategory = Economy,
     }
 }
