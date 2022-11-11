@@ -197,5 +197,21 @@ recipe Build Baseball Bat
         Category:Welding,
         NeedToBeLearn:true,
         }
+
+    recipe Dismantle Car Battery
+        {
+        destroy CarBattery1/CarBattery2/CarBattery3,
+        keep Screwdriver,
+
+        NoBrokenItems:true,
+        Result:ElectronicsScrap=3,
+        OnCreate:Perdition.OnCreate.DismantleCarBattery,
+        Time:100.0,
+        AnimNode:Disassemble,
+        Prop1:Screwdriver,
+        Prop2:CDplayer,
+        Sound:Dismantle,
+        Category:Vehicle,
+        }
 }
 
