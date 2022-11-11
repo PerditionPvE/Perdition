@@ -166,6 +166,7 @@ module Perdition
 
   	   Result:ScrapMetal=100,
        Time:50.0,
+       Category:Storage,
     }
     
     recipe Box Scrap
@@ -174,6 +175,7 @@ module Perdition
 
   	   Result:100ScrapBox,
        Time:50.0,
+       Category:Storage,
     }
    /****************************** Crating ******************************/
    /*
@@ -190,6 +192,7 @@ module Perdition
         556Bullets=300,
         Result:Ammocrate556,
         Time:500.0,
+        Category:Crate,
         }
 
     recipe Crate 9mm Ammo
@@ -197,6 +200,7 @@ module Perdition
         Bullets9mm=300,
         Result:Ammocrate9mm,
         Time:500.0,
+        Category:Crate,
         }
 
     recipe Crate .45 Ammo
@@ -204,6 +208,7 @@ module Perdition
         Bullets45=300,
         Result:Ammocrate45,
         Time:500.0,
+        Category:Crate,
         }  
 
     recipe Crate .308 Ammo
@@ -211,42 +216,47 @@ module Perdition
         308Bullets=300,
         Result:Ammocrate308,
         Time:500.0,
+        Category:Crate,
         }
 
     recipe Crate .223 Ammo
         {
         223Bullets=300,
         Result:Ammocrate223,
-        Time:500.0, 
-        } 
-        /****************************** Uncrate ******************************/
-        
+        Time:500.0,
+        Category:Crate,
+        }
+        /***************************** Uncrate ******************************/
     recipe Take 5.56 from Crate
         {
         Ammocrate556,
         Result:556Bullets=30,
-        Time:50.0, 
+        Time:50.0,
+        Category:Crate,
         } 
 
     recipe Take 9mm from Crate
         {
         Ammocrate9mm,
         Result:Bullets9mm=30,
-        Time:50.0, 
+        Time:50.0,
+        Category:Crate,
         }
 
     recipe Take .45 from Crate
         {
         Ammocrate45,
         Result:Bullets45=30,
-        Time:50.0, 
+        Time:50.0,
+        Category:Crate,
         } 
 
     recipe Take .308 from Crate
         {
         Ammocrate308,
         Result:308Bullets=30,
-        Time:50.0, 
+        Time:50.0,
+        Category:Crate,
         } 
 
     recipe Take .223 from Crate
@@ -254,5 +264,6 @@ module Perdition
         Ammocrate223,
         Result:223Bullets=30,
         Time:50.0,
-        } 
-    }
+        Category:Crate,
+        }
+}
