@@ -141,7 +141,6 @@ recipe Build Baseball Bat
         SkillRequired:MetalWelding=4/Carpentry=3,
         OnGiveXP:Recipe.OnGiveXP.MetalWelding20,
         OnCreate:BSItem_OnCreate,
-        NeedTobeLearn:false,
         }
 
     recipe Make Gas Can from Compost
