@@ -164,7 +164,7 @@ module Perdition
     {
        100ScrapBox,
 
-  	   ScrapMetal=100,
+  	   Result:ScrapMetal=100,
        Time:50.0,
     }
     
