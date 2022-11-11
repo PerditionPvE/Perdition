@@ -88,6 +88,78 @@ module Perdition
         NeedToBeLearn:true,
         }
 
+    recipe Masterwork Knife
+        {
+        MetalBar=2,
+        IronIngot=1,
+        Charcoal=1,
+        Matches/Lighter=1,
+        keep Hammer/BallPeenHammer,
+        keep Tongs,
+
+        Result:SuperKnife,
+        Time:1000.0,
+        Category:Perdition,
+        SkillRequired:MetalWelding=9,
+        OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
+        OnCreate:BSItem_OnCreate,
+        NeedToBeLearn:true,
+        }
+
+    recipe Masterwork Cleaver
+        {
+        MetalBar=2,
+        IronIngot=1,
+        Charcoal=1,
+        Matches/Lighter=1,
+        keep Hammer/BallPeenHammer,
+        keep Tongs,
+
+        Result:SuperCleaver,
+        Time:1000.0,
+        Category:Perdition,
+        SkillRequired:MetalWelding=9,
+        OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
+        OnCreate:BSItem_OnCreate,
+        NeedToBeLearn:true,
+        }
+
+    recipe Masterwork Sledgehammer
+        {
+        MetalBar=2,
+        IronIngot=1,
+        Charcoal=1,
+        Matches/Lighter=1,
+        keep Hammer/BallPeenHammer,
+        keep Tongs,
+
+        Result:SuperSledgehammer,
+        Time:1000.0,
+        Category:Perdition,
+        SkillRequired:MetalWelding=9,
+        OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
+        OnCreate:BSItem_OnCreate,
+        NeedToBeLearn:true,
+        }
+
+    recipe Masterwork Shovel
+        {
+        MetalBar=2,
+        IronIngot=1,
+        Charcoal=1,
+        Matches/Lighter=1,
+        keep Hammer/BallPeenHammer,
+        keep Tongs,
+
+        Result:SuperShovel,
+        Time:1000.0,
+        Category:Perdition,
+        SkillRequired:MetalWelding=9,
+        OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
+        OnCreate:BSItem_OnCreate,
+        NeedToBeLearn:true,
+        }
+
    recipe Unbox Scrap
     {
        100ScrapBox,
