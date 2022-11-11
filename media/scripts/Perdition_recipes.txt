@@ -34,7 +34,7 @@ module Perdition
         Time:1000.0,
         Category:Perdition,
         SkillRequired:MetalWelding=9,
-        OnGiveXP:Recipe.OnGiveXP.MetalWelding35,
+        OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
         OnCreate:BSItem_OnCreate,
         NeedToBeLearn:true,
         }
@@ -50,7 +50,7 @@ module Perdition
         Time:1000.0,
         Category:Perdition,
         SkillRequired:MetalWelding=10,
-        OnGiveXP:Recipe.OnGiveXP.MetalWelding35,
+        OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
         OnCreate:BSItem_OnCreate,
         NeedToBeLearn:true,
         }
@@ -66,7 +66,7 @@ module Perdition
         Time:1000.0,
         Category:Perdition,
         SkillRequired:MetalWelding=8,
-        OnGiveXP:Recipe.OnGiveXP.MetalWelding35,
+        OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
         OnCreate:BSItem_OnCreate,
         NeedToBeLearn:true,
         }
@@ -83,7 +83,7 @@ module Perdition
         Time:1000.0,
         Category:Perdition,
         SkillRequired:MetalWelding=9,
-        OnGiveXP:Recipe.OnGiveXP.MetalWelding35,
+        OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
         OnCreate:BSItem_OnCreate,
         NeedToBeLearn:true,
         }
