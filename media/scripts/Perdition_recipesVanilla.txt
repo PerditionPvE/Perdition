@@ -153,7 +153,7 @@ recipe Build Baseball Bat
         Result:PetrolCan=2,
         Time:1500.0,
         Category:General,
-        NeedTobeLearn:True,
+        NeedTobeLearn:true,
         }
 
     recipe Extract Fuel from Lighter
@@ -185,7 +185,7 @@ recipe Build Baseball Bat
         Result:IronIngot,
         Time:2000.0,
         Category:Metalwelding,
-        NeedTobeLearn:True,
+        NeedTobeLearn:true,
         }
 
     recipe Propane Tank
@@ -196,7 +196,7 @@ recipe Build Baseball Bat
         Result:PropaneTank,
         Time:1500.0,
         Category:General,
-        NeedTobeLearn:True,
+        NeedTobeLearn:true,
         }
 }
 
