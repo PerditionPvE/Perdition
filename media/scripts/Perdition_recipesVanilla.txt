@@ -115,7 +115,7 @@ recipe Build Baseball Bat
         CanBeDoneFromFloor:true,
         OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
         Category:Welding,
-    }*/
+    }
 /****************************** Misc Recipes ******************************/
     recipe Make Rubber Duck
 	{
