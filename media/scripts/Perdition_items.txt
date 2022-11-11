@@ -158,6 +158,7 @@ module Perdition
         {
                 /* Metadata */
         DisplayName = Dragonforged Katana,
+        DisplayCategory = Weapon,
         WeaponSprite	=	Katana,
 
                 /* Damage */
@@ -348,6 +349,7 @@ module Perdition
 
     item SuperKnife
         {
+        DisplayCategory = Weapon
         MaxRange			= 0.9,
         WeaponSprite			= HuntingKnife,
         MinAngle			= 0.65,
@@ -428,6 +430,7 @@ module Perdition
     	DoorDamage	=	20,
     	SwingAnim	=	Bat,
     	DisplayName	=	The Butcher,
+    	DisplayCategory = Weapon,
     	MinRange	=	0.61,
     	SwingTime	=	4,
     	KnockdownMod	=	2,
@@ -521,7 +524,7 @@ module Perdition
 
     item SuperShovel
         {
-        DisplayCategory 		= Gardening,
+        DisplayCategory 		= ToolWeapon,
         Type 				= Weapon,
         DisplayName 			= Lobo,
         Icon				= Shovel,
@@ -639,5 +642,6 @@ item 100ScrapBox
     Type		= Normal,
     DisplayName	= Box Of Scrap,
     Icon		= Box,
+    DisplayCategory = Crate
     }
 }
