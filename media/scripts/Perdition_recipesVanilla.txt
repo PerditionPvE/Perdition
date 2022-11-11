@@ -127,12 +127,12 @@ recipe Build Baseball Bat
         Category:Quacc,
 	}
 
-    recipe Make Metal Bar
+    recipe Forge Metal Bar
         {
         WoodenStick=4,
         ScrapMetal=10,
         keep Tongs,
-        keep BallPeenHammer/ClubHammer/Hammer/HammerStone,
+        keep [Recipes.GetItemTypes.Hammer],
 
         Result:MetalBar,
         Time: 200.0,
@@ -146,44 +146,44 @@ recipe Build Baseball Bat
         {
         EmptyPetrolCan=2,
         CompostBag=10,
-        SugarBrown/Sugar=5,
+        [Recipe.GetItemTypes.Sugar];5,
         Glue=3,
 
         Result:PetrolCan=2,
         Time:1500.0,
-        Category:General,
+        Category:Farming,
         NeedToBeLearn:true,
         }
 
     recipe Extract Fuel from Lighter
         {
-        Lighter=200,
-        EmptyPetrolCan,
+        Lighter=10,
+        PetrolCan,
 
         Result:PetrolCan=1,
         Time:1200.0,
-        Category:General,
-        NeedTobeLearn:false,
-         }
+        Category:Survivalist,
+        }
+
     recipe Make Gas Can
         {
         Glue=1,
-        BleachEmpty=3,
+        destroy Bleach=3,
 
         Result:EmptyPetrolCan,
-        Category:General,
-        NeedToBeLearn:false,
+        Category:Survivalist,
         }
+
     recipe Refine Unusable Metal
         {
         UnusableMetal=3,
-        BlowTorch=2,
+        BlowTorch=2, /* this will be reworked with metallurgy update */
         keep WeldingMask,
         keep Tongs,
 
         Result:IronIngot,
         Time:2000.0,
-        Category:Metalwelding,
+        Category:Welding,
         NeedToBeLearn:true,
         }
 
@@ -194,7 +194,7 @@ recipe Build Baseball Bat
 
         Result:PropaneTank,
         Time:1500.0,
-        Category:General,
+        Category:Welding,
         NeedToBeLearn:true,
         }
 }
