@@ -136,7 +136,7 @@ recipe Build Baseball Bat
         keep BallPeenHammer/ClubHammer/Hammer/HammerStone,
 
         Result:MetalBar,
-        Time: 200.0
+        Time: 200.0,
         Category:Metalwelding,
         SkillRequired:MetalWelding=4/Carpentry=3,
         OnGiveXP:Recipe.OnGiveXP.MetalWelding20,
@@ -152,7 +152,7 @@ recipe Build Baseball Bat
         Glue=3,
 
         Result:PetrolCan=2,
-        Time:1500.0
+        Time:1500.0,
         Category:General,
         NeedTobeLearn:True,
         }
