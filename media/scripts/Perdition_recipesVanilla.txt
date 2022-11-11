@@ -127,7 +127,8 @@ recipe Build Baseball Bat
         Time:10.0,
         Category:Quacc,
 	}
-    recipe Metal Bar
+
+    recipe Make Metal Bar
         {
         WoodenStick=4,
         ScrapMetal=10,
@@ -142,7 +143,8 @@ recipe Build Baseball Bat
         OnCreate:BSItem_OnCreate,
         NeedTobeLearn:false,
         }
-    recipe Gas Can from Compost
+
+    recipe Make Gas Can from Compost
         {
         EmptyPetrolCan=2,
         CompostBag=10,
@@ -154,7 +156,8 @@ recipe Build Baseball Bat
         Category:General,
         NeedTobeLearn:True,
         }
-    recipe Gas Can from Lighter
+
+    recipe Extract Fuel from Lighter
         {
         Lighter=200,
         EmptyPetrolCan,
@@ -164,7 +167,7 @@ recipe Build Baseball Bat
         Category:General,
         NeedTobeLearn:false,
          }
-    recipe Empty Gas Can
+    recipe Make Gas Can
         {
         Glue=1,
         BleachEmpty=3,
@@ -173,7 +176,7 @@ recipe Build Baseball Bat
         Category:General,
         NeedToBeLearn:false,
         }
-    recipe Workable Iron
+    recipe Refine Unusable Metal
         {
         UnusableMetal=3,
         BlowTorch=2,
