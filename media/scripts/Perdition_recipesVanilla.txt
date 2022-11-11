@@ -101,7 +101,7 @@ recipe Build Baseball Bat
         SkillRequired:MetalWelding=2,
         CanBeDoneFromFloor:true,
         OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
-        Category:Metalworking,
+        Category:Welding,
     }
 
     recipe Make Barbed Wire
