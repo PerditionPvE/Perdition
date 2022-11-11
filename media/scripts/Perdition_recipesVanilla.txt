@@ -89,7 +89,6 @@ recipe Build Baseball Bat
         OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
     }
 
-	
     /*recipe Make Barbed Wire
     {
         Wire=4,
@@ -137,8 +136,8 @@ recipe Build Baseball Bat
 
         Result:MetalBar,
         Time: 200.0,
-        Category:Metalwelding,
-        SkillRequired:MetalWelding=4/Carpentry=3,
+        Category:Welding,
+        SkillRequired:MetalWelding=4/Woodwork=2,
         OnGiveXP:Recipe.OnGiveXP.MetalWelding20,
         OnCreate:BSItem_OnCreate,
         }
