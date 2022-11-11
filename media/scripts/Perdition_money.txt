@@ -1,0 +1,50 @@
+module Base
+{
+    item 10bill
+        {
+		Weight		= 0.01,
+		Type		= Normal,
+		DisplayName	= 10$ Bill,
+		Icon		= Money,
+    }
+
+    item 20bill
+        {
+		Weight		= 0.01,
+		Type		= Normal,
+		DisplayName	= 20$ Bill,
+		Icon		= Money,
+    }
+
+    item 50bill
+        {
+		Weight		= 0.01,
+		Type		= Normal,
+		DisplayName	= 50$ Bill,
+		Icon		= Money,
+    }
+
+    item 100bill
+        {
+		Weight		= 0.01,
+		Type		= Normal,
+		DisplayName	= 100$ Bill,
+		Icon		= Money,
+    }
+
+    item 1000bill
+        {
+		Weight		= 0.01,
+		Type		= Normal,
+		DisplayName	= 1000$ Bill,
+		Icon		= Money,
+    }
+
+    item 10000bill
+        {
+		Weight		= 0.01,
+		Type		= Normal,
+		DisplayName	= 10000$ Bill,
+		Icon		= Money,
+    }
+}
