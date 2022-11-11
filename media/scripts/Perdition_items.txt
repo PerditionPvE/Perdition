@@ -67,7 +67,7 @@ module Perdition
     item CrowbarUpgradeManual
         {
         DisplayName = The Master's Forge: Crowbar,
-        DisplayCategory = Skillbook,
+        DisplayCategory = SkillBook,
         Type = Literature,
         Weight = 0.5,
         Icon = Book,
@@ -145,7 +145,7 @@ module Perdition
     item AxeUpgradeManual
         {
         DisplayName = The Master's Forge: Axes,
-        DisplayCategory = Skillbook,
+        DisplayCategory = SkillBook,
         Type = Literature,
         Weight = 0.5,
         Icon = Book,
@@ -221,7 +221,7 @@ module Perdition
     item KatanaUpgradeManual
         {
         DisplayName = The Master's Forge: Katana,
-        DisplayCategory = Skillbook,
+        DisplayCategory = SkillBook,
         Type = Literature,
         Weight = 0.5,
         Icon = Book,
@@ -277,7 +277,7 @@ module Perdition
     item PickaxeUpgradeManual
         {
         DisplayName = The Master's Forge: Pickaxe,
-        DisplayCategory = Skillbook,
+        DisplayCategory = SkillBook,
         Type = Literature,
         Weight = 0.5,
         Icon = Book,
@@ -337,7 +337,7 @@ module Perdition
     item MacheteUpgradeManual
         {
         DisplayName = The Master's Forge: Machete,
-        DisplayCategory = Skillbook,
+        DisplayCategory = SkillBook,
         Type = Literature,
         Weight = 0.5,
         Icon = Book,
@@ -399,7 +399,7 @@ module Perdition
     item KnifeUpgradeManual
         {
         DisplayName = The Master's Forge: Knives,
-        DisplayCategory = Skillbook,
+        DisplayCategory = SkillBook,
         Type = Literature,
         Weight = 0.5,
         Icon = Book,
@@ -449,7 +449,7 @@ module Perdition
     item CleaverUpgradeManual
         {
         DisplayName = The Master's Forge: Butchering,
-        DisplayCategory = Skillbook,
+        DisplayCategory = SkillBook,
         Type = Literature,
         Weight = 0.5,
         Icon = Book,
@@ -510,7 +510,7 @@ module Perdition
     item SHammerUpgradeManual
         {
         DisplayName = The Master's Forge: The Maul,
-        DisplayCategory = Skillbook,
+        DisplayCategory = SkillBook,
         Type = Literature,
         Weight = 0.5,
         Icon = Book,
@@ -570,7 +570,7 @@ module Perdition
     item ShovelUpgradeManual
         {
         DisplayName = The Master's Forge: Shovel,
-        DisplayCategory = Skillbook,
+        DisplayCategory = SkillBook,
         Type = Literature,
         Weight = 0.5,
         Icon = Book,
