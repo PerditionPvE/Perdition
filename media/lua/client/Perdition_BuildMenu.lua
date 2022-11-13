@@ -21,6 +21,32 @@ Perdition.doBuildMenu = function(player, context, worldobjects, test)
         local furnitureOption = subWM:getNew(context)
     end
 end
+PerditionBuildMenu.checkElectricalMaterials = function(player, toolTip, meta)
+    setmetatable(meta, {__index={copperWire = 0, electronicsScrap = 0, light = 0, amplifier = 0, aluminum = 0, screws = 0}})
+    local copperWire, electronicsScrap, light, amplifier, aluminum, screws =
+    meta[1] or meta.copperWire,
+    meta[2] or meta.electronicsScrap,
+    meta[3] or meta.light,
+    meta[4] or meta.amplifier,
+    meta[5] or meta.screws
+
+    local checks = {}
+    if copperWire > 0 then
+        -- seek copper wire in inventories or on ground
+
+    end
+    if electronicsScrap > 0 then
+    end
+    if light > 0 then
+        -- search for any light bulb
+    end
+    if amplifier > 0 then
+
+    end
+    if screws > 0 then
+
+    end
+end
 
 PerditionBuildMenu.checkSkillRequirement = function(player, toolTip, meta)
     setmetatable(meta, {__index={carpentry = 0, farming = 0, firstaid=0, electrical=0, metalworking=0, mechanics=0, tailoring=0}})
