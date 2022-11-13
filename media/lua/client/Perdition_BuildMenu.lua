@@ -6,12 +6,20 @@ local function predicateWeldingMask(item) --from ISBlacksmithMenu.lua
     return item:hasTag("WeldingMask") or item:getType() == "WeldingMask"
 end
 
-Perdition.doBuildMenu = function(player, context, worldobjects, test)
+PerditionBuildMenu.doBuildMenu = function(playerID, context, worldobjects, test)
     if test and ISWorldObjectContextMenu.Test then return true end
-    player = getSpecificPlayer(player) -- gets the specific player this argument is from
+    if test then return ISWorldObjectContextMenu.setTest() end
+
+    local player = getSpecificPlayer(playerID)
     local inv = player:getInventory()
 
-    if playerObj:getVehicle() then return; end -- checks to make sure the player is not in a car
+    local engineerOption = context:addOption("Engineering", worldobjects, nil)
+    local submenu = ISContextMenu:getNew(context)
+    context:addSubMenu(engineerOption, submenu)
+    local ovenOption = submenu:addOption("Ovens", worldobjects, nil)
+    local subMenuOven = submenu:getNew(ovenOption)
+
+    -- ovens
 
     if (inv:containsTypeRecurse("BlowTorch") and inv:containsEvalRecurse(predicateWeldingMask)) or ISBuildMenu.cheat then
         local weldingMenu = context:addOption("Perdition Welding", worldobjects, nil)
