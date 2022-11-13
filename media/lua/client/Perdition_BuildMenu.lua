@@ -22,24 +22,72 @@ Perdition.doBuildMenu = function(player, context, worldobjects, test)
     end
 end
 
-PerditionBuildMenu.checkSkillRequirement = function(player, meta)
-    setmetatable(meta, {__index={carpentry = 0, cooking = 0, farming = 0, firstaid=0, electrical=0, metalworking=0, mechanics=0, tailoring=0}})
-    local carpentry, cooking, farming, firstaid, electrical, metalworking, mechanics, tailoring =
+PerditionBuildMenu.checkSkillRequirement = function(player, toolTip, meta)
+    setmetatable(meta, {__index={carpentry = 0, farming = 0, firstaid=0, electrical=0, metalworking=0, mechanics=0, tailoring=0}})
+    local carpentry, farming, firstaid, electrical, metalworking, mechanics, tailoring =
     meta[1] or meta.carpentry,
-    meta[2] or meta.cooking,
-    meta[3] or meta.farming,
-    meta[4] or meta.firstaid,
-    meta[5] or meta.electrical,
-    meta[6] or meta.metalworking,
-    meta[7] or meta.mechanics,
-    meta[8] or meta.tailoring
+    meta[2] or meta.farming,
+    meta[3] or meta.firstaid,
+    meta[4] or meta.electrical,
+    meta[5] or meta.metalworking,
+    meta[6] or meta.mechanics,
+    meta[7] or meta.tailoring
 
     local checks = {}
+    if carpentry > 0 then
+        if player:getPerkLevel(Perks.WoodWork) >= carpentry then
+            toolTip.description = toolTip.description .. "<LINE> <RGB:0,1,0> " .. getText("IGUI_perks_WoodWork") .. " " .. player:getPerkLevel(Perks.WoodWork) .. "/" .. carpentry
+        else
+            toolTip.description = toolTip.description .. "<LINE> <RGB:1,0,0> " .. getText("IGUI_perks_WoodWork") .. " " .. player:getPerkLevel(Perks.WoodWork) .. "/" .. carpentry
+        end
+    end
+    if farming > 0 then
+        if player:getPerkLevel(Perks.Farming) >= farming then
+            toolTip.description = toolTip.description .. "<LINE> <RGB:0,1,0> " .. getText("IGUI_perks_Farming") .. " " .. player:getPerkLevel(Perks.Farming) .. "/" .. farming
+        else
+            toolTip.description = toolTip.description .. "<LINE> <RGB:1,0,0> " .. getText("IGUI_perks_Farming") .. " " .. player:getPerkLevel(Perks.Farming) .. "/" .. farming
+        end
+    end
+    if firstaid > 0 then
+        if player:getPerkLevel(Perks.Doctor) >= firstaid then
+            toolTip.description = toolTip.description .. "<LINE> <RGB:0,1,0> " .. getText("IGUI_perks_Doctor") .. " " .. player:getPerkLevel(Perks.Doctor) .. "/" .. firstaid
+        else
+            toolTip.description = toolTip.description .. "<LINE> <RGB:1,0,0> " .. getText("IGUI_perks_Doctor") .. " " .. player:getPerkLevel(Perks.Doctor) .. "/" .. firstaid
+        end
+    end
+    if electrical > 0 then
+        if player:getPerkLevel(Perks.Electricity) >= electrical then
+            toolTip.description = toolTip.description .. "<LINE> <RGB:0,1,0> " .. getText("IGUI_perks_Electricity") .. " " .. player:getPerkLevel(Perks.Electricity) .. "/" .. electrical
+        else
+            toolTip.description = toolTip.description .. "<LINE> <RGB:1,0,0> " .. getText("IGUI_perks_Electricity") .. " " .. player:getPerkLevel(Perks.Electricity) .. "/" .. electrical
+        end
+    end
+    if metalworking > 0 then
+        if player:getPerkLevel(Perks.MetalWelding) >= metalworking then
+            toolTip.description = toolTip.description .. "<LINE> <RGB:0,1,0> " .. getText("IGUI_perks_MetalWelding") .. " " .. player:getPerkLevel(Perks.MetalWelding) .. "/" .. metalworking
+        else
+            toolTip.description = toolTip.description .. "<LINE> <RGB:1,0,0> " .. getText("IGUI_perks_MetalWelding") .. " " .. player:getPerkLevel(Perks.MetalWelding) .. "/" .. metalworking
+        end
+    end
+    if mechanics > 0 then
+        if player:getPerkLevel(Perks.Mechanics) >= mechanics then
+            toolTip.description = toolTip.description .. "<LINE> <RGB:0,1,0> " .. getText("IGUI_perks_Mechanics") .. " " .. player:getPerkLevel(Perks.Mechanics) .. "/" .. mechanics
+        else
+            toolTip.description = toolTip.description .. "<LINE> <RGB:1,0,0> " .. getText("IGUI_perks_Mechanics") .. " " .. player:getPerkLevel(Perks.Mechanics) .. "/" .. mechanics
+        end
+    end
+    if tailoring > 0 then
+        if player:getPerkLevel(Perks.Tailoring) >= tailoring then
+            toolTip.description = toolTip.description .. "<LINE> <RGB:0,1,0> " .. getText("IGUI_perks_Tailoring") .. " " .. player:getPerkLevel(Perks.Tailoring) .. "/" .. tailoring
+        else
+            toolTip.description = toolTip.description .. "<LINE> <RGB:1,0,0> " .. getText("IGUI_perks_Tailoring") .. " " .. player:getPerkLevel(Perks.Tailoring) .. "/" .. tailoring
+        end
+    end
+
     checks.append(player:getPerkLevel(Perks.WoodWork) >= carpentry)
-    checks.append(player:getPerkLevel(Perks.Cooking) >= cooking)
     checks.append(player:getPerkLevel(Perks.Farming) >= farming)
     checks.append(player:getPerkLevel(Perks.Doctor) >= firstaid)
-    checks.append(player:getPerkLevel(Perks.Electrical) >= electrical)
+    checks.append(player:getPerkLevel(Perks.Electricity) >= electrical)
     checks.append(player:getPerkLevel(Perks.MetalWelding) >= metalworking)
     checks.append(player:getPerkLevel(Perks.Mechanics) >= mechanics)
     checks.append(player:getPerkLevel(Perks.Tailoring) >= tailoring)
