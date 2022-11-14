@@ -8,7 +8,7 @@ module Perdition
     item SuperCrowbar
         {
                 /* Metadata */
-        DisplayName	              = Lambda Crowbar,
+        DisplayName	              = pieetrr's skill issue,
         DisplayCategory           = ToolWeapon,
         WeaponSprite              = Crowbar,
         Icon                      = Crowbar,
