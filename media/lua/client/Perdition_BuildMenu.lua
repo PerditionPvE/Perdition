@@ -54,6 +54,49 @@ PerditionBuildMenu.checkElectricalMaterials = function(player, toolTip, meta)
     if screws > 0 then
 
     end
+    for _, val in ipairs(checks) do
+        if not val then
+            return false, toolTip
+        end
+    end
+    return true, toolTip
+end
+
+PerditionBuildMenu.checkMetalWeldingMaterials = function(player, toolTip, meta)
+    setmetatable(meta, {__index{metalPipes = 0, smallMetalSheet = 0, metalSheet = 0, hinge = 0, scrapMetal = 0, metalBar=0, wire=0}})
+    local metalPipes, smallMetalSheet, metalSheet, hinge, scrapMetal, metalBar, wire =
+    meta[1] or meta.metalPipes,
+    meta[2] or meta.smallMetalSheet,
+    meta[3] or meta.metalSheet,
+    meta[4] or meta.hinge,
+    meta[5] or meta.scrapMetal,
+    meta[6] or meta.metalBar,
+    meta[7] or meta.wire;
+
+    local nameref = {
+        {metalPipes, "Base", "MetalPipe"},
+        {smallMetalSheet, "Base", "SmallSheetMetal"},
+        {metalSheet, "Base", "SheetMetal"},
+        {hinge, "Base", "Hinge"},
+        {scrapMetal, "Base", "ScrapMetal"},
+        {metalBar, "Base", "MetalBar"},
+        {wire, "Base", "Wire"}
+    }
+
+    local isOk = true
+    for i, group in ipairs(nameref) do
+        local req, module, name = table.unpack(group)
+        if req > 0 then
+            local count = ISBlacksmithMenu.getMaterialCount(player, name)
+            if count > req then
+                toolTip.description = toolTip.description .. "<LINE> <RGB:0,1,0> " .. getItemNameFromFullType(module .. "." .. name) .. " " .. count .. "/" .. req
+            else
+                isOk = false
+                toolTip.description = toolTip.description .. "<LINE> <RGB:1,0,0> " .. getItemNameFromFullType(module .. "." .. name) .. " " .. count .. "/" .. req
+            end
+        end
+    end
+    return isOk, toolTip
 end
 
 PerditionBuildMenu.checkSkillRequirement = function(player, toolTip, meta)
