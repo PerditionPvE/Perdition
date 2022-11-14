@@ -1,0 +1,20 @@
+module Base
+{
+    /* from build 41.77 */
+    item BlowTorch
+    {
+        DisplayCategory = Tool,
+        Weight	=	1.0,
+        Type	=	Drainable,
+        UseWhileEquipped	=	FALSE,
+        UseDelta	=	0.01,
+        DisplayName	=	Propane Torch,
+        Icon	=	BlowTorch,
+        MetalValue = 20,
+        KeepOnDeplete = true,
+        StaticModel = BlowTorch,
+        WeightEmpty = 0.3,
+        WorldStaticModel = BlowtorchGround,
+        cantBeConsolided = TRUE,
+    }
+}
