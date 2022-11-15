@@ -8,7 +8,7 @@ module Perdition
     item SuperCrowbar
         {
                 /* Metadata */
-        DisplayName	              = pieetrr's skill issue,
+        DisplayName	              = pieetrr's skillshu,
         DisplayCategory           = ToolWeapon,
         WeaponSprite              = Crowbar,
         Icon                      = Crowbar,
