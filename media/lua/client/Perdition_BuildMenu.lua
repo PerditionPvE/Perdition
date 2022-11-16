@@ -35,10 +35,9 @@ PerditionBuildMenu.doBuildMenu = function(playerID, context, worldobjects, test)
     context:addSubMenu(engineerOption, submenu)
     local ovenOption = submenu:addOption("Ovens", worldobjects, nil)
     local subMenuOven = submenu:getNew(ovenOption)
-    getSpriteManager("Base.Mov_GreenOven")
     -- ovens
 
-    local ovenGreenOption = submenuOven:addOption("Green Oven", worldobjects, PerditionBuildMenu.onBuildOvenGreen, player)
+    local ovenGreenOption = subMenuOven:addOption("Green Oven", worldobjects, PerditionBuildMenu.onStove, player)
     local toolTip = ISBlacksmithMenu.addToolTip(ovenGreenOption, getText("ContextMenu_OvenGreen"), "appliances_cooking_01_0")
     local hasElectricalParts, toolTip = PerditionBuildMenu.checkElectricalMaterials(player, toolTip, {electronicsScrap=10, copperWire=4})
     local hasMetalWeldingParts, toolTip = PerditionBuildMenu.checkMetalWeldingMaterials(player, toolTip, {metalSheet=4, hinge=1})
