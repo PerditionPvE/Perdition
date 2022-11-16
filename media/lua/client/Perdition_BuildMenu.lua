@@ -29,12 +29,89 @@ PerditionBuildMenu.doBuildMenu = function(playerID, context, worldobjects, test)
 
     -- ovens
 
-    if (inv:containsTypeRecurse("BlowTorch") and inv:containsEvalRecurse(predicateWeldingMask)) or ISBuildMenu.cheat then
-        local weldingMenu = context:addOption("Perdition Welding", worldobjects, nil)
-        local subWM = ISContextMenu:getNew(context)
-        context:addSubMenu(weldingMenu, subWM)
-        local keepMenu = true
-        local furnitureOption = subWM:getNew(context)
+    local ovenGreenOption = submenuOven:addOption("Green Oven", worldobjects, PerditionBuildMenu.onBuildOvenGreen, playerID)
+    local toolTip = ISBlacksmithMenu.addToolTip(ovenGreenOption, getText("ContextMenu_OvenGreen"), "appliances_cooking_01_9")
+    local hasElectricalParts, toolTip = PerditionBuildMenu.checkElectricalMaterials(player, toolTip, {electronicsScrap=10, copperWire=4})
+    local hasMetalWeldingParts, toolTip = PerditionBuildMenu.checkMetalWeldingMaterials(player, toolTip, {metalSheet=4, hinge=1})
+    local hasTools, toolTip = PerditionBuildMenu.checkTools(player, toolTip, 1, true, false, false)
+    local hasSkills, toolTip = PerditionBuildMenu.checkSkillRequirement(player, toolTip, {metalworking=4, electrical=4})
+    if not (hasElectricalParts and hasMetalWeldingParts and hasTools and hasSkills) then ovenGreenOption.notAvailable = true end
+
+end
+
+PerditionBuildMenu.checkTools = function(player, toolTip, torchUse, needsScrewdriver, needsHammer, needsSaw)
+    local isOk = true
+    local inv = player:getInventory()
+
+    -- blowtorch searching, from ISBlacksmithMenu.lua <function> ISBlacksmithMenu.checkMetalWeldingFurnitures
+    local blowTorch = inv:getItemFirstTypeRecurse("Base.BlowTorch")
+    local blowTorchUseLeft = inv:getUsesTypeRecurse("Base.BlowTorch")
+    if ISBlacksmithMenu.groundItemUses["Base.BlowTorch"] then
+        blowTorchUseLeft = blowTorchUseLeft + ISBlacksmithMenu.groundItemUses["Base.BlowTorch"]
+        local maxUses = 0
+        local blowTorchGround = nil
+        for _,item2 in ipairs(ISBlacksmithMenu.groundItems["Base.BlowTorch"]) do
+            if item2:getDrainableUsesInt() > maxUses then
+                blowTorchGround = item2
+                maxUses = item2:getDrainableUsesInt()
+            end
+        end
+        blowTorch = blowTorch or blowTorchGround
+    end
+
+    -- check if blowtorch has enough uses
+    if torchUse > 0 then
+        if blowTorch then
+            if blowTorchUseLeft > torchUse then
+                toolTip.description = toolTip.description .. " <LINE> <RGB:0,1,0> " .. getItemNameFromFullType("Base.BlowTorch") .. " " .. getText("ContextMenu_Uses") .. " " .. blowTorchUseLeft .. "/" .. torchUse;
+            else
+                toolTip.description = toolTip.description .. " <LINE> <RGB:1,0,0> " .. getItemNameFromFullType("Base.BlowTorch") .. " " .. getText("ContextMenu_Uses") .. " " .. blowTorchUseLeft .. "/" .. torchUse;
+                isOk = false
+            end
+        else
+            toolTip.description = toolTip.description .. " <LINE> <RGB:1,0,0> " .. getItemNameFromFullType("Base.BlowTorch") .. " 0" .. "/" .. torchUse;
+            isOk = false
+        end
+
+        -- check if have enough welding rods
+        local rodUse = ISBlacksmithMenu.weldingRodUses(torchUse)
+        local rods = ISBlacksmithMenu.getMaterialUses(player, "Base.WeldingRods")
+        if ro0dUse > 0 then
+            if rods > rodUse then
+                toolTip.description = toolTip.description .. " <LINE> <RGB:0,1,0> " .. getItemNameFromFullType("Base.WeldingRods") .. " " .. getText("ContextMenu_Uses") .. " " .. rods .. "/" .. rodUse
+            else
+                toolTip.description = toolTip.description .. " <LINE> <RGB:1,0,0> " .. getItemNameFromFullType("Base.WeldingRods") .. " " .. getText("ContextMenu_Uses") .. " " .. rods .. "/" .. rodUse
+                isOk = false
+            end
+        end
+        if inv:containsEvalRecurse(predicateWeldingMask) then
+            toolTip.description = toolTip.description .. " <LINE> <RGB:0,1,0> " .. getItemNameFromFullType("Base.WeldingMask") .. " 1/1" ;
+        else
+            toolTip.description = toolTip.description .. " <LINE> <RGB:1,0,0> " .. getItemNameFromFullType("Base.WeldingMask") .. " 0/1" ;
+            isOk = false
+        end
+    end
+
+    if needsScrewdriver then
+        if inv:containsEvalRecurse(predicateScrewdriver) then
+            toolTip.description = toolTip.description .. " <LINE> <RGB:0,1,0> " .. getItemNameFromFullType("Base.Screwdriver") .. " 1/1"
+        else
+            toolTip.description = toolTip.description .. " <LINE> <RGB:1,0,0> " .. getItemNameFromFullType("Base.Screwdriver") .. " 0/1"
+            isOk = false
+        end
+    end
+
+    if needsHammer then
+        if inv:containsEvalRecurse(predicateHammer) then
+            toolTip.description = toolTip.description .. " <LINE> <RGB:0,1,0> " .. getItemNameFromFullType("Base.Hammer") .. " 1/1"
+        else
+            toolTip.description = toolTip.description .. " <LINE> <RGB:1,0,0> " .. getItemNameFromFullType("Base.Hammer") .. " 0/1"
+            isOk = false
+        end
+    end
+    -- with each if statement my sanity drops
+    if needsSaw then
+        print("you literally don't need a saw for anything fuck you")
     end
 end
 PerditionBuildMenu.checkElectricalMaterials = function(player, toolTip, meta)
