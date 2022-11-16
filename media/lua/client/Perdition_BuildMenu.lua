@@ -123,28 +123,27 @@ PerditionBuildMenu.checkElectricalMaterials = function(player, toolTip, meta)
     meta[4] or meta.amplifier,
     meta[5] or meta.screws
 
-    local checks = {}
-    if copperWire > 0 then
-        -- seek copper wire in inventories or on ground
+    local isOk = true
+    local namerefs = {
+        {copperWire, "Base", "ElectricWire"},
+        {electronicsScrap, "Base", "ElectronicsScrap"},
+        {light, "Base", "Lightbulb"},
+        {amplifier, "Base", "Aluminum"},
+        {screws, "Base", "Screws"}
+    }
 
-    end
-    if electronicsScrap > 0 then
-    end
-    if light > 0 then
-        -- search for any light bulb
-    end
-    if amplifier > 0 then
-
-    end
-    if screws > 0 then
-
-    end
-    for _, val in ipairs(checks) do
-        if not val then
-            return false, toolTip
+    for _, group in ipairs(namerefs) do
+        local req, module, name = table.unpack(namerefs)
+        if req > 0 then
+            local count = ISBlacksmithMenu.getMaterialCount(player, name)
+            if count > req then
+                toolTip.description = toolTip.description .. "<LINE> <RGB:0,1,0> " .. getItemNameFromFullType(module .. "." .. name) .. " " .. count .. "/" .. req
+            else
+                toolTip.description = toolTip.description .. "<LINE> <RGB:1,0,0> " .. getItemNameFromFullType(module .. "." .. name) .. " " .. count .. "/" .. req
+                isOk = false
+            end
         end
     end
-    return true, toolTip
 end
 
 PerditionBuildMenu.checkMetalWeldingMaterials = function(player, toolTip, meta)
