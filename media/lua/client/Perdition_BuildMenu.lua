@@ -14,6 +14,15 @@ local function predicateHammer(item)
     return item:hasTag("Hammer") or item:getType() == "Hammer"
 end
 
+local function getGreenOvenSprite()
+    local sprite = {}
+    sprite.sprite = "appliances_cooking_01_0"
+    sprite.north = "appliances_cooking_01_1"
+    sprite.east  = "appliances_cooking_01_2"
+    sprite.south = "appliances_cooking_01_3"
+    return sprite
+end
+
 PerditionBuildMenu.doBuildMenu = function(playerID, context, worldobjects, test)
     if test and ISWorldObjectContextMenu.Test then return true end
     if test then return ISWorldObjectContextMenu.setTest() end
@@ -26,11 +35,11 @@ PerditionBuildMenu.doBuildMenu = function(playerID, context, worldobjects, test)
     context:addSubMenu(engineerOption, submenu)
     local ovenOption = submenu:addOption("Ovens", worldobjects, nil)
     local subMenuOven = submenu:getNew(ovenOption)
-
+    getSpriteManager("Base.Mov_GreenOven")
     -- ovens
 
-    local ovenGreenOption = submenuOven:addOption("Green Oven", worldobjects, PerditionBuildMenu.onBuildOvenGreen, playerID)
-    local toolTip = ISBlacksmithMenu.addToolTip(ovenGreenOption, getText("ContextMenu_OvenGreen"), "appliances_cooking_01_9")
+    local ovenGreenOption = submenuOven:addOption("Green Oven", worldobjects, PerditionBuildMenu.onBuildOvenGreen, player)
+    local toolTip = ISBlacksmithMenu.addToolTip(ovenGreenOption, getText("ContextMenu_OvenGreen"), "appliances_cooking_01_0")
     local hasElectricalParts, toolTip = PerditionBuildMenu.checkElectricalMaterials(player, toolTip, {electronicsScrap=10, copperWire=4})
     local hasMetalWeldingParts, toolTip = PerditionBuildMenu.checkMetalWeldingMaterials(player, toolTip, {metalSheet=4, hinge=1})
     local hasTools, toolTip = PerditionBuildMenu.checkTools(player, toolTip, 1, true, false, false)
@@ -145,7 +154,6 @@ PerditionBuildMenu.checkElectricalMaterials = function(player, toolTip, meta)
         end
     end
 end
-
 PerditionBuildMenu.checkMetalWeldingMaterials = function(player, toolTip, meta)
     setmetatable(meta, {__index{metalPipes = 0, smallMetalSheet = 0, metalSheet = 0, hinge = 0, scrapMetal = 0, metalBar=0, wire=0}})
     local metalPipes, smallMetalSheet, metalSheet, hinge, scrapMetal, metalBar, wire =
@@ -182,7 +190,6 @@ PerditionBuildMenu.checkMetalWeldingMaterials = function(player, toolTip, meta)
     end
     return isOk, toolTip
 end
-
 PerditionBuildMenu.checkSkillRequirement = function(player, toolTip, meta)
     setmetatable(meta, {__index={carpentry = 0, farming = 0, firstaid=0, electrical=0, metalworking=0, mechanics=0, tailoring=0}})
     local carpentry, farming, firstaid, electrical, metalworking, mechanics, tailoring =
@@ -251,7 +258,7 @@ PerditionBuildMenu.checkSkillRequirement = function(player, toolTip, meta)
     checks.append(player:getPerkLevel(Perks.Electricity) >= electrical)
     checks.append(player:getPerkLevel(Perks.MetalWelding) >= metalworking)
     checks.append(player:getPerkLevel(Perks.Mechanics) >= mechanics)
-    checks.append(player:getPerkLevel(Perks.Tailoring) >= tailoring)
+    checks.append(player:getPerkLevel(Perks.Tailoring) >= tailoring) Moveable:getMovableFullName("Base.Mov_")
 
     for _, val in ipairs(checks) do
         if not val then
@@ -260,3 +267,23 @@ PerditionBuildMenu.checkSkillRequirement = function(player, toolTip, meta)
     end
     return true, toolTip
 end
+
+-- oncraft methods
+
+PerditionBuildMenu.onStove = function(worldobjects, player, torchUse)
+    local sprite = getGreenOvenSprite()
+    local stove = ISStove:new("Green Oven", sprite)
+    stove.firstItem = "BlowTorch"
+    stove.secondItem = "WeldingMask"
+    stove.modData["xp:MetalWelding"] = 30
+    stove.modData["need:Base.ElectronicsScrap"] = "10"
+    stove.modData["need:Base.ElectricWire"] = "4"
+    stove.modData["need:Base.SheetMetal"] = "4"
+    stove.modData["need:Base.Hinge"] = "1"
+    stove.modData["use:Base.BlowTorch"] = torchUse
+    stove.modData["use:Base.WeldingRods"] = ISBlacksmithMenu.weldingRodUses(torchUse)
+    stove.player = player
+    getCell():setDrag(stove, player)
+end
+
+Events.OnFillWorldObjectContextMenu.Add(PerditionBuildMenu.doBuildMenu)
