@@ -267,6 +267,14 @@ module Perdition
         Category:Crate,
         }
         /***************************** Sacking vegetables ******************************/
+    
+    recipe Sack Strawberry
+        {
+        Strawberry=16,
+        Result:SackProduce_Strawberry,
+        Time:250.0,
+        Category:General,
+        }
     recipe Sack Corn
         {
         Corn=12,
