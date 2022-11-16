@@ -6,6 +6,14 @@ local function predicateWeldingMask(item) --from ISBlacksmithMenu.lua
     return item:hasTag("WeldingMask") or item:getType() == "WeldingMask"
 end
 
+local function predicateScrewdriver(item)
+    return item:hasTag("Screwdriver") or item:getType() == "Screwdriver"
+end
+
+local function predicateHammer(item)
+    return item:hasTag("Hammer") or item:getType() == "Hammer"
+end
+
 PerditionBuildMenu.doBuildMenu = function(playerID, context, worldobjects, test)
     if test and ISWorldObjectContextMenu.Test then return true end
     if test then return ISWorldObjectContextMenu.setTest() end
