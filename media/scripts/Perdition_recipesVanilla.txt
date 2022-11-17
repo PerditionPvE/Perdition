@@ -212,6 +212,18 @@ recipe Build Baseball Bat
         /***************************** Tailoring Recipes  ******************************/
     recipe Tailor T-Shirt
         {
+        Rope/SheetRope=4,Thread=5,
+        Keep Needle,
+        Keep Scissors,
+        Keep Recipe.GetItemTypes.SharpKnife,
+        
+        Result:Sack,
+        Time:500.0,
+        Category:Farming,
+        SkillRequired:Tailoring=2,
+        }
+    recipe Tailor T-Shirt
+        {
         RippedSheets/RippedSheetsDirty=24,Thread=5,
         Keep Needle,
         Keep Scissors,
