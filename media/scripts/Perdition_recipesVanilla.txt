@@ -115,18 +115,7 @@ recipe Build Baseball Bat
         OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
         Category:Welding,
     }*/
-/****************************** Misc Recipes ******************************/
-    recipe Make Rubber Duck
-	{
-        RubberBand=20,
-        Lighter=1,
-        CanBeDoneFromFloor:true,
-
-        Result:Rubberducky,
-        Time:10.0,
-        Category:Quacc,
-	}
-
+/****************************** Metal Working ******************************/
     recipe Forge Metal Bar
         {
         WoodenStick=4,
@@ -141,39 +130,6 @@ recipe Build Baseball Bat
         OnGiveXP:Recipe.OnGiveXP.MetalWelding20,
         OnCreate:BSItem_OnCreate,
         }
-
-    recipe Make Gas Can from Compost
-        {
-        EmptyPetrolCan=2,
-        CompostBag=10,
-        [Recipe.GetItemTypes.Sugar];5,
-        Glue=3,
-
-        Result:PetrolCan=2,
-        Time:1500.0,
-        Category:Farming,
-        NeedToBeLearn:true,
-        }
-
-    recipe Extract Fuel from Lighter
-        {
-        Lighter=10,
-        PetrolCan,
-
-        Result:PetrolCan=1,
-        Time:1200.0,
-        Category:Survivalist,
-        }
-
-    recipe Make Gas Can
-        {
-        Glue=1,
-        destroy Bleach=3,
-
-        Result:EmptyPetrolCan,
-        Category:Survivalist,
-        }
-
     recipe Refine Unusable Metal
         {
         UnusableMetal=3,
@@ -212,6 +168,48 @@ recipe Build Baseball Bat
         Prop2:CDplayer,
         Sound:Dismantle,
         Category:Vehicle,
+        }
+        /***************************** Tailoring Recipes  ******************************/
+
+        /***************************** Misc Recipes  ******************************/
+    recipe Make Rubber Duck
+	{
+        RubberBand=20,
+        Lighter=1,
+        CanBeDoneFromFloor:true,
+
+        Result:Rubberducky,
+        Time:10.0,
+        Category:Quacc,
+	}
+    recipe Make Gas Can
+        {
+        Glue=1,
+        destroy Bleach=3,
+
+        Result:EmptyPetrolCan,
+        Category:Survivalist,
+        }
+    recipe Make Gas Can from Compost
+        {
+        EmptyPetrolCan=2,
+        CompostBag=10,
+        [Recipe.GetItemTypes.Sugar];5,
+        Glue=3,
+
+        Result:PetrolCan=2,
+        Time:1500.0,
+        Category:Farming,
+        NeedToBeLearn:true,
+        }
+    recipe Extract Fuel from Lighter
+        {
+        Lighter=10,
+        PetrolCan,
+
+        Result:PetrolCan=1,
+        Time:1200.0,
+        Category:Survivalist,
         }
 }
 
