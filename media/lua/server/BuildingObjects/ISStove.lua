@@ -1,3 +1,4 @@
+require "ISBuildingObject"
 ISStove = ISBuildingObject:derive('ISStove')
 
 function ISStove:create(x, y, z, north, sprite)
