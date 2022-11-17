@@ -125,7 +125,7 @@ recipe Build Baseball Bat
 
         Result:Hinges=4,
         Time:200.0,
-        Category:Perdition - Crafting,
+        Category:Welding,
         OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
         SkillRequired:MetalWelding=3,
         }
@@ -139,7 +139,7 @@ recipe Build Baseball Bat
 
         Result:Doorknob=2,
         Time:350.0,
-        Category:Perdition - Crafting,
+        Category:Welding,
         OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
         SkillRequired:MetalWelding=4,
         }    
@@ -151,7 +151,7 @@ recipe Build Baseball Bat
 
         Result:ScrewsBox,
         Time:550.0,
-        Category:Perdition - Crafting,
+        Category:Welding,
         OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
         SkillRequired:MetalWelding=6,
         }
