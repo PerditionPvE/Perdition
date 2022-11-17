@@ -116,6 +116,46 @@ recipe Build Baseball Bat
         Category:Welding,
     }*/
 /****************************** Metal Working ******************************/
+    recipe Make 4 Hinges
+        {
+        ScrapMetal=6,
+        Screws=12,
+        keep Screwdriver,
+        keep Hammer/BallPeenHammer,
+
+        Result:Hinges=4,
+        Time:200.0,
+        Category:Perdition - Crafting,
+        OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
+        SkillRequired:MetalWelding=3,
+        }
+
+    recipe Make 2 Doorknobs
+        {
+        ScrapMetal=4,Screws=4,
+        keep Screwdriver,
+        keep Hammer/BallPeenHammer,
+        Keep BlowTorch=2,
+
+        Result:Doorknob=2,
+        Time:350.0,
+        Category:Perdition - Crafting,
+        OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
+        SkillRequired:MetalWelding=4,
+        }    
+
+    recipe Smith Box Of Screws
+        {
+        ScrapMetal=20,
+        Keep PropaneGasFurnace,
+
+        Result:ScrewsBox,
+        Time:550.0,
+        Category:Perdition - Crafting,
+        OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
+        SkillRequired:MetalWelding=6,
+        }
+
     recipe Forge Metal Bar
         {
         WoodenStick=4,
