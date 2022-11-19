@@ -4,7 +4,7 @@ module Base
     {
        bill1000=10,
 
-  	   Result:1000bill,
+  	   Result:10000bill,
        Time:50.0,
        Category:Money,
     }
@@ -22,7 +22,7 @@ module Base
     {
        10000bill,
 
-  	   Result:1000bill=10,
+  	   Result:100bill=100,
        Time:50.0,
        Category:Money,
     }
