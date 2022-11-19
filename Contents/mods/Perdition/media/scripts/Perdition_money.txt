@@ -1,10 +1,18 @@
 module Base
 {
+    item Money
+        {
+        Weight  = 0.01,
+        Type = Normal,
+        DisplayName = $1 Bill,
+        Icon = Money,
+        DisplayCategory = Economy,
+    }
     item 10bill
         {
 		Weight		= 0.01,
 		Type		= Normal,
-		DisplayName	= 10$ Bill,
+		DisplayName	= $10 Bill,
 		Icon		= Money,
 		DisplayCategory = Economy,
     }
@@ -13,7 +21,7 @@ module Base
         {
 		Weight		= 0.01,
 		Type		= Normal,
-		DisplayName	= 20$ Bill,
+		DisplayName	= $20 Bill,
 		Icon		= Money,
         DisplayCategory = Economy,
     }
@@ -22,7 +30,7 @@ module Base
         {
 		Weight		= 0.01,
 		Type		= Normal,
-		DisplayName	= 50$ Bill,
+		DisplayName	= $50 Bill,
 		Icon		= Money,
         DisplayCategory = Economy,
     }
@@ -31,7 +39,7 @@ module Base
         {
 		Weight		= 0.01,
 		Type		= Normal,
-		DisplayName	= 100$ Bill,
+		DisplayName	= $100 Bill,
 		Icon		= Money,
         DisplayCategory = Economy,
     }
@@ -40,7 +48,7 @@ module Base
         {
 		Weight		= 0.01,
 		Type		= Normal,
-		DisplayName	= 1000$ Bill,
+		DisplayName	= $1000 Bill,
 		Icon		= Money,
         DisplayCategory = Economy,
     }
@@ -49,7 +57,7 @@ module Base
         {
 		Weight		= 0.01,
 		Type		= Normal,
-		DisplayName	= 10000$ Bill,
+		DisplayName	= $10000 Bill,
 		Icon		= Money,
         DisplayCategory = Economy,
     }

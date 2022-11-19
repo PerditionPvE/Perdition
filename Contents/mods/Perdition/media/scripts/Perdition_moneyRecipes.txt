@@ -1,15 +1,15 @@
 module Base
 {
-	recipe Combine into 10000$ Bill (with 1000$)
+	recipe Combine into $10000 Bill (with $1000)
     {
        bill1000=10,
 
-  	   Result:1000bill,
+  	   Result:10000bill,
        Time:50.0,
        Category:Money,
     }
 
-    recipe Return a 10000$ Bill (into 1000$)
+    recipe Return a $10000 Bill (into $1000)
     {
        10000bill,
 
@@ -18,16 +18,16 @@ module Base
        Category:Money,
     }
 
-    recipe Return a 10000$ Bill (into 100$)
+    recipe Return a $10000 Bill (into $100)
     {
        10000bill,
 
-  	   Result:1000bill=10,
+  	   Result:100bill=100,
        Time:50.0,
        Category:Money,
     }
 
-	recipe Combine into 1000$ Bill
+	recipe Combine into $1000 Bill
     {
        bill100=10,
 
@@ -36,7 +36,7 @@ module Base
        Category:Money,
     }
 
-    recipe Return a 1000$ Bill (into 100$)
+    recipe Return a $1000 Bill (into $100)
     {
        1000bill,
 
@@ -46,7 +46,7 @@ module Base
     }
 
 
-    recipe Combine into 100$ Bill
+    recipe Combine into $100 Bill
     {
        Money=100,
 
@@ -55,7 +55,7 @@ module Base
        Category:Money,
     }
 
-	recipe Return a 100$ Bill
+	recipe Return a $100 Bill
     {
        100bill,
 
@@ -64,7 +64,7 @@ module Base
        Category:Money,
     }
 
-	recipe Combine into 100$ Bill (with 50$)
+	recipe Combine into $100 Bill (with $50)
     {
        50bill=2,
 
@@ -73,7 +73,7 @@ module Base
        Category:Money,
     }
 
-	recipe Return a 100$ Bill (into 50$)
+	recipe Return a $100 Bill (into $50)
     {
        100bill,
 
@@ -82,7 +82,7 @@ module Base
        Category:Money,
     }
 
-	recipe Combine into 100$ Bill (with 20$)
+	recipe Combine into $100 Bill (with $20)
     {
        20bill=5,
 
@@ -91,7 +91,7 @@ module Base
        Category:Money,
     }
 
-	recipe Return a 100$ Bill (into 20$)
+	recipe Return a $100 Bill (into $20)
     {
        100bill,
 
@@ -100,7 +100,7 @@ module Base
        Category:Money,
     }
 
-	recipe Combine into 100$ Bill (with 10$)
+	recipe Combine into $100 Bill (with $10)
     {
        10bill=10,
 
@@ -109,7 +109,7 @@ module Base
        Category:Money,
     }
 
-	recipe Return a 100$ Bill (into 10$)
+	recipe Return a $100 Bill (into $10)
     {
        100bill,
 
@@ -118,7 +118,7 @@ module Base
        Category:Money,
     }
 
-	recipe Combine into 50$ Bill
+	recipe Combine into $50 Bill
     {
        Money=50,
 
@@ -127,7 +127,7 @@ module Base
        Category:Money,
     }
 
-	recipe Return a 50$ Bill
+	recipe Return a $50 Bill
     {
       50bill,
 
@@ -136,7 +136,7 @@ module Base
        Category:Money,
     }
 
-	recipe Combine into 50$ Bill (with 10$)
+	recipe Combine into $50 Bill (with $10)
     {
        10bill=5,
 
@@ -145,7 +145,7 @@ module Base
        Category:Money,
     }
 
-	recipe Return a 50$ Bill (into 10$)
+	recipe Return a $50 Bill (into $10)
     {
       50bill,
 
@@ -154,7 +154,7 @@ module Base
        Category:Money,
     }
 
-	recipe Combine into 20$ Bill
+	recipe Combine into $20 Bill
     {
        Money=20,
 
@@ -163,7 +163,7 @@ module Base
        Category:Money,
     }
 
-	recipe Return a 20$ Bill
+	recipe Return a $20 Bill
     {
        20bill,
 
@@ -172,7 +172,7 @@ module Base
        Category:Money,
     }
 
-	recipe Combine into 20$ Bill (with 10$)
+	recipe Combine into $20 Bill (with $10)
     {
        10bill=2,
 
@@ -181,7 +181,7 @@ module Base
        Category:Money,
     }
 
-	recipe Return a 20$ Bill (into 10$)
+	recipe Return a $20 Bill (into $10)
     {
        20bill,
 
@@ -190,7 +190,7 @@ module Base
        Category:Money,
     }
 
-	recipe Get a 10$ Bill
+	recipe Get a $10 Bill
     {
        Money=10,
 
@@ -199,7 +199,7 @@ module Base
        Category:Money,
     }
 
-	recipe Return a 10$ Bill
+	recipe Return a $10 Bill
     {
        10bill,
 
