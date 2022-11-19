@@ -1,0 +1,355 @@
+module Perdition
+{
+    imports
+    {
+        Base
+    }
+
+/****************************** Masterwork weapons ******************************/
+	recipe Masterwork Crowbar
+        {
+        MetalBar,
+        Charcoal=1,
+       	Matches/Lighter=2,
+        keep Hammer/BallPeenHammer,
+        keep Tongs,
+
+        Result:SuperCrowbar,
+        Time:1000.0,
+        Category:Perdition,
+        SkillRequired:MetalWelding=8,
+        OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
+        OnCreate:BSItem_OnCreate,
+        NeedToBeLearn:true,
+    }
+    recipe Masterwork Axe
+        {
+        MetalBar,
+        Charcoal=1,
+        Matches/Lighter=1,
+        keep Hammer/BallPeenHammer,
+        keep Tongs,
+
+        Result:SuperAxe,
+        Time:1000.0,
+        Category:Perdition,
+        SkillRequired:MetalWelding=9,
+        OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
+        OnCreate:BSItem_OnCreate,
+        NeedToBeLearn:true,
+        }
+    recipe Masterwork Katana
+        {
+        MetalBar,
+        Charcoal=1,
+        Matches/Lighter=1,
+        keep Hammer/BallPeenHammer,
+        keep Tongs,
+
+        Result:SuperKatana,
+        Time:1000.0,
+        Category:Perdition,
+        SkillRequired:MetalWelding=10,
+        OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
+        OnCreate:BSItem_OnCreate,
+        NeedToBeLearn:true,
+        }
+    recipe Masterwork Pickaxe
+        {
+        MetalBar,
+        Charcoal=1,
+        Matches/Lighter=1,
+        keep Hammer/BallPeenHammer,
+        keep Tongs,
+
+        Result:SuperPickaxe,
+        Time:1000.0,
+        Category:Perdition,
+        SkillRequired:MetalWelding=8,
+        OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
+        OnCreate:BSItem_OnCreate,
+        NeedToBeLearn:true,
+        }
+    recipe Masterwork Machete
+        {
+        MetalBar=2,
+        IronIngot,
+        Charcoal=1,
+        Matches/Lighter=1,
+        keep Hammer/BallPeenHammer,
+        keep Tongs,
+
+        Result:SuperMachete,
+        Time:1000.0,
+        Category:Perdition,
+        SkillRequired:MetalWelding=9,
+        OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
+        OnCreate:BSItem_OnCreate,
+        NeedToBeLearn:true,
+        }
+
+    recipe Masterwork Knife
+        {
+        MetalBar=2,
+        IronIngot=1,
+        Charcoal=1,
+        Matches/Lighter=1,
+        keep Hammer/BallPeenHammer,
+        keep Tongs,
+
+        Result:SuperKnife,
+        Time:1000.0,
+        Category:Perdition,
+        SkillRequired:MetalWelding=9,
+        OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
+        OnCreate:BSItem_OnCreate,
+        NeedToBeLearn:true,
+        }
+
+    recipe Masterwork Cleaver
+        {
+        MetalBar=2,
+        IronIngot=1,
+        Charcoal=1,
+        Matches/Lighter=1,
+        keep Hammer/BallPeenHammer,
+        keep Tongs,
+
+        Result:SuperCleaver,
+        Time:1000.0,
+        Category:Perdition,
+        SkillRequired:MetalWelding=9,
+        OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
+        OnCreate:BSItem_OnCreate,
+        NeedToBeLearn:true,
+        }
+
+    recipe Masterwork Sledgehammer
+        {
+        MetalBar=2,
+        IronIngot=1,
+        Charcoal=1,
+        Matches/Lighter=1,
+        keep Hammer/BallPeenHammer,
+        keep Tongs,
+
+        Result:SuperSledgehammer,
+        Time:1000.0,
+        Category:Perdition,
+        SkillRequired:MetalWelding=9,
+        OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
+        OnCreate:BSItem_OnCreate,
+        NeedToBeLearn:true,
+        }
+
+    recipe Masterwork Shovel
+        {
+        MetalBar=2,
+        IronIngot=1,
+        Charcoal=1,
+        Matches/Lighter=1,
+        keep Hammer/BallPeenHammer,
+        keep Tongs,
+
+        Result:SuperShovel,
+        Time:1000.0,
+        Category:Perdition,
+        SkillRequired:MetalWelding=9,
+        OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
+        OnCreate:BSItem_OnCreate,
+        NeedToBeLearn:true,
+        }
+
+   recipe Unbox Scrap
+    {
+       100ScrapBox,
+
+  	   Result:ScrapMetal=100,
+       Time:50.0,
+       Category:Storage,
+    }
+    
+    recipe Box Scrap
+    {
+       ScrapMetal=100,
+
+  	   Result:100ScrapBox,
+       Time:50.0,
+       Category:Storage,
+    }
+   /****************************** Crating ******************************/
+   /*
+    recipe Crate Gunpowder
+        {
+        GunPowder=600,
+        Result:AmmocrateGunPowder,
+        Time:500.0,
+        }
+    */
+
+    recipe Crate 5.56 Ammo
+        {
+        556Bullets=300,
+        Result:Ammocrate556,
+        Time:500.0,
+        Category:Crate,
+        }
+
+    recipe Crate 9mm Ammo
+        {
+        Bullets9mm=300,
+        Result:Ammocrate9mm,
+        Time:500.0,
+        Category:Crate,
+        }
+
+    recipe Crate .45 Ammo
+        {
+        Bullets45=300,
+        Result:Ammocrate45,
+        Time:500.0,
+        Category:Crate,
+        }  
+
+    recipe Crate .308 Ammo
+        {
+        308Bullets=300,
+        Result:Ammocrate308,
+        Time:500.0,
+        Category:Crate,
+        }
+
+    recipe Crate .223 Ammo
+        {
+        223Bullets=300,
+        Result:Ammocrate223,
+        Time:500.0,
+        Category:Crate,
+        }
+        /***************************** Uncrate ******************************/
+    recipe Take 5.56 from Crate
+        {
+        Ammocrate556,
+        Result:556Bullets=30,
+        Time:50.0,
+        Category:Crate,
+        } 
+
+    recipe Take 9mm from Crate
+        {
+        Ammocrate9mm,
+        Result:Bullets9mm=30,
+        Time:50.0,
+        Category:Crate,
+        }
+
+    recipe Take .45 from Crate
+        {
+        Ammocrate45,
+        Result:Bullets45=30,
+        Time:50.0,
+        Category:Crate,
+        } 
+
+    recipe Take .308 from Crate
+        {
+        Ammocrate308,
+        Result:308Bullets=30,
+        Time:50.0,
+        Category:Crate,
+        } 
+
+    recipe Take .223 from Crate
+        {
+        Ammocrate223,
+        Result:223Bullets=30,
+        Time:50.0,
+        Category:Crate,
+        }
+        /***************************** Sacking vegetables ******************************/
+    
+    recipe Sack Strawberries
+        {
+        Strawberry=16,
+        Result:SackProduce_Strawberry,
+        Time:250.0,
+        Category:Farming,
+        }
+    recipe Sack Corn
+        {
+        Corn=12,
+        Result:SackProduce_Corn,
+        Time:250.0,
+        Category:Farming,
+        }
+    recipe Sack Bell Peppers
+        {
+        BellPepper=12,
+        Result:SackProduce_BellPepper,
+        Time:250.0,
+        Category:Farming,
+        }
+    recipe Sack Broccoli
+        {
+        Broccoli=12,
+        Result:SackProduce_Broccoli,
+        Time:250.0,
+        Category:Farming,
+        }
+    recipe Sack Cabbages
+        {
+        Cabbage=8,
+        Result:SackProduce_Cabbage,
+        Time:250.0,
+        Category:Farming,
+        }
+    recipe Sack Carrots
+        {
+        Carrot=12,
+        Result:SackProduce_Carrot,
+        Time:250.0,
+        Category:Farming,
+        }
+    recipe Sack EggPlants
+        {
+        EggPlant=12,
+        Result:SackProduce_EggPlant,
+        Time:250.0,
+        Category:Farming,
+        }
+    recipe Sack Leeks
+        {
+        Leek=12,
+        Result:SackProduce_Leek,
+        Time:250.0,
+        Category:Farming,
+        }
+    recipe Sack Onion
+        {
+        Onion=12,
+        Result:SackProduce_Onion,
+        Time:250.0,
+        Category:Farming,
+        }
+    recipe Sack Potato
+        {
+        Potato=12,
+        Result:SackProduce_Potato,
+        Time:250.0,
+        Category:Farming,
+        }
+    recipe Sack Radishes
+        {
+        RedRadish=12,
+        Result:SackProduce_RedRadish,
+        Time:250.0,
+        Category:Farming,
+        }
+    recipe Sack Lettuce
+        {
+        Lettuce=8,
+        Result:SackProduce_Lettuce,
+        Time:250.0,
+        Category:Farming,
+        }
+}
