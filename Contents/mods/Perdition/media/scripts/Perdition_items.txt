@@ -583,6 +583,7 @@ module Perdition
     }
 
 /********************************************** Ammo Crates **********************************************/
+    /* TODO: fix quacc's weird system
     item Ammocrate556
         {
 		Weight		= 11.3,
@@ -631,7 +632,7 @@ module Perdition
 		DisplayName	= .223 Munition Crate,
         ConsolidateOption = ContextMenu_Merge,
         Icon		= 223Box,
-    }   
+    }   */
       
 
 /****************************** Boxing(not the sport like boxing stuff up) ******************************/
@@ -642,6 +643,6 @@ item 100ScrapBox
     Type		= Normal,
     DisplayName	= Box Of Scrap,
     Icon		= Box,
-    DisplayCategory = Crate
+    DisplayCategory = Crate,
     }
 }
