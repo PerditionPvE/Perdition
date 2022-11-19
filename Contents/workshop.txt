@@ -1,0 +1,5 @@
+version=1
+title=[BETA] Perdition
+description=Test version of Perdition server mod
+tags=
+visibility=unlisted

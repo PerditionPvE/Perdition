@@ -3,6 +3,7 @@ PerditionBuildMenu = {}
 PerditionBuildMenu.canDoSomething = false
 
 local weldingRodUses = ISBlacksmithMenu.weldingRodUses
+local getItemNameFromFullType = getItemNameFromFullType
 
 local function predicateWeldingMask(item) --from ISBlacksmithMenu.lua
     return item:hasTag("WeldingMask") or item:getType() == "WeldingMask"
@@ -36,6 +37,24 @@ local function getGreenOvenSprite()
     return sprite
 end
 
+local function getModernOvenSprite()
+    local sprite = {}
+    sprite.sprite = "appliances_cooking_01_12"
+    sprite.north = "appliances_cooking_01_13"
+    sprite.east = "appliances_cooking_01_14"
+    sprite.south = "appliances_cooking_01_15"
+    return sprite
+end
+
+local function getGrayOvenSprite()
+    local sprite = {}
+    sprite.sprite = "appliances_cooking_01_4"
+    sprite.north  = "appliances_cooking_01_5"
+    sprite.east   = "appliances_cooking_01_6"
+    sprite.south  = "appliances_cooking_01_7"
+    return sprite
+end
+
 PerditionBuildMenu.doBuildMenu = function(playerID, context, worldobjects, test)
     if test and ISWorldObjectContextMenu.Test then return true end
     if test then return ISWorldObjectContextMenu.setTest() end
@@ -55,16 +74,37 @@ PerditionBuildMenu.doBuildMenu = function(playerID, context, worldobjects, test)
     context:addSubMenu(ovenOption, subMenuOven)
     -- ovens
 
-    local ovenGreenOption = subMenuOven:addOption("Green Oven", worldobjects, PerditionBuildMenu.onStove, player, "2")
+    local ovenGreenOption = subMenuOven:addOption("Green Oven", worldobjects, PerditionBuildMenu.onStove, player, getGreenOvenSprite(), "Green Oven", "2")
     local toolTip = PerditionBuildMenu.addToolTip(ovenGreenOption, "Green Oven", "appliances_cooking_01_0")
     local hasElectricalParts, toolTip = PerditionBuildMenu.checkElectricalMaterials(player, toolTip, {electronicsScrap=10, copperWire=4})
     local hasMetalWeldingParts, toolTip = PerditionBuildMenu.checkMetalWeldingMaterials(player, toolTip, {metalSheet=4, hinge=1})
     local hasTools, toolTip = PerditionBuildMenu.checkTools(player, toolTip, 1, true, false, false)
     local hasSkills, toolTip = PerditionBuildMenu.checkSkillRequirement(player, toolTip, {metalworking=4, electrical=4})
     if not (hasElectricalParts and hasMetalWeldingParts and hasTools and hasSkills) then ovenGreenOption.notAvailable = true end
-    print('lol')
+
+    local ovenGrayOption = subMenuOven:addOption("Gray Oven", worldobjects, PerditionBuildMenu.onStove, player, getGrayOvenSprite(), "Gray Oven", "2")
+    local toolTip = PerditionBuildMenu.addToolTip(ovenGrayOption, "Gray Oven", "appliances_cooking_01_4")
+    local hasElectricalParts, toolTip = PerditionBuildMenu.checkElectricalMaterials(player, toolTip, {electronicsScrap=10, copperWire=4})
+    local hasMetalWeldingParts, toolTip = PerditionBuildMenu.checkMetalWeldingMaterials(player, toolTip, {metalSheet=4, hinge=1})
+    local hasTools, toolTip = PerditionBuildMenu.checkTools(player, toolTip, 1, true, false, false)
+    local hasSkills, toolTip = PerditionBuildMenu.checkSkillRequirement(player, toolTip, {metalworking=4, electrical=4})
+    if not (hasElectricalParts and hasMetalWeldingParts and hasTools and hasSkills) then ovenGrayOption.notAvailable = true end
+
+    local ovenModernOption = subMenuOven:addOption("Modern Oven", worldobjects, PerditionBuildMenu.onStove, player, getModernOvenSprite(), "Modern Oven", "2")
+    local toolTip = PerditionBuildMenu.addToolTip(ovenGrayOption, "Gray Oven", "appliances_cooking_01_4")
+    local hasElectricalParts, toolTip = PerditionBuildMenu.checkElectricalMaterials(player, toolTip, {electronicsScrap=10, copperWire=4})
+    local hasMetalWeldingParts, toolTip = PerditionBuildMenu.checkMetalWeldingMaterials(player, toolTip, {metalSheet=4, hinge=1})
+    local hasTools, toolTip = PerditionBuildMenu.checkTools(player, toolTip, 1, true, false, false)
+    local hasSkills, toolTip = PerditionBuildMenu.checkSkillRequirement(player, toolTip, {metalworking=4, electrical=4})
+    if not (hasElectricalParts and hasMetalWeldingParts and hasTools and hasSkills) then ovenGrayOption.notAvailable = true end
 end
 
+---@param player IsoPlayer
+---@param toolTip ISToolTip
+---@param torchUse int: the use delta of the blowtorch item
+---@param needsScrewdriver boolean
+---@param needsHammer boolean
+---@param needsSaw boolean
 PerditionBuildMenu.checkTools = function(player, toolTip, torchUse, needsScrewdriver, needsHammer, needsSaw)
     local isOk = true
     local inv = player:getInventory()
@@ -141,33 +181,40 @@ PerditionBuildMenu.checkTools = function(player, toolTip, torchUse, needsScrewdr
 
     return isOk, toolTip
 end
-PerditionBuildMenu.checkElectricalMaterials = function(player, toolTip, meta)
-    setmetatable(meta, {__index={copperWire = 0, electronicsScrap = 0, light = 0, amplifier = 0, aluminum = 0, screws = 0}})
+
+---@param player IsoPlayer
+---@param toolTip ISToolTip
+---@param materials table: ElectricWire, ElectronicsScrap, Lightbulb, Amplifier, Aluminum, Screws are valid items
+PerditionBuildMenu.checkElectricalMaterials = function(player, toolTip, materials)
     local copperWire, electronicsScrap, light, amplifier, aluminum, screws =
-    meta[1] or meta.copperWire,
-    meta[2] or meta.electronicsScrap,
-    meta[3] or meta.light,
-    meta[4] or meta.amplifier,
-    meta[5] or meta.aluminum,
-    meta[6] or meta.screws
+    materials.copperWire or 0,
+    materials.electronicsScrap or 0,
+    materials.light or 0,
+    materials.amplifier or 0,
+    materials.aluminum or 0,
+    materials.screws or 0
 
     local isOk = true
     local namerefs = {
-        {copperWire, "Base", "ElectricWire"},
+        {copperWire, "Radio", "ElectricWire"},
         {electronicsScrap, "Base", "ElectronicsScrap"},
         {light, "Base", "Lightbulb"},
-        {amplifier, "Base", "Aluminum"},
+        {aluminum, "Base", "Aluminum"},
+        {amplifier, "Base", "Amplifier"},
         {screws, "Base", "Screws"}
     }
 
     for _, group in ipairs(namerefs) do
         local req, module, name = unpack(group)
         if req > 0 then
-            local count = ISBlacksmithMenu.getMaterialCount(player, name)
-            if count > req then
-                toolTip.description = toolTip.description .. "<LINE> <RGB:0,1,0> " .. getItemNameFromFullType(module .. "." .. name) .. " " .. count .. "/" .. req
+            local count = ISBlacksmithMenu.getMaterialCount(player, name) or 0
+            local thing = string.format("<LINE> <RGB:0,1,0> %s %s/%s", getItemNameFromFullType(module .. "." .. name), count, req)
+            print(thing)
+            if count >= req then
+                print(getItemNameFromFullType(module .. "." .. name) .. " " .. count .. "/" .. req)
+                toolTip.description = toolTip.description .. thing
             else
-                toolTip.description = toolTip.description .. "<LINE> <RGB:1,0,0> " .. getItemNameFromFullType(module .. "." .. name) .. " " .. count .. "/" .. req
+                toolTip.description = toolTip.description .. thing
                 isOk = false
             end
         end
@@ -199,30 +246,31 @@ PerditionBuildMenu.checkMetalWeldingMaterials = function(player, toolTip, materi
     }
 
     local isOk = true
-    for i, group in ipairs(nameref) do
+    for _, group in ipairs(nameref) do
         local req, module, name = unpack(group)
         if req > 0 then
             local count = ISBlacksmithMenu.getMaterialCount(player, name)
-            if count > req then
-                toolTip.description = toolTip.description .. "<LINE> <RGB:0,1,0> " .. getItemNameFromFullType(module .. "." .. name) .. " " .. count .. "/" .. req
+            local thing = getItemNameFromFullType(module .. "." .. name) .. " " .. count .. "/" .. req
+            print(thing)
+            if count >= req then
+                toolTip.description = toolTip.description .. "<LINE> <RGB:0,1,0> " .. thing
             else
                 isOk = false
-                toolTip.description = toolTip.description .. "<LINE> <RGB:1,0,0> " .. getItemNameFromFullType(module .. "." .. name) .. " " .. count .. "/" .. req
+                toolTip.description = toolTip.description .. "<LINE> <RGB:1,0,0> " .. thing
             end
         end
     end
     return isOk, toolTip
 end
-PerditionBuildMenu.checkSkillRequirement = function(player, toolTip, meta)
-    setmetatable(meta, {__index={carpentry = 0, farming = 0, firstaid=0, electrical=0, metalworking=0, mechanics=0, tailoring=0}})
+PerditionBuildMenu.checkSkillRequirement = function(player, toolTip, skills)
     local carpentry, farming, firstaid, electrical, metalworking, mechanics, tailoring =
-    meta[1] or meta.carpentry,
-    meta[2] or meta.farming,
-    meta[3] or meta.firstaid,
-    meta[4] or meta.electrical,
-    meta[5] or meta.metalworking,
-    meta[6] or meta.mechanics,
-    meta[7] or meta.tailoring
+    skills.carpentry or 0,
+    skills.farming or 0,
+    skills.firstaid or 0,
+    skills.electrical or 0,
+    skills.metalworking or 0,
+    skills.mechanics or 0,
+    skills.tailoring or 0
     local isOk = true
     if carpentry > 0 then
         if player:getPerkLevel(Perks.WoodWork) >= carpentry then
@@ -283,9 +331,8 @@ PerditionBuildMenu.checkSkillRequirement = function(player, toolTip, meta)
     return isOk, toolTip
 end
 -- oncraft methods
-PerditionBuildMenu.onStove = function(worldobjects, player, torchUse)
-    local sprite = getGreenOvenSprite()
-    local stove = ISStove:new("Green Oven", sprite)
+PerditionBuildMenu.onStove = function(worldobjects, player, sprite, name, torchUse)
+    local stove = ISStove:new(name, sprite)
     stove.firstItem = "BlowTorch"
     stove.secondItem = "WeldingMask"
     stove.modData["xp:MetalWelding"] = 30
