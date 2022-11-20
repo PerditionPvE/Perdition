@@ -200,14 +200,14 @@ recipe Build Baseball Bat
         Category:Vehicle,
         }
         /***************************** Tailoring Recipes  ******************************/
-    recipe Tailor T-Shirt
+    recipe Tailor Sack
         {
         Rope/SheetRope=4,Thread=5,
         Keep Needle,
         Keep Scissors,
         Keep Recipe.GetItemTypes.SharpKnife,
         
-        Result:Sack,
+        Result:SackCabbages,
         Time:500.0,
         Category:Farming,
         SkillRequired:Tailoring=2,
@@ -325,6 +325,125 @@ recipe Build Baseball Bat
         Result:PetrolCan=1,
         Time:1200.0,
         Category:Survivalist,
+        }
+
+/***************************** Sacking vegetables ******************************/
+
+    recipe Sack Strawberries
+        {
+        farming.Strewberrie=16,
+        [Perdition.GetItemTypes.Sack];1,
+
+        Result:SackProduce_Strawberry,
+        Time:250.0,
+        Category:Farming,
+        }
+    recipe Sack Tomato
+        {
+        farming.Tomato=12,
+        [Perdition.GetItemTypes.Sack];1,
+
+        Result:SackProduce_Tomato
+        Time:250.0,
+        Category:Farming,
+        }
+    recipe Sack Corn
+        {
+        Corn=12,
+        [Perdition.GetItemTypes.Sack];1,
+
+        Result:SackProduce_Corn,
+        Time:250.0,
+        Category:Farming,
+        }
+    recipe Sack Bell Peppers
+        {
+        BellPepper=12,
+        [Perdition.GetItemTypes.Sack];1,
+
+        Result:SackProduce_BellPepper,
+        Time:250.0,
+        Category:Farming,
+        }
+    recipe Sack Broccoli
+        {
+        Broccoli=12,
+        [Perdition.GetItemTypes.Sack];1,
+
+        Result:SackProduce_Broccoli,
+        Time:250.0,
+        Category:Farming,
+        }
+    recipe Sack Cabbages
+        {
+        farming.Cabbage=8,
+        [Perdition.GetItemTypes.Sack];1,
+
+        Result:SackProduce_Cabbage,
+        Time:250.0,
+        Category:Farming,
+        }
+    recipe Sack Carrots
+        {
+        Carrot=12,
+        [Perdition.GetItemTypes.Sack];1,
+
+        Result:SackProduce_Carrot,
+        Time:250.0,
+        Category:Farming,
+        }
+    recipe Sack Eggplants
+        {
+        Eggplant=12,
+        [Perdition.GetItemTypes.Sack];1,
+
+        Result:SackProduce_Eggplant,
+        Time:250.0,
+        Category:Farming,
+        }
+    recipe Sack Leeks
+        {
+        Leek=12,
+        [Perdition.GetItemTypes.Sack];1,
+
+        Result:SackProduce_Leek,
+        Time:250.0,
+        Category:Farming,
+        }
+    recipe Sack Onion
+        {
+        Onion=12,
+        [Perdition.GetItemTypes.Sack];1,
+
+        Result:SackProduce_Onion,
+        Time:250.0,
+        Category:Farming,
+        }
+    recipe Sack Potato
+        {
+        farming.Potato=12,
+        [Perdition.GetItemTypes.Sack];1,
+
+        Result:SackProduce_Potato,
+        Time:250.0,
+        Category:Farming,
+        }
+    recipe Sack Radishes
+        {
+        farming.RedRadish=12,
+        [Perdition.GetItemTypes.Sack];1,
+
+        Result:SackProduce_RedRadish,
+        Time:250.0,
+        Category:Farming,
+        }
+    recipe Sack Lettuce
+        {
+        Lettuce=8,
+        [Perdition.GetItemTypes.Sack];1,
+        Result:SackProduce_Lettuce,
+        Time:250.0,
+        Category:Farming,
         }
 }
 
