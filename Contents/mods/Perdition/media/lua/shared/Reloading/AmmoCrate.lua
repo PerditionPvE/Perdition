@@ -32,9 +32,16 @@ function AmmoCrate:new(size)
     o.size = size
     o.currentCapacity = 0
     o.ammoType = nil
+    for key, value in pairs(crateSizes[size]) do
+        o[key] = value
+    end
     return o
 end
 
+---@param item Item sync this item to the instance
+function AmmoCrate:sync(item)
+    --TODO: create more verbose modData for this item
+end
 local function predicateAmmo(item)
     return item:getCount() > 0
 end
