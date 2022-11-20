@@ -185,7 +185,6 @@ module Perdition
         Result:AmmocrateGunPowder,
         Time:500.0,
         }
-    */
 
     recipe Crate 5.56 Ammo
         {
@@ -265,91 +264,5 @@ module Perdition
         Result:223Bullets=30,
         Time:50.0,
         Category:Crate,
-        }
-        /***************************** Sacking vegetables ******************************/
-    
-    recipe Sack Strawberries
-        {
-        Strawberry=16,
-        Result:SackProduce_Strawberry,
-        Time:250.0,
-        Category:Farming,
-        }
-    recipe Sack Corn
-        {
-        Corn=12,
-        Result:SackProduce_Corn,
-        Time:250.0,
-        Category:Farming,
-        }
-    recipe Sack Bell Peppers
-        {
-        BellPepper=12,
-        Result:SackProduce_BellPepper,
-        Time:250.0,
-        Category:Farming,
-        }
-    recipe Sack Broccoli
-        {
-        Broccoli=12,
-        Result:SackProduce_Broccoli,
-        Time:250.0,
-        Category:Farming,
-        }
-    recipe Sack Cabbages
-        {
-        Cabbage=8,
-        Result:SackProduce_Cabbage,
-        Time:250.0,
-        Category:Farming,
-        }
-    recipe Sack Carrots
-        {
-        Carrot=12,
-        Result:SackProduce_Carrot,
-        Time:250.0,
-        Category:Farming,
-        }
-    recipe Sack EggPlants
-        {
-        EggPlant=12,
-        Result:SackProduce_EggPlant,
-        Time:250.0,
-        Category:Farming,
-        }
-    recipe Sack Leeks
-        {
-        Leek=12,
-        Result:SackProduce_Leek,
-        Time:250.0,
-        Category:Farming,
-        }
-    recipe Sack Onion
-        {
-        Onion=12,
-        Result:SackProduce_Onion,
-        Time:250.0,
-        Category:Farming,
-        }
-    recipe Sack Potato
-        {
-        Potato=12,
-        Result:SackProduce_Potato,
-        Time:250.0,
-        Category:Farming,
-        }
-    recipe Sack Radishes
-        {
-        RedRadish=12,
-        Result:SackProduce_RedRadish,
-        Time:250.0,
-        Category:Farming,
-        }
-    recipe Sack Lettuce
-        {
-        Lettuce=8,
-        Result:SackProduce_Lettuce,
-        Time:250.0,
-        Category:Farming,
-        }
+        } */
 }
