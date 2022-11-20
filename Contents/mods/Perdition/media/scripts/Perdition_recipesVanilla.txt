@@ -56,11 +56,11 @@ recipe Build Baseball Bat
 /****************************** Item Recipes ******************************/
     recipe Spin Twine
 	{
-	    RippedSheets=5,
+	    Thread=10,
 	    keep Scissors,
 
-	    SkillRequired:Tailoring=2,
-	    Result:BaseballBat,
+	    SkillRequired:Tailoring=1,
+	    Result:Twine=1,
 	    Sound:Twine,
 	    Time:600.0,
 	    Category:Tailoring,
@@ -77,19 +77,8 @@ recipe Build Baseball Bat
         Category:Survivalist,
     }
 
-	recipe Make Charcoal
-    {
-        Log=5,
-        Matches/Lighter=1,
-        CanBeDoneFromFloor:true,
-
-        Result:Charcoal,
-        Time:1000.0,
-        Category:Survivalist,
-        OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
-    }
-
-    /*recipe Make Barbed Wire
+    /* TODO: make barbed wire used
+    recipe Make Barbed Wire
     {
         Wire=4,
         Nail=20,
@@ -123,7 +112,7 @@ recipe Build Baseball Bat
         keep Screwdriver,
         keep Hammer/BallPeenHammer,
 
-        Result:Hinges=4,
+        Result:Hinge=4,
         Time:200.0,
         Category:Welding,
         OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
@@ -146,14 +135,14 @@ recipe Build Baseball Bat
 
     recipe Smith Box Of Screws
         {
-        ScrapMetal=20,
-        Keep PropaneGasFurnace,
+        ScrapMetal=10,
+        Keep BlowTorch,
 
         Result:ScrewsBox,
         Time:550.0,
         Category:Welding,
-        OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
-        SkillRequired:MetalWelding=6,
+        OnGiveXP:Recipe.OnGiveXP.MetalWelding5,
+        SkillRequired:MetalWelding=5,
         }
 
     recipe Forge Metal Bar
@@ -167,13 +156,13 @@ recipe Build Baseball Bat
         Time: 200.0,
         Category:Welding,
         SkillRequired:MetalWelding=4/Woodwork=2,
-        OnGiveXP:Recipe.OnGiveXP.MetalWelding20,
+        OnGiveXP:Recipe.OnGiveXP.MetalWelding15,
         OnCreate:BSItem_OnCreate,
         }
     recipe Refine Unusable Metal
         {
         UnusableMetal=3,
-        BlowTorch=2, /* this will be reworked with metallurgy update */
+        BlowTorch=2, /* TODO: this will be reworked with metallurgy update */
         keep WeldingMask,
         keep Tongs,
 
