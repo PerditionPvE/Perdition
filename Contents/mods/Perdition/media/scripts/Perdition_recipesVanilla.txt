@@ -200,6 +200,7 @@ recipe Build Baseball Bat
         keep Screwdriver,
 
         NoBrokenItems:true,
+        SkillRequired:Mechanics=1/Electricity=4,
         Result:ElectronicsScrap=3,
         OnCreate:Perdition.OnCreate.DismantleCarBattery,
         Time:100.0,
