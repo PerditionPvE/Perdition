@@ -1,7 +1,9 @@
 require "Reloading/ISReloadUtil"
----@class AmmoCrate
-AmmoCrate = {}
-AmmoCrate.sizes = {
+require "ISBaseObject"
+---@class AmmoCrate : ISBaseObject
+AmmoCrate = ISBaseObject:derive("AmmoCrate")
+
+crateSizes = {
     small = {
         weight = 0.5, -- the initial weight of the crate when there is no ammo
         weightReduction = 0.3, -- the percentile reduction to bullet weight
