@@ -1,6 +1,6 @@
 version=1
 id=2890762154
-title=Perdition [BETA]
-description=Beta test version of the Perdition server mod
+title=Perdition
+description=Mod for the Perdition server
 tags=Build 41
 visibility=unlisted
