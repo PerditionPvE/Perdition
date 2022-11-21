@@ -56,11 +56,11 @@ recipe Build Baseball Bat
 /****************************** Item Recipes ******************************/
     recipe Spin Twine
 	{
-	    RippedSheets=5,
+	    Thread=10,
 	    keep Scissors,
 
-	    SkillRequired:Tailoring=2,
-	    Result:BaseballBat,
+	    SkillRequired:Tailoring=1,
+	    Result:Twine=1,
 	    Sound:Twine,
 	    Time:600.0,
 	    Category:Tailoring,
@@ -77,19 +77,8 @@ recipe Build Baseball Bat
         Category:Survivalist,
     }
 
-	recipe Make Charcoal
-    {
-        Log=5,
-        Matches/Lighter=1,
-        CanBeDoneFromFloor:true,
-
-        Result:Charcoal,
-        Time:1000.0,
-        Category:Survivalist,
-        OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
-    }
-
-    /*recipe Make Barbed Wire
+    /* TODO: make barbed wire used
+    recipe Make Barbed Wire
     {
         Wire=4,
         Nail=20,
@@ -123,7 +112,7 @@ recipe Build Baseball Bat
         keep Screwdriver,
         keep Hammer/BallPeenHammer,
 
-        Result:Hinges=4,
+        Result:Hinge=4,
         Time:200.0,
         Category:Welding,
         OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
@@ -146,14 +135,14 @@ recipe Build Baseball Bat
 
     recipe Smith Box Of Screws
         {
-        ScrapMetal=20,
-        Keep PropaneGasFurnace,
+        ScrapMetal=10,
+        Keep BlowTorch,
 
         Result:ScrewsBox,
         Time:550.0,
         Category:Welding,
-        OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
-        SkillRequired:MetalWelding=6,
+        OnGiveXP:Recipe.OnGiveXP.MetalWelding5,
+        SkillRequired:MetalWelding=5,
         }
 
     recipe Forge Metal Bar
@@ -167,13 +156,13 @@ recipe Build Baseball Bat
         Time: 200.0,
         Category:Welding,
         SkillRequired:MetalWelding=4/Woodwork=2,
-        OnGiveXP:Recipe.OnGiveXP.MetalWelding20,
+        OnGiveXP:Recipe.OnGiveXP.MetalWelding15,
         OnCreate:BSItem_OnCreate,
         }
     recipe Refine Unusable Metal
         {
         UnusableMetal=3,
-        BlowTorch=2, /* this will be reworked with metallurgy update */
+        BlowTorch=2, /* TODO: this will be reworked with metallurgy update */
         keep WeldingMask,
         keep Tongs,
 
@@ -200,6 +189,7 @@ recipe Build Baseball Bat
         keep Screwdriver,
 
         NoBrokenItems:true,
+        SkillRequired:Mechanics=1/Electricity=4,
         Result:ElectronicsScrap=3,
         OnCreate:Perdition.OnCreate.DismantleCarBattery,
         Time:100.0,
@@ -210,14 +200,14 @@ recipe Build Baseball Bat
         Category:Vehicle,
         }
         /***************************** Tailoring Recipes  ******************************/
-    recipe Tailor T-Shirt
+    recipe Tailor Sack
         {
         Rope/SheetRope=4,Thread=5,
         Keep Needle,
         Keep Scissors,
         Keep Recipe.GetItemTypes.SharpKnife,
         
-        Result:Sack,
+        Result:SackCabbages,
         Time:500.0,
         Category:Farming,
         SkillRequired:Tailoring=2,
@@ -335,6 +325,125 @@ recipe Build Baseball Bat
         Result:PetrolCan=1,
         Time:1200.0,
         Category:Survivalist,
+        }
+
+/***************************** Sacking vegetables ******************************/
+
+    recipe Sack Strawberries
+        {
+        farming.Strewberrie=16,
+        [Perdition.GetItemTypes.Sack];1,
+
+        Result:SackProduce_Strawberry,
+        Time:250.0,
+        Category:Farming,
+        }
+    recipe Sack Tomato
+        {
+        farming.Tomato=12,
+        [Perdition.GetItemTypes.Sack];1,
+
+        Result:SackProduce_Tomato
+        Time:250.0,
+        Category:Farming,
+        }
+    recipe Sack Corn
+        {
+        Corn=12,
+        [Perdition.GetItemTypes.Sack];1,
+
+        Result:SackProduce_Corn,
+        Time:250.0,
+        Category:Farming,
+        }
+    recipe Sack Bell Peppers
+        {
+        BellPepper=12,
+        [Perdition.GetItemTypes.Sack];1,
+
+        Result:SackProduce_BellPepper,
+        Time:250.0,
+        Category:Farming,
+        }
+    recipe Sack Broccoli
+        {
+        Broccoli=12,
+        [Perdition.GetItemTypes.Sack];1,
+
+        Result:SackProduce_Broccoli,
+        Time:250.0,
+        Category:Farming,
+        }
+    recipe Sack Cabbages
+        {
+        farming.Cabbage=8,
+        [Perdition.GetItemTypes.Sack];1,
+
+        Result:SackProduce_Cabbage,
+        Time:250.0,
+        Category:Farming,
+        }
+    recipe Sack Carrots
+        {
+        Carrot=12,
+        [Perdition.GetItemTypes.Sack];1,
+
+        Result:SackProduce_Carrot,
+        Time:250.0,
+        Category:Farming,
+        }
+    recipe Sack Eggplants
+        {
+        Eggplant=12,
+        [Perdition.GetItemTypes.Sack];1,
+
+        Result:SackProduce_Eggplant,
+        Time:250.0,
+        Category:Farming,
+        }
+    recipe Sack Leeks
+        {
+        Leek=12,
+        [Perdition.GetItemTypes.Sack];1,
+
+        Result:SackProduce_Leek,
+        Time:250.0,
+        Category:Farming,
+        }
+    recipe Sack Onion
+        {
+        Onion=12,
+        [Perdition.GetItemTypes.Sack];1,
+
+        Result:SackProduce_Onion,
+        Time:250.0,
+        Category:Farming,
+        }
+    recipe Sack Potato
+        {
+        farming.Potato=12,
+        [Perdition.GetItemTypes.Sack];1,
+
+        Result:SackProduce_Potato,
+        Time:250.0,
+        Category:Farming,
+        }
+    recipe Sack Radishes
+        {
+        farming.RedRadish=12,
+        [Perdition.GetItemTypes.Sack];1,
+
+        Result:SackProduce_RedRadish,
+        Time:250.0,
+        Category:Farming,
+        }
+    recipe Sack Lettuce
+        {
+        Lettuce=8,
+        [Perdition.GetItemTypes.Sack];1,
+        Result:SackProduce_Lettuce,
+        Time:250.0,
+        Category:Farming,
         }
 }
 
