@@ -5,14 +5,14 @@ module Perdition
 		Base
 	}
 /****************************** Guns ******************************/
-    item PERDMarksmanship1
+    item PERDAiming1
     {
         DisplayCategory = SkillBook,
         NumberOfPages		=	220,
         Weight				=	0.8,
         Type				=	Literature,
-        DisplayName			=	Marksmanship Vol. 1,
-        Icon				=	ExtraSkillbook,
+        DisplayName			=	Aiming Vol. 1,
+        Icon				=	Book,
         SkillTrained 		= 	Aiming,
         LvlSkillTrained 	= 	1,
         NumLevelsTrained 	= 	2,
@@ -20,14 +20,14 @@ module Perdition
         WorldStaticModel 	= 	BookGrey_Ground,
     }
 
-	item PERDMarksmanship2
+	item PERDAiming2
     {
         DisplayCategory = SkillBook,
         NumberOfPages		=	260,
         Weight				=	0.8,
         Type				=	Literature,
-        DisplayName			=	Marksmanship Vol. 2,
-        Icon				=	ExtraSkillbook,
+        DisplayName			=	Aiming Vol. 2,
+        Icon				=	Book,
         SkillTrained 		= 	Aiming,
         LvlSkillTrained 	= 	3,
         NumLevelsTrained 	= 	2,
@@ -35,14 +35,14 @@ module Perdition
         WorldStaticModel 	= 	BookClosedGround,
     }
 
-	item PERDMarksmanship3
+	item PERDAiming3
     {
         DisplayCategory = SkillBook,
         NumberOfPages		=	300,
         Weight				=	0.8,
         Type				=	Literature,
-        DisplayName			=	Marksmanship Vol. 3,
-        Icon				=	ExtraSkillbook,
+        DisplayName			=	Aiming Vol. 3,
+        Icon				=	Book,
         SkillTrained 		= 	Aiming,
         LvlSkillTrained 	= 	5,
         NumLevelsTrained 	= 	2,
@@ -57,7 +57,7 @@ module Perdition
         Weight				=	0.8,
         Type				=	Literature,
         DisplayName			=	Aiming Vol. 4,
-        Icon				=	ExtraSkillbook,
+        Icon				=	Book,
         SkillTrained 		= 	Aiming,
         LvlSkillTrained 	= 	7,
         NumLevelsTrained 	= 	2,
@@ -72,7 +72,7 @@ module Perdition
         Weight				=	0.8,
         Type				=	Literature,
         DisplayName			=	Aiming Vol. 5,
-        Icon				=	ExtraSkillbook,
+        Icon				=	Book,
         SkillTrained 		= 	Aiming,
         LvlSkillTrained 	= 	9,
         NumLevelsTrained 	= 	2,
@@ -87,7 +87,7 @@ module Perdition
         Weight				=	0.8,
         Type				=	Literature,
         DisplayName			=	Reloading Vol. 1,
-        Icon				=	ExtraSkillbook,
+        Icon				=	Book,
         SkillTrained 		= 	Reloading,
         LvlSkillTrained 	= 	1,
         NumLevelsTrained 	= 	2,
@@ -102,7 +102,7 @@ module Perdition
         Weight				=	0.8,
         Type				=	Literature,
         DisplayName			=	Reloading Vol. 2,
-        Icon				=	ExtraSkillbook,
+        Icon				=	Book,
         SkillTrained 		= 	Reloading,
         LvlSkillTrained 	= 	3,
         NumLevelsTrained 	= 	2,
