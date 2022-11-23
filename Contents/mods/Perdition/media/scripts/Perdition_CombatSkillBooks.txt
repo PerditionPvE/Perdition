@@ -1,0 +1,942 @@
+module Perdition
+{
+	imports
+	{
+		Base
+	}
+/****************************** Guns ******************************/
+    item PERDMarksmanship1
+    {
+        DisplayCategory = SkillBook,
+        NumberOfPages		=	220,
+        Weight				=	0.8,
+        Type				=	Literature,
+        DisplayName			=	Marksmanship Vol. 1,
+        Icon				=	ExtraSkillbook,
+        SkillTrained 		= 	Aiming,
+        LvlSkillTrained 	= 	1,
+        NumLevelsTrained 	= 	2,
+        StaticModel 		= 	Book,
+        WorldStaticModel 	= 	BookGrey_Ground,
+    }
+
+	item PERDMarksmanship2
+    {
+        DisplayCategory = SkillBook,
+        NumberOfPages		=	260,
+        Weight				=	0.8,
+        Type				=	Literature,
+        DisplayName			=	Marksmanship Vol. 2,
+        Icon				=	ExtraSkillbook,
+        SkillTrained 		= 	Aiming,
+        LvlSkillTrained 	= 	3,
+        NumLevelsTrained 	= 	2,
+        StaticModel 		= 	Book,
+        WorldStaticModel 	= 	BookClosedGround,
+    }
+
+	item PERDMarksmanship3
+    {
+        DisplayCategory = SkillBook,
+        NumberOfPages		=	300,
+        Weight				=	0.8,
+        Type				=	Literature,
+        DisplayName			=	Marksmanship Vol. 3,
+        Icon				=	ExtraSkillbook,
+        SkillTrained 		= 	Aiming,
+        LvlSkillTrained 	= 	5,
+        NumLevelsTrained 	= 	2,
+        StaticModel 		= 	Book,
+        WorldStaticModel 	= 	BookClosedGround,
+    }
+	
+	item PERDAiming4
+	{
+        DisplayCategory = SkillBook,
+		NumberOfPages		=	340,
+        Weight				=	0.8,
+        Type				=	Literature,
+        DisplayName			=	Aiming Vol. 4,
+        Icon				=	ExtraSkillbook,
+        SkillTrained 		= 	Aiming,
+        LvlSkillTrained 	= 	7,
+        NumLevelsTrained 	= 	2,
+        StaticModel 		= 	Book,
+        WorldStaticModel 	= 	BookClosedGround,
+	}
+	
+	item PERDAiming5
+	{
+        DisplayCategory = SkillBook,
+		NumberOfPages		=	380,
+        Weight				=	0.8,
+        Type				=	Literature,
+        DisplayName			=	Aiming Vol. 5,
+        Icon				=	ExtraSkillbook,
+        SkillTrained 		= 	Aiming,
+        LvlSkillTrained 	= 	9,
+        NumLevelsTrained 	= 	2,
+        StaticModel 		= 	Book,
+        WorldStaticModel 	= 	BookClosedGround,
+	}
+
+	item PERDReloading1
+    {
+        DisplayCategory = SkillBook,
+        NumberOfPages		=	220,
+        Weight				=	0.8,
+        Type				=	Literature,
+        DisplayName			=	Reloading Vol. 1,
+        Icon				=	ExtraSkillbook,
+        SkillTrained 		= 	Reloading,
+        LvlSkillTrained 	= 	1,
+        NumLevelsTrained 	= 	2,
+        StaticModel 		= 	Book,
+        WorldStaticModel 	= 	BookClosedGround,
+    }
+
+	item PERDReloading2
+    {
+        DisplayCategory = SkillBook,
+        NumberOfPages		=	260,
+        Weight				=	0.8,
+        Type				=	Literature,
+        DisplayName			=	Reloading Vol. 2,
+        Icon				=	ExtraSkillbook,
+        SkillTrained 		= 	Reloading,
+        LvlSkillTrained 	= 	3,
+        NumLevelsTrained 	= 	2,
+        StaticModel 		= 	Book,
+        WorldStaticModel 	= 	BookClosedGround,
+    }
+
+	item PERDReloading3
+    {
+        DisplayCategory = SkillBook,
+        NumberOfPages		=	300,
+        Weight				=	0.8,
+        Type				=	Literature,
+        DisplayName			=	Reloading Vol. 3,
+        Icon				=	Book,
+        SkillTrained 		= 	Reloading,
+        LvlSkillTrained 	= 	5,
+        NumLevelsTrained 	= 	2,
+        StaticModel 		= 	Book,
+        WorldStaticModel 	= 	BookClosedGround,
+    }
+	
+	item PERDReloading4
+    {
+        DisplayCategory = SkillBook,
+        NumberOfPages		=	340,
+        Weight				=	0.8,
+        Type				=	Literature,
+        DisplayName			=	Reloading Vol. 4,
+        Icon				=	Book,
+        SkillTrained 		= 	Reloading,
+        LvlSkillTrained 	= 	7,
+        NumLevelsTrained 	= 	2,
+        StaticModel 		= 	Book,
+        WorldStaticModel 	= 	BookClosedGround,
+    }
+	
+	item PERDReloading5
+    {
+        DisplayCategory = SkillBook,
+        NumberOfPages		=	380,
+        Weight				=	0.8,
+        Type				=	Literature,
+        DisplayName			=	Reloading Vol. 5,
+        Icon				=	Book,
+        SkillTrained 		= 	Reloading,
+        LvlSkillTrained 	= 	9,
+        NumLevelsTrained 	= 	2,
+        StaticModel 		= 	Book,
+        WorldStaticModel 	= 	BookClosedGround,
+    }
+/****************************** Passive Skills ******************************/
+    item PERDMaintenance1
+    {
+        DisplayCategory = SkillBook,
+        NumberOfPages       =   220,
+        Weight              =   0.8,
+        Type                =   Literature,
+        DisplayName         =   Maintenance Vol. 1,
+        Icon                =   Book,
+        SkillTrained        =   Maintenance,
+        LvlSkillTrained     =   1,
+        NumLevelsTrained    =   2,
+        StaticModel         =   Book,
+        WorldStaticModel    =   BookClosedGround,
+    }
+
+    item PERDMaintenance2
+    {
+        DisplayCategory = SkillBook,
+        NumberOfPages       =   260,
+        Weight              =   0.8,
+        Type                =   Literature,
+        DisplayName         =   Maintenance Vol. 2,
+        Icon                =   Book,
+        SkillTrained        =   Maintenance,
+        LvlSkillTrained     =   3,
+        NumLevelsTrained    =   2,
+        StaticModel         =   Book,
+        WorldStaticModel    =   BookClosedGround,
+    }
+
+    item PERDMaintenance3
+    {
+        DisplayCategory = SkillBook,
+        NumberOfPages       =   300,
+        Weight              =   0.8,
+        Type                =   Literature,
+        DisplayName         =   Maintenance Vol. 3,
+        Icon                =   Book,
+        SkillTrained        =   Maintenance,
+        LvlSkillTrained     =   5,
+        NumLevelsTrained    =   2,
+        StaticModel         =   Book,
+        WorldStaticModel    =   BookClosedGround,
+    }
+
+    item PERDMaintenance4
+    {
+        DisplayCategory = SkillBook,
+        NumberOfPages       =   340,
+        Weight              =   0.8,
+        Type                =   Literature,
+        DisplayName         =   Maintenance Vol. 4,
+        Icon                =   Book,
+        SkillTrained        =   Maintenance,
+        LvlSkillTrained     =   7,
+        NumLevelsTrained    =   2,
+        StaticModel         =   Book,
+        WorldStaticModel    =   BookClosedGround,
+    }
+
+    item PERDMaintenance5
+    {
+        DisplayCategory = SkillBook,
+        NumberOfPages       =   380,
+        Weight              =   0.8,
+        Type                =   Literature,
+        DisplayName         =   Maintenance Vol. 5,
+        Icon                =   Book,
+        SkillTrained        =   Maintenance,
+        LvlSkillTrained     =   9,
+        NumLevelsTrained    =   2,
+        StaticModel         =   Book,
+        WorldStaticModel    =   BookClosedGround,
+    }
+
+
+
+    item PERDNimble1
+    {
+        DisplayCategory = SkillBook,
+        NumberOfPages       =   220,
+        Weight              =   0.8,
+        Type                =   Literature,
+        DisplayName         =   Nimble Vol. 1,
+        Icon                =   Book,
+        SkillTrained        =   Nimble,
+        LvlSkillTrained     =   1,
+        NumLevelsTrained    =   2,
+        StaticModel         =   Book,
+        WorldStaticModel    =   BookClosedGround,
+    }
+
+    item PERDNimble2
+    {
+        DisplayCategory = SkillBook,
+        NumberOfPages       =   260,
+        Weight              =   0.8,
+        Type                =   Literature,
+        DisplayName         =   Nimble Vol. 2,
+        Icon                =   Book,
+        SkillTrained        =   Nimble,
+        LvlSkillTrained     =   3,
+        NumLevelsTrained    =   2,
+        StaticModel         =   Book,
+        WorldStaticModel    =   BookClosedGround,
+    }
+
+    item PERDNimble3
+    {
+        DisplayCategory = SkillBook,
+        NumberOfPages       =   300,
+        Weight              =   0.8,
+        Type                =   Literature,
+        DisplayName         =   Nimble Vol. 3,
+        Icon                =   Book,
+        SkillTrained        =   Nimble,
+        LvlSkillTrained     =   5,
+        NumLevelsTrained    =   2,
+        StaticModel         =   Book,
+        WorldStaticModel    =   BookClosedGround,
+    }
+
+    item PERDNimble4
+    {
+        DisplayCategory = SkillBook,
+        NumberOfPages       =   340,
+        Weight              =   0.8,
+        Type                =   Literature,
+        DisplayName         =   Nimble Vol. 4,
+        Icon                =   Book,
+        SkillTrained        =   Nimble,
+        LvlSkillTrained     =   7,
+        NumLevelsTrained    =   2,
+        StaticModel         =   Book,
+        WorldStaticModel    =   BookClosedGround,
+    }
+
+    item PERDNimble5
+    {
+        DisplayCategory = SkillBook,
+        NumberOfPages       =   380,
+        Weight              =   0.8,
+        Type                =   Literature,
+        DisplayName         =   Nimble Vol. 5,
+        Icon                =   Book,
+        SkillTrained        =   Nimble,
+        LvlSkillTrained     =   9,
+        NumLevelsTrained    =   2,
+        StaticModel         =   Book,
+        WorldStaticModel    =   BookClosedGround,
+    }
+
+    
+
+    item PERDFitness1
+    {
+        DisplayCategory = SkillBook,
+        NumberOfPages       =   220,
+        Weight              =   0.8,
+        Type                =   Literature,
+        DisplayName         =   Fitness Vol. 1,
+        Icon                =   Book,
+        SkillTrained        =   Fitness,
+        LvlSkillTrained     =   1,
+        NumLevelsTrained    =   2,
+        StaticModel         =   Book,
+        WorldStaticModel    =   BookClosedGround,
+    }
+
+    item PERDFitness2
+    {
+        DisplayCategory = SkillBook,
+        NumberOfPages       =   260,
+        Weight              =   0.8,
+        Type                =   Literature,
+        DisplayName         =   Fitness Vol. 2,
+        Icon                =   Book,
+        SkillTrained        =   Fitness,
+        LvlSkillTrained     =   3,
+        NumLevelsTrained    =   2,
+        StaticModel         =   Book,
+        WorldStaticModel    =   BookClosedGround,
+    }
+
+    item PERDFitness3
+    {
+        DisplayCategory = SkillBook,
+        NumberOfPages       =   300,
+        Weight              =   0.8,
+        Type                =   Literature,
+        DisplayName         =   Fitness Vol. 3,
+        Icon                =   Book,
+        SkillTrained        =   Fitness,
+        LvlSkillTrained     =   5,
+        NumLevelsTrained    =   2,
+        StaticModel         =   Book,
+        WorldStaticModel    =   BookClosedGround,
+    }
+
+    item PERDFitness4
+    {
+        DisplayCategory = SkillBook,
+        NumberOfPages       =   340,
+        Weight              =   0.8,
+        Type                =   Literature,
+        DisplayName         =   Fitness Vol. 4,
+        Icon                =   Book,
+        SkillTrained        =   Fitness,
+        LvlSkillTrained     =   7,
+        NumLevelsTrained    =   2,
+        StaticModel         =   Book,
+        WorldStaticModel    =   BookClosedGround,
+    }
+
+    item PERDFitness5
+    {
+        DisplayCategory = SkillBook,
+        NumberOfPages       =   380,
+        Weight              =   0.8,
+        Type                =   Literature,
+        DisplayName         =   Fitness Vol. 5,
+        Icon                =   Book,
+        SkillTrained        =   Fitness,
+        LvlSkillTrained     =   9,
+        NumLevelsTrained    =   2,
+        StaticModel         =   Book,
+        WorldStaticModel    =   BookClosedGround,
+    }
+
+
+
+
+    item PERDStrength1
+    {
+        DisplayCategory = SkillBook,
+        NumberOfPages       =   220,
+        Weight              =   0.8,
+        Type                =   Literature,
+        DisplayName         =   Strength Vol. 1,
+        Icon                =   Book,
+        SkillTrained        =   Strength,
+        LvlSkillTrained     =   1,
+        NumLevelsTrained    =   2,
+        StaticModel         =   Book,
+        WorldStaticModel    =   BookClosedGround,
+    }
+
+    item PERDStrength2
+    {
+        DisplayCategory = SkillBook,
+        NumberOfPages       =   260,
+        Weight              =   0.8,
+        Type                =   Literature,
+        DisplayName         =   Strength Vol. 2,
+        Icon                =   Book,
+        SkillTrained        =   Strength,
+        LvlSkillTrained     =   3,
+        NumLevelsTrained    =   2,
+        StaticModel         =   Book,
+        WorldStaticModel    =   BookClosedGround,
+    }
+
+    item PERDStrength3
+    {
+        DisplayCategory = SkillBook,
+        NumberOfPages       =   300,
+        Weight              =   0.8,
+        Type                =   Literature,
+        DisplayName         =   Strength Vol. 3,
+        Icon                =   Book,
+        SkillTrained        =   Strength,
+        LvlSkillTrained     =   5,
+        NumLevelsTrained    =   2,
+        StaticModel         =   Book,
+        WorldStaticModel    =   BookClosedGround,
+    }
+
+    item PERDStrength4
+    {
+        DisplayCategory = SkillBook,
+        NumberOfPages       =   340,
+        Weight              =   0.8,
+        Type                =   Literature,
+        DisplayName         =   Strength Vol. 4,
+        Icon                =   Book,
+        SkillTrained        =   Strength,
+        LvlSkillTrained     =   7,
+        NumLevelsTrained    =   2,
+        StaticModel         =   Book,
+        WorldStaticModel    =   BookClosedGround,
+    }
+
+    item PERDStrength5
+    {
+        DisplayCategory = SkillBook,
+        NumberOfPages       =   380,
+        Weight              =   0.8,
+        Type                =   Literature,
+        DisplayName         =   Strength Vol. 5,
+        Icon                =   Book,
+        SkillTrained        =   Strength,
+        LvlSkillTrained     =   9,
+        NumLevelsTrained    =   2,
+        StaticModel         =   Book,
+        WorldStaticModel    =   BookClosedGround,
+    }
+
+
+
+
+/****************************** Melee ******************************/
+    item PERDAxe1
+    {
+        DisplayCategory = SkillBook,
+        NumberOfPages       =   220,
+        Weight              =   0.8,
+        Type                =   Literature,
+        DisplayName         =   Axe Vol. 1,
+        Icon                =   Book,
+        SkillTrained        =   Axe,
+        LvlSkillTrained     =   1,
+        NumLevelsTrained    =   2,
+        StaticModel         =   Book,
+        WorldStaticModel    =   BookClosedGround,
+    }
+
+    item PERDAxe2
+    {
+        DisplayCategory = SkillBook,
+        NumberOfPages       =   260,
+        Weight              =   0.8,
+        Type                =   Literature,
+        DisplayName         =   Axe Vol. 2,
+        Icon                =   Book,
+        SkillTrained        =   Axe,
+        LvlSkillTrained     =   3,
+        NumLevelsTrained    =   2,
+        StaticModel         =   Book,
+        WorldStaticModel    =   BookClosedGround,
+    }
+
+    item PERDAxe3
+    {
+        DisplayCategory = SkillBook,
+        NumberOfPages       =   300,
+        Weight              =   0.8,
+        Type                =   Literature,
+        DisplayName         =   Axe Vol. 3,
+        Icon                =   Book,
+        SkillTrained        =   Axe,
+        LvlSkillTrained     =   5,
+        NumLevelsTrained    =   2,
+        StaticModel         =   Book,
+        WorldStaticModel    =   BookClosedGround,
+    }
+
+    item PERDAxe4
+    {
+        DisplayCategory = SkillBook,
+        NumberOfPages       =   340,
+        Weight              =   0.8,
+        Type                =   Literature,
+        DisplayName         =   Axe Vol. 4,
+        Icon                =   Book,
+        SkillTrained        =   Axe,
+        LvlSkillTrained     =   7,
+        NumLevelsTrained    =   2,
+        StaticModel         =   Book,
+        WorldStaticModel    =   BookClosedGround,
+    }
+
+    item PERDAxe5
+    {
+        DisplayCategory = SkillBook,
+        NumberOfPages       =   380,
+        Weight              =   0.8,
+        Type                =   Literature,
+        DisplayName         =   Axe Vol. 5,
+        Icon                =   Book,
+        SkillTrained        =   Axe,
+        LvlSkillTrained     =   9,
+        NumLevelsTrained    =   2,
+        StaticModel         =   Book,
+        WorldStaticModel    =   BookClosedGround,
+    }
+
+
+
+
+
+
+    item PERDSpear1
+    {
+        DisplayCategory = SkillBook,
+        NumberOfPages       =   220,
+        Weight              =   0.8,
+        Type                =   Literature,
+        DisplayName         =   Spear Vol. 1,
+        Icon                =   Book,
+        SkillTrained        =   Spear,
+        LvlSkillTrained     =   1,
+        NumLevelsTrained    =   2,
+        StaticModel         =   Book,
+        WorldStaticModel    =   BookClosedGround,
+    }
+
+    item PERDSpear2
+    {
+        DisplayCategory = SkillBook,
+        NumberOfPages       =   260,
+        Weight              =   0.8,
+        Type                =   Literature,
+        DisplayName         =   Spear Vol. 2,
+        Icon                =   Book,
+        SkillTrained        =   Spear,
+        LvlSkillTrained     =   3,
+        NumLevelsTrained    =   2,
+        StaticModel         =   Book,
+        WorldStaticModel    =   BookClosedGround,
+    }
+
+    item PERDSpear3
+    {
+        DisplayCategory = SkillBook,
+        NumberOfPages       =   300,
+        Weight              =   0.8,
+        Type                =   Literature,
+        DisplayName         =   Spear Vol. 3,
+        Icon                =   Book,
+        SkillTrained        =   Spear,
+        LvlSkillTrained     =   5,
+        NumLevelsTrained    =   2,
+        StaticModel         =   Book,
+        WorldStaticModel    =   BookClosedGround,
+    }
+
+    item PERDSpear4
+    {
+        DisplayCategory = SkillBook,
+        NumberOfPages       =   340,
+        Weight              =   0.8,
+        Type                =   Literature,
+        DisplayName         =   Spear Vol. 4,
+        Icon                =   Book,
+        SkillTrained        =   Spear,
+        LvlSkillTrained     =   7,
+        NumLevelsTrained    =   2,
+        StaticModel         =   Book,
+        WorldStaticModel    =   BookClosedGround,
+    }
+
+    item PERDSpear5
+    {
+        DisplayCategory = SkillBook,
+        NumberOfPages       =   380,
+        Weight              =   0.8,
+        Type                =   Literature,
+        DisplayName         =   Spear Vol. 5,
+        Icon                =   Book,
+        SkillTrained        =   Spear,
+        LvlSkillTrained     =   9,
+        NumLevelsTrained    =   2,
+        StaticModel         =   Book,
+        WorldStaticModel    =   BookClosedGround,
+    }
+
+
+
+
+
+
+    item PERDLongBlunt1
+    {
+        DisplayCategory = SkillBook,
+        NumberOfPages       =   220,
+        Weight              =   0.8,
+        Type                =   Literature,
+        DisplayName         =   Long Blunt Vol. 1,
+        Icon                =   Book,
+        SkillTrained        =   Blunt,
+        LvlSkillTrained     =   1,
+        NumLevelsTrained    =   2,
+        StaticModel         =   Book,
+        WorldStaticModel    =   BookClosedGround,
+    }
+
+    item PERDLongBlunt2
+    {
+        DisplayCategory = SkillBook,
+        NumberOfPages       =   260,
+        Weight              =   0.8,
+        Type                =   Literature,
+        DisplayName         =   Long Blunt Vol. 2,
+        Icon                =   Book,
+        SkillTrained        =   Blunt,
+        LvlSkillTrained     =   3,
+        NumLevelsTrained    =   2,
+        StaticModel         =   Book,
+        WorldStaticModel    =   BookClosedGround,
+    }
+
+    item PERDLongBlunt3
+    {
+        DisplayCategory = SkillBook,
+        NumberOfPages       =   300,
+        Weight              =   0.8,
+        Type                =   Literature,
+        DisplayName         =   Long Blunt Vol. 3,
+        Icon                =   Book,
+        SkillTrained        =   Blunt,
+        LvlSkillTrained     =   5,
+        NumLevelsTrained    =   2,
+        StaticModel         =   Book,
+        WorldStaticModel    =   BookClosedGround,
+    }
+
+    item PERDLongBlunt4
+    {
+        DisplayCategory = SkillBook,
+        NumberOfPages       =   340,
+        Weight              =   0.8,
+        Type                =   Literature,
+        DisplayName         =   Long Blunt Vol. 4,
+        Icon                =   Book,
+        SkillTrained        =   Blunt,
+        LvlSkillTrained     =   7,
+        NumLevelsTrained    =   2,
+        StaticModel         =   Book,
+        WorldStaticModel    =   BookClosedGround,
+    }
+
+    item PERDLongBlunt5
+    {
+        DisplayCategory = SkillBook,
+        NumberOfPages       =   380,
+        Weight              =   0.8,
+        Type                =   Literature,
+        DisplayName         =   Long Blunt Vol. 5,
+        Icon                =   Book,
+        SkillTrained        =   Blunt,
+        LvlSkillTrained     =   9,
+        NumLevelsTrained    =   2,
+        StaticModel         =   Book,
+        WorldStaticModel    =   BookClosedGround,
+    }
+
+
+
+
+
+    item PERDShortBlunt1
+    {
+        DisplayCategory = SkillBook,
+        NumberOfPages       =   220,
+        Weight              =   0.8,
+        Type                =   Literature,
+        DisplayName         =   Short Blunt Vol. 1,
+        Icon                =   Book,
+        SkillTrained        =   SmallBlunt,
+        LvlSkillTrained     =   1,
+        NumLevelsTrained    =   2,
+        StaticModel         =   Book,
+        WorldStaticModel    =   BookClosedGround,
+    }
+
+    item PERDShortBlunt2
+    {
+        DisplayCategory = SkillBook,
+        NumberOfPages       =   260,
+        Weight              =   0.8,
+        Type                =   Literature,
+        DisplayName         =   Short Blunt Vol. 2,
+        Icon                =   Book,
+        SkillTrained        =   SmallBlunt,
+        LvlSkillTrained     =   3,
+        NumLevelsTrained    =   2,
+        StaticModel         =   Book,
+        WorldStaticModel    =   BookClosedGround,
+    }
+
+    item PERDShortBlunt3
+    {
+        DisplayCategory = SkillBook,
+        NumberOfPages       =   300,
+        Weight              =   0.8,
+        Type                =   Literature,
+        DisplayName         =   Short Blunt Vol. 3,
+        Icon                =   Book,
+        SkillTrained        =   SmallBlunt,
+        LvlSkillTrained     =   5,
+        NumLevelsTrained    =   2,
+        StaticModel         =   Book,
+        WorldStaticModel    =   BookClosedGround,
+    }
+
+    item PERDShortBlunt4
+    {
+        DisplayCategory = SkillBook,
+        NumberOfPages       =   340,
+        Weight              =   0.8,
+        Type                =   Literature,
+        DisplayName         =   Short Blunt Vol. 4,
+        Icon                =   Book,
+        SkillTrained        =   SmallBlunt,
+        LvlSkillTrained     =   7,
+        NumLevelsTrained    =   2,
+        StaticModel         =   Book,
+        WorldStaticModel    =   BookClosedGround,
+    }
+
+    item PERDShortBlunt5
+    {
+        DisplayCategory = SkillBook,
+        NumberOfPages       =   380,
+        Weight              =   0.8,
+        Type                =   Literature,
+        DisplayName         =   Short Blunt Vol. 5,
+        Icon                =   Book,
+        SkillTrained        =   SmallBlunt,
+        LvlSkillTrained     =   9,
+        NumLevelsTrained    =   2,
+        StaticModel         =   Book,
+        WorldStaticModel    =   BookClosedGround,
+    }
+
+
+
+
+
+
+    item PERDShortBlade1
+    {
+        DisplayCategory = SkillBook,
+        NumberOfPages       =   220,
+        Weight              =   0.8,
+        Type                =   Literature,
+        DisplayName         =   Short Blade Vol. 1,
+        Icon                =   Book,
+        SkillTrained        =   SmallBlade,
+        LvlSkillTrained     =   1,
+        NumLevelsTrained    =   2,
+        StaticModel         =   Book,
+        WorldStaticModel    =   BookClosedGround,
+    }
+
+    item PERDShortBlade2
+    {
+        DisplayCategory = SkillBook,
+        NumberOfPages       =   260,
+        Weight              =   0.8,
+        Type                =   Literature,
+        DisplayName         =   Short Blade Vol. 2,
+        Icon                =   Book,
+        SkillTrained        =   SmallBlade,
+        LvlSkillTrained     =   3,
+        NumLevelsTrained    =   2,
+        StaticModel         =   Book,
+        WorldStaticModel    =   BookClosedGround,
+    }
+
+    item PERDShortBlade3
+    {
+        DisplayCategory = SkillBook,
+        NumberOfPages       =   300,
+        Weight              =   0.8,
+        Type                =   Literature,
+        DisplayName         =   Short Blade Vol. 3,
+        Icon                =   Book,
+        SkillTrained        =   SmallBlade,
+        LvlSkillTrained     =   5,
+        NumLevelsTrained    =   2,
+        StaticModel         =   Book,
+        WorldStaticModel    =   BookClosedGround,
+    }
+
+    item PERDShortBlade4
+    {
+        DisplayCategory = SkillBook,
+        NumberOfPages       =   340,
+        Weight              =   0.8,
+        Type                =   Literature,
+        DisplayName         =   Short Blade Vol. 4,
+        Icon                =   Book,
+        SkillTrained        =   SmallBlade,
+        LvlSkillTrained     =   7,
+        NumLevelsTrained    =   2,
+        StaticModel         =   Book,
+        WorldStaticModel    =   BookClosedGround,
+    }
+
+    item PERDShortBlade5
+    {
+        DisplayCategory = SkillBook,
+        NumberOfPages       =   380,
+        Weight              =   0.8,
+        Type                =   Literature,
+        DisplayName         =   Short Blade Vol. 5,
+        Icon                =   Book,
+        SkillTrained        =   SmallBlade,
+        LvlSkillTrained     =   9,
+        NumLevelsTrained    =   2,
+        StaticModel         =   Book,
+        WorldStaticModel    =   BookClosedGround,
+    }
+
+
+
+
+
+
+    item PERDLongBlade1
+    {
+        DisplayCategory = SkillBook,
+        NumberOfPages       =   220,
+        Weight              =   0.8,
+        Type                =   Literature,
+        DisplayName         =   Long Blade Vol. 1,
+        Icon                =   Book,
+        SkillTrained        =   LongBlade,
+        LvlSkillTrained     =   1,
+        NumLevelsTrained    =   2,
+        StaticModel         =   Book,
+        WorldStaticModel    =   BookClosedGround,
+    }
+
+    item PERDLongBlade2
+    {
+        DisplayCategory = SkillBook,
+        NumberOfPages       =   260,
+        Weight              =   0.8,
+        Type                =   Literature,
+        DisplayName         =   Long Blade Vol. 2,
+        Icon                =   Book,
+        SkillTrained        =   LongBlade,
+        LvlSkillTrained     =   3,
+        NumLevelsTrained    =   2,
+        StaticModel         =   Book,
+        WorldStaticModel    =   BookClosedGround,
+    }
+
+    item PERDLongBlade3
+    {
+        DisplayCategory = SkillBook,
+        NumberOfPages       =   300,
+        Weight              =   0.8,
+        Type                =   Literature,
+        DisplayName         =   Long Blade Vol. 3,
+        Icon                =   Book,
+        SkillTrained        =   LongBlade,
+        LvlSkillTrained     =   5,
+        NumLevelsTrained    =   2,
+        StaticModel         =   Book,
+        WorldStaticModel    =   BookClosedGround,
+    }
+
+    item PERDLongBlade4
+    {
+        DisplayCategory = SkillBook,
+        NumberOfPages       =   340,
+        Weight              =   0.8,
+        Type                =   Literature,
+        DisplayName         =   Long Blade Vol. 4,
+        Icon                =   Book,
+        SkillTrained        =   LongBlade,
+        LvlSkillTrained     =   7,
+        NumLevelsTrained    =   2,
+        StaticModel         =   Book,
+        WorldStaticModel    =   BookClosedGround,
+    }
+
+    item PERDLongBlade5
+    {
+        DisplayCategory = SkillBook,
+        NumberOfPages       =   380,
+        Weight              =   0.8,
+        Type                =   Literature,
+        DisplayName         =   Long Blade Vol. 5,
+        Icon                =   Book,
+        SkillTrained        =   LongBlade,
+        LvlSkillTrained     =   9,
+        NumLevelsTrained    =   2,
+        StaticModel         =   Book,
+        WorldStaticModel    =   BookClosedGround,
+    }
+}
