@@ -17,6 +17,12 @@ function ShopUI:initialise()
     self.no.borderColor = {r=1, g=1, b=1, a=0.4}
     self:addChild(self.no)
 
+    self.items = nil -- shop listing
+    self.cart = nil -- player cart
+    self.edititems = nil -- button to edit shop listing
+    self.buy = nil -- confirm purchase of cart
+    self.playercash = nil -- shows how much money the player has total
+    self.cartcost = nil -- how much the cart costs total
 
 end
 
