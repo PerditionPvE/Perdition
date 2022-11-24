@@ -84,15 +84,17 @@ function ShopUI:initialise()
 
     -- shows how much money the player has total
     local mon = Economy.getWorth(self.player)
+    print(mon)
     self.myCash = ISLabel:new(
             self:getWidth(),
             0,
             tabHeight,
-            "$",
+            "$" .. mon,
             good.r, good.g, good.b, 1,
             UIFont.Medium)
     self.myCash:initialise()
     self.myCash:instantiate()
+    self.myCash.x = self:getWidth() - self.myCash:getWidth() - padding.right -- TODO: check if this positions well
     self:addChild(self.myCash)
 
     self.cost = nil -- how much the cart costs total

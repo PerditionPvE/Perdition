@@ -14,9 +14,11 @@ Economy.bills = {
 
 ---@param item Item the iterated item
 local function predicateMoney(item)
-    for _, bill in pairs(Economy.bills) do
+    for value, bill in pairs(Economy.bills) do
         -- gets the base name
-        if item:getFullName() == bill then
+        print(item:getType())
+        print(item:getType() == bill)
+        if item:getType() == bill then
             return true
         end
     end
@@ -41,18 +43,16 @@ end
 ---@return int
 Economy.getWorth = function(player)
     local inv = player:getInventory()
-    local items = inv:getAllEval(predicateMoney)
+    local items = inv:getAllEvalRecurse(predicateMoney)
     local total = 0
     for i=0, items:size() - 1 do
         local item = items:get(i)
-        if item:getFullName() == "Money" then
+        if item:getType() == "Money" then
             total = total + 1
-            print(total)
         else
             for value, name in pairs(Economy.bills) do
-                if item:getFullName() == name then
+                if item:getType() == name then
                     total = total + value
-                    print(total)
                 end
             end
         end
