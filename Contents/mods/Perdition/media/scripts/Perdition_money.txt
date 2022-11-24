@@ -8,6 +8,16 @@ module Base
         Icon = Money,
         DisplayCategory = Economy,
     }
+
+    item 5bill
+        {
+        Weight = 0.01,
+        Type = Normal,
+        DisplayName = $5 Bill,
+        Icon = Money,
+        DisplayCategory = Economy,
+    }
+
     item 10bill
         {
 		Weight		= 0.01,
@@ -48,16 +58,25 @@ module Base
         {
 		Weight		= 0.01,
 		Type		= Normal,
-		DisplayName	= $1000 Bill,
+		DisplayName	= $1,000 Bill,
 		Icon		= Money,
         DisplayCategory = Economy,
     }
+
+    item 5000bill
+        {
+        Weight = 0.01,
+        Type = Normal,
+        DisplayName = $5,000 Bill,
+        Icon = Money,
+        DisplayCategory = Economy,
+        }
 
     item 10000bill
         {
 		Weight		= 0.01,
 		Type		= Normal,
-		DisplayName	= $10000 Bill,
+		DisplayName	= $10,000 Bill,
 		Icon		= Money,
         DisplayCategory = Economy,
     }
