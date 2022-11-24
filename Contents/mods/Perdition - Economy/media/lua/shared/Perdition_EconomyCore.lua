@@ -24,4 +24,19 @@ Economy.getBillsByCost = function(cost)
     end
     return result
 end
---Events.OnPlayerUpdate.Add(checkRoom)
+
+---@param item Item the iterated item
+local function predicateMoney(item)
+    for _, bill in pairs(Economy.bills) do
+        -- TODO check if getFullName() actually gets the full type
+        if item:getFullName() == bill then
+            return true
+        end
+    end
+    return false
+end
+
+---@param inv ItemContainer
+Economy.getWorth = function(inv)
+    -- TODO calculate full inventory worth by money
+end
