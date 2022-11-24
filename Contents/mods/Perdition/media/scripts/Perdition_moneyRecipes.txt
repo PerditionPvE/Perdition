@@ -1,6 +1,7 @@
 module Base
 {
-	recipe Combine into $10000 Bill (with $1000)
+    /* 10,000 */
+	recipe Exchange for $10,000 Bill
     {
        bill1000=10,
 
@@ -9,7 +10,7 @@ module Base
        Category:Money,
     }
 
-    recipe Return a $10000 Bill (into $1000)
+    recipe Exchange for $1,000 Bills (10)
     {
        10000bill,
 
@@ -18,7 +19,7 @@ module Base
        Category:Money,
     }
 
-    recipe Return a $10000 Bill (into $100)
+    recipe Exchange for $100 Bill (100)
     {
        10000bill,
 
@@ -27,7 +28,8 @@ module Base
        Category:Money,
     }
 
-	recipe Combine into $1000 Bill
+    /* 1,000 */
+	recipe Exchange for $1,000 Bill
     {
        bill100=10,
 
@@ -36,7 +38,8 @@ module Base
        Category:Money,
     }
 
-    recipe Return a $1000 Bill (into $100)
+    /* 100 */
+    recipe Exchange for $100 Bills (10)
     {
        1000bill,
 
@@ -46,7 +49,7 @@ module Base
     }
 
 
-    recipe Combine into $100 Bill
+    recipe Exchange for $100 Bill
     {
        Money=100,
 
@@ -55,7 +58,7 @@ module Base
        Category:Money,
     }
 
-	recipe Return a $100 Bill
+	recipe Break down $100 Bill
     {
        100bill,
 
@@ -64,7 +67,7 @@ module Base
        Category:Money,
     }
 
-	recipe Combine into $100 Bill (with $50)
+	recipe Exchange for $100 Bill
     {
        50bill=2,
 
@@ -73,7 +76,7 @@ module Base
        Category:Money,
     }
 
-	recipe Return a $100 Bill (into $50)
+	recipe Exchange for $50 Bills (2)
     {
        100bill,
 
@@ -82,7 +85,7 @@ module Base
        Category:Money,
     }
 
-	recipe Combine into $100 Bill (with $20)
+	recipe Exchange for $100 Bill
     {
        20bill=5,
 
@@ -91,7 +94,7 @@ module Base
        Category:Money,
     }
 
-	recipe Return a $100 Bill (into $20)
+	recipe Exchange for $20 Bills (5)
     {
        100bill,
 
@@ -100,7 +103,7 @@ module Base
        Category:Money,
     }
 
-	recipe Combine into $100 Bill (with $10)
+	recipe Exchange for $100 Bill
     {
        10bill=10,
 
@@ -109,7 +112,7 @@ module Base
        Category:Money,
     }
 
-	recipe Return a $100 Bill (into $10)
+	recipe Exchange for $10 Bill (10)
     {
        100bill,
 
@@ -118,7 +121,7 @@ module Base
        Category:Money,
     }
 
-	recipe Combine into $50 Bill
+	recipe Exchange for $50 Bill
     {
        Money=50,
 
@@ -127,7 +130,7 @@ module Base
        Category:Money,
     }
 
-	recipe Return a $50 Bill
+	recipe Break down $50 Bill
     {
       50bill,
 
@@ -136,7 +139,7 @@ module Base
        Category:Money,
     }
 
-	recipe Combine into $50 Bill (with $10)
+	recipe Exchange for $10 Bill
     {
        10bill=5,
 
@@ -145,7 +148,7 @@ module Base
        Category:Money,
     }
 
-	recipe Return a $50 Bill (into $10)
+	recipe Exchange for $10 Bills (5)
     {
       50bill,
 
@@ -154,7 +157,7 @@ module Base
        Category:Money,
     }
 
-	recipe Combine into $20 Bill
+	recipe Exchange for $20 Bill
     {
        Money=20,
 
@@ -163,7 +166,7 @@ module Base
        Category:Money,
     }
 
-	recipe Return a $20 Bill
+	recipe Break down $20 Bill
     {
        20bill,
 
@@ -172,7 +175,7 @@ module Base
        Category:Money,
     }
 
-	recipe Combine into $20 Bill (with $10)
+	recipe Exchange for $20 Bill
     {
        10bill=2,
 
@@ -181,7 +184,7 @@ module Base
        Category:Money,
     }
 
-	recipe Return a $20 Bill (into $10)
+	recipe Exchange for $10 Bills (2)
     {
        20bill,
 
@@ -190,7 +193,7 @@ module Base
        Category:Money,
     }
 
-	recipe Get a $10 Bill
+	recipe Exchange for $10 Bill
     {
        Money=10,
 
@@ -199,12 +202,39 @@ module Base
        Category:Money,
     }
 
-	recipe Return a $10 Bill
+	recipe Break down $10 Bill
     {
        10bill,
 
   	   Result:Money=10,
        Time:50.0,
        Category:Money,
+    }
+
+    recipe Exchange for $5 Bills (2)
+        {
+        10bill,
+
+        Result:5bill=2,
+        Time:50,
+        Category:Money,
+    }
+
+    recipe Break down $5 Bill
+        {
+        5bill,
+
+        Result:Money=5,
+        Time:50,
+        Category:Money,
+    }
+
+    recipe Exchange for $5 Bill
+        {
+        Money=5,
+
+        Result:5bill,
+        Time:50,
+        Category:Money,
     }
 }
