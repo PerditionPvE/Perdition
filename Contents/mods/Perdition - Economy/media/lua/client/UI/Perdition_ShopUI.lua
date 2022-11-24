@@ -10,14 +10,14 @@ function ShopUI:initialise()
     local listWidth = (self.width / 2) - 15
     local listheight = 250
 
-    self.no = ISButton:new(10, self:getHigh() - padBottom - btnHgt, btnWid, "Cancel", self, ShopUI.onClick)
+    self.no = ISButton:new(10, self:getHeight() - padBottom - btnHgt, btnWid, btnHgt,"Cancel", self, ShopUI.onClick)
     self.no.internal = "CANCEL"
     self.no:initialise()
     self.no:instantiate()
     self.no.borderColor = {r=1, g=1, b=1, a=0.4}
     self:addChild(self.no)
 
-    self.yes = ISButton:new(120, self:getHigh() - padBottom - btnHgt, btnWid, "Confirm", self, shopUI.onClick)
+    self.yes = ISButton:new(120, self:getHeight() - padBottom - btnHgt, btnWid, btnHgt, "Confirm", self, ShopUI.onClick)
     self.yes.internal = "CONFIRM"
     self.yes:initialise()
     self.yes:instantiate()
@@ -41,13 +41,34 @@ function ShopUI:initialise()
     self.cart.selected = 0
     self.cart.joypadParent = self
     self.cart.font = UIFont.NewSmall
-    self:addChild(slf.cart)
+    self:addChild(self.cart)
 
     self.edititems = nil -- button to edit shop listing
 
     self.playercash = nil -- shows how much money the player has total
     self.cartcost = nil -- how much the cart costs total
+end
 
+function ShopUI:new(x, y, width, height, player)
+    local o = {}
+    x = getCore():getScreenWidth() / 2 - (width / 2)
+    y = getCore():getScreenHeight() / 2 - (height / 2)
+    width = 350
+    height = 450
+    o = ISPanel:new(x, y, width, height)
+    setmetatable(o, self)
+    self.__index = self
+    o.borderColor = {r=0.4, g=0.4, b=0.4, a=1}
+    o.backgroundColor = {r=0, g=0, b=0, a=0.8};
+    o.listHeaderColor = {r=0.4, g=0.4, b=0.4, a=0.3};
+    o.width = width
+    o.height = height
+    o.player = player
+    o.moveWithMouse = true
+    o.offers = nil
+    o.cart = nil
+    ShopUI.instance = o
+    return o
 end
 
 function ShopUI.onClick(button)
