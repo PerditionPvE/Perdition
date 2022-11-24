@@ -19,6 +19,7 @@ idk.doShopMenu = function(player, context, worldobjects, test)
 end
 
 function sendShopMenu(worldobjects, player)
+    print(ShopUI)
     local ui = ShopUI:new(50, 50, 500, 150, player)
     ui:initialise()
     ui:addToUIManager()

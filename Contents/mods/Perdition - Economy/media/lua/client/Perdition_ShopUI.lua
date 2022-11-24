@@ -29,10 +29,10 @@ local function getBillsByCost(cost)
     local remainder = cost
     local result = {}
     for value, name in pairs(bills) do
-        local bills = remainder // value -- get the total divisable
+        local all = remainder // value -- get the total divisable
         remainder = remainder % value
-        result[name] = bills
-        print(getItemNameFromFullType("Base." .. name), "s: ", bills)
+        result[name] = all
+        print(getItemNameFromFullType("Base." .. name), "s: ", all)
     end
     return result
 end
@@ -86,12 +86,9 @@ function ShopUI:initialise()
     }
     local listWidth = (self.width / 2) - 15
     local listHeight = 250
-
     local tabWidth = 40
     local tabHeight = 18
-
     local defaultZomboidBorder = {r=1, g=1, b=1, a=0.4}
-
 
     -- close menu button
     self.no = ISButton:new(10, self:getHeight() - padding.bottom - buttonHeight, buttonWidth, buttonHeight,"Cancel", self, ShopUI.onClick)
@@ -144,11 +141,14 @@ function ShopUI:initialise()
     self:addChild(self.edititems)
 
     -- shows how much money the player has total
-    self.myCash = ISLabel:new(0,0,
-        tabHeight,
+    local mon = getWorth(self.player)
+    self.myCash = ISLabel:new(
+            self:getWidth(),
+            0,
+            tabHeight,
             "$",
             good.r, good.g, good.b, 1,
-            UIFont.NewSmall)
+            UIFont.Medium)
     self.myCash:initialise()
     self.myCash:instantiate()
     self:addChild(self.myCash)
