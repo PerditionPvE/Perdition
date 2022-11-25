@@ -1,6 +1,3 @@
-require "recipecode"
----@class Perdition
-Perdition = {}
 Perdition.OnCreate = {}
 Perdition.GetItemTypes = {}
 
