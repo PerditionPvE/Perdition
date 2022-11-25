@@ -1,0 +1,172 @@
+module ATM
+{
+    imports
+    {
+        Base
+    }
+    recipe Crowbar
+        {
+        destroy Money=800,
+        keep ToolTrader,
+
+        Result:	Crowbar,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        OnTest:Change_All_For_Money_OnTest,
+        }
+    recipe Woodaxe
+        {
+        destroy Money=1000,
+        keep ToolTrader,
+
+        Result:	WoodAxe,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        OnTest:Change_All_For_Money_OnTest,
+        }
+    recipe Pickaxe
+        {
+        destroy Money=800,
+        keep ToolTrader,
+
+        Result:	PickAxe,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        OnTest:Change_All_For_Money_OnTest,
+        }
+    recipe Propane Tank
+        {
+        destroy Money=500,
+        keep ToolTrader,
+
+        Result:	PropaneTank,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        OnTest:Change_All_For_Money_OnTest,
+        }
+    recipe Welder Mask
+        {
+        destroy Money=500,
+        keep ToolTrader,
+
+        Result:	WeldingMask,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        OnTest:Change_All_For_Money_OnTest,
+        }
+    recipe Propane Torch
+        {
+        destroy Money=500,
+        keep ToolTrader,
+
+        Result:	BlowTorch,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        OnTest:Change_All_For_Money_OnTest,
+        }
+    recipe Jack
+        {
+        destroy Money=400,
+        keep ToolTrader,
+
+        Result:	Jack,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        OnTest:Change_All_For_Money_OnTest,
+        }
+    recipe Tirepump
+        {
+        destroy Money=400,
+        keep ToolTrader,
+
+        Result:	TirePump,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        OnTest:Change_All_For_Money_OnTest,
+        }
+    recipe Lugwrench
+        {
+        destroy Money=400,
+        keep ToolTrader,
+
+        Result:	LugWrench,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        OnTest:Change_All_For_Money_OnTest,
+        }
+    recipe Wrench
+        {
+        destroy Money=300,
+        keep ToolTrader,
+
+        Result:	Spanner,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        OnTest:Change_All_For_Money_OnTest,
+        }
+    recipe Screwdriver
+        {
+        destroy Money=300,
+        keep ToolTrader,
+
+        Result:	Screwdriver,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        OnTest:Change_All_For_Money_OnTest,
+        }
+    recipe Battery Charger
+        {
+        destroy Money=700,
+        keep ToolTrader,
+
+        Result:	CarBatteryCharger,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        OnTest:Change_All_For_Money_OnTest,
+        }
+    recipe Box of Nails
+        {
+        destroy Money=250,
+        keep ToolTrader,
+
+        Result:	NailsBox,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        OnTest:Change_All_For_Money_OnTest,
+        }
+    recipe Box of Screws
+        {
+        destroy Money=200,
+        keep ToolTrader,
+
+        Result:	Screws,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        OnTest:Change_All_For_Money_OnTest,
+        }
+    recipe Fishing Rod
+        {
+        destroy Money=200,
+        keep ToolTrader,
+
+        Result:	FishingRod,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        OnTest:Change_All_For_Money_OnTest,
+        }
+}
