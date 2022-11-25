@@ -114,7 +114,7 @@ module ATM
         destroy PillsBeta=10/PillsSleepingTablets=10/Pills=10/PillsVitamins=10,
         keep MoneyTrader,
 
-        Result:Money=200,
+        Result:Money=10,
         CanBeDoneFromFloor:true,
         Category:Money,
         Time:5,
