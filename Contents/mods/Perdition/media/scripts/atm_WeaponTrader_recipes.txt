@@ -54,7 +54,7 @@ module ATM
         }
     recipe 5.56 ammo box
         {
-        destroy Money=500,
+        destroy Money=150,
         keep WeaponTrader,
 
         Result:	556Box,
