@@ -1,11 +1,11 @@
-module Perdition
+module ition
 {
 	imports
 	{
 		Base
 	}
 /****************************** Guns ******************************/
-    item PERDAiming1
+    item Aiming1
     {
         DisplayCategory = SkillBook,
         NumberOfPages		=	220,
@@ -20,7 +20,7 @@ module Perdition
         WorldStaticModel 	= 	BookGrey_Ground,
     }
 
-	item PERDAiming2
+	item Aiming2
     {
         DisplayCategory = SkillBook,
         NumberOfPages		=	260,
@@ -35,7 +35,7 @@ module Perdition
         WorldStaticModel 	= 	BookClosedGround,
     }
 
-	item PERDAiming3
+	item Aiming3
     {
         DisplayCategory = SkillBook,
         NumberOfPages		=	300,
@@ -50,7 +50,7 @@ module Perdition
         WorldStaticModel 	= 	BookClosedGround,
     }
 	
-	item PERDAiming4
+	item Aiming4
 	{
         DisplayCategory = SkillBook,
 		NumberOfPages		=	340,
@@ -65,7 +65,7 @@ module Perdition
         WorldStaticModel 	= 	BookClosedGround,
 	}
 	
-	item PERDAiming5
+	item Aiming5
 	{
         DisplayCategory = SkillBook,
 		NumberOfPages		=	380,
@@ -80,7 +80,7 @@ module Perdition
         WorldStaticModel 	= 	BookClosedGround,
 	}
 
-	item PERDReloading1
+	item Reloading1
     {
         DisplayCategory = SkillBook,
         NumberOfPages		=	220,
@@ -95,7 +95,7 @@ module Perdition
         WorldStaticModel 	= 	BookClosedGround,
     }
 
-	item PERDReloading2
+	item Reloading2
     {
         DisplayCategory = SkillBook,
         NumberOfPages		=	260,
@@ -110,7 +110,7 @@ module Perdition
         WorldStaticModel 	= 	BookClosedGround,
     }
 
-	item PERDReloading3
+	item Reloading3
     {
         DisplayCategory = SkillBook,
         NumberOfPages		=	300,
@@ -125,7 +125,7 @@ module Perdition
         WorldStaticModel 	= 	BookClosedGround,
     }
 	
-	item PERDReloading4
+	item Reloading4
     {
         DisplayCategory = SkillBook,
         NumberOfPages		=	340,
@@ -140,7 +140,7 @@ module Perdition
         WorldStaticModel 	= 	BookClosedGround,
     }
 	
-	item PERDReloading5
+	item Reloading5
     {
         DisplayCategory = SkillBook,
         NumberOfPages		=	380,
@@ -155,7 +155,7 @@ module Perdition
         WorldStaticModel 	= 	BookClosedGround,
     }
 /****************************** Passive Skills ******************************/
-    item PERDMaintenance1
+    item Maintenance1
     {
         DisplayCategory = SkillBook,
         NumberOfPages       =   220,
@@ -170,7 +170,7 @@ module Perdition
         WorldStaticModel    =   BookClosedGround,
     }
 
-    item PERDMaintenance2
+    item Maintenance2
     {
         DisplayCategory = SkillBook,
         NumberOfPages       =   260,
@@ -185,7 +185,7 @@ module Perdition
         WorldStaticModel    =   BookClosedGround,
     }
 
-    item PERDMaintenance3
+    item Maintenance3
     {
         DisplayCategory = SkillBook,
         NumberOfPages       =   300,
@@ -200,7 +200,7 @@ module Perdition
         WorldStaticModel    =   BookClosedGround,
     }
 
-    item PERDMaintenance4
+    item Maintenance4
     {
         DisplayCategory = SkillBook,
         NumberOfPages       =   340,
@@ -215,7 +215,7 @@ module Perdition
         WorldStaticModel    =   BookClosedGround,
     }
 
-    item PERDMaintenance5
+    item Maintenance5
     {
         DisplayCategory = SkillBook,
         NumberOfPages       =   380,
@@ -232,7 +232,7 @@ module Perdition
 
 
 
-    item PERDNimble1
+    item Nimble1
     {
         DisplayCategory = SkillBook,
         NumberOfPages       =   220,
@@ -247,7 +247,7 @@ module Perdition
         WorldStaticModel    =   BookClosedGround,
     }
 
-    item PERDNimble2
+    item Nimble2
     {
         DisplayCategory = SkillBook,
         NumberOfPages       =   260,
@@ -262,7 +262,7 @@ module Perdition
         WorldStaticModel    =   BookClosedGround,
     }
 
-    item PERDNimble3
+    item Nimble3
     {
         DisplayCategory = SkillBook,
         NumberOfPages       =   300,
@@ -277,7 +277,7 @@ module Perdition
         WorldStaticModel    =   BookClosedGround,
     }
 
-    item PERDNimble4
+    item Nimble4
     {
         DisplayCategory = SkillBook,
         NumberOfPages       =   340,
@@ -292,7 +292,7 @@ module Perdition
         WorldStaticModel    =   BookClosedGround,
     }
 
-    item PERDNimble5
+    item Nimble5
     {
         DisplayCategory = SkillBook,
         NumberOfPages       =   380,
@@ -309,7 +309,7 @@ module Perdition
 
     
 
-    item PERDFitness1
+    item Fitness1
     {
         DisplayCategory = SkillBook,
         NumberOfPages       =   220,
@@ -324,7 +324,7 @@ module Perdition
         WorldStaticModel    =   BookClosedGround,
     }
 
-    item PERDFitness2
+    item Fitness2
     {
         DisplayCategory = SkillBook,
         NumberOfPages       =   260,
@@ -339,7 +339,7 @@ module Perdition
         WorldStaticModel    =   BookClosedGround,
     }
 
-    item PERDFitness3
+    item Fitness3
     {
         DisplayCategory = SkillBook,
         NumberOfPages       =   300,
@@ -354,7 +354,7 @@ module Perdition
         WorldStaticModel    =   BookClosedGround,
     }
 
-    item PERDFitness4
+    item Fitness4
     {
         DisplayCategory = SkillBook,
         NumberOfPages       =   340,
@@ -369,7 +369,7 @@ module Perdition
         WorldStaticModel    =   BookClosedGround,
     }
 
-    item PERDFitness5
+    item Fitness5
     {
         DisplayCategory = SkillBook,
         NumberOfPages       =   380,
@@ -387,7 +387,7 @@ module Perdition
 
 
 
-    item PERDStrength1
+    item Strength1
     {
         DisplayCategory = SkillBook,
         NumberOfPages       =   220,
@@ -402,7 +402,7 @@ module Perdition
         WorldStaticModel    =   BookClosedGround,
     }
 
-    item PERDStrength2
+    item Strength2
     {
         DisplayCategory = SkillBook,
         NumberOfPages       =   260,
@@ -417,7 +417,7 @@ module Perdition
         WorldStaticModel    =   BookClosedGround,
     }
 
-    item PERDStrength3
+    item Strength3
     {
         DisplayCategory = SkillBook,
         NumberOfPages       =   300,
@@ -432,7 +432,7 @@ module Perdition
         WorldStaticModel    =   BookClosedGround,
     }
 
-    item PERDStrength4
+    item Strength4
     {
         DisplayCategory = SkillBook,
         NumberOfPages       =   340,
@@ -447,7 +447,7 @@ module Perdition
         WorldStaticModel    =   BookClosedGround,
     }
 
-    item PERDStrength5
+    item Strength5
     {
         DisplayCategory = SkillBook,
         NumberOfPages       =   380,
@@ -466,7 +466,7 @@ module Perdition
 
 
 /****************************** Melee ******************************/
-    item PERDAxe1
+    item Axe1
     {
         DisplayCategory = SkillBook,
         NumberOfPages       =   220,
@@ -481,7 +481,7 @@ module Perdition
         WorldStaticModel    =   BookClosedGround,
     }
 
-    item PERDAxe2
+    item Axe2
     {
         DisplayCategory = SkillBook,
         NumberOfPages       =   260,
@@ -496,7 +496,7 @@ module Perdition
         WorldStaticModel    =   BookClosedGround,
     }
 
-    item PERDAxe3
+    item Axe3
     {
         DisplayCategory = SkillBook,
         NumberOfPages       =   300,
@@ -511,7 +511,7 @@ module Perdition
         WorldStaticModel    =   BookClosedGround,
     }
 
-    item PERDAxe4
+    item Axe4
     {
         DisplayCategory = SkillBook,
         NumberOfPages       =   340,
@@ -526,7 +526,7 @@ module Perdition
         WorldStaticModel    =   BookClosedGround,
     }
 
-    item PERDAxe5
+    item Axe5
     {
         DisplayCategory = SkillBook,
         NumberOfPages       =   380,
@@ -546,7 +546,7 @@ module Perdition
 
 
 
-    item PERDSpear1
+    item Spear1
     {
         DisplayCategory = SkillBook,
         NumberOfPages       =   220,
@@ -561,7 +561,7 @@ module Perdition
         WorldStaticModel    =   BookClosedGround,
     }
 
-    item PERDSpear2
+    item Spear2
     {
         DisplayCategory = SkillBook,
         NumberOfPages       =   260,
@@ -576,7 +576,7 @@ module Perdition
         WorldStaticModel    =   BookClosedGround,
     }
 
-    item PERDSpear3
+    item Spear3
     {
         DisplayCategory = SkillBook,
         NumberOfPages       =   300,
@@ -591,7 +591,7 @@ module Perdition
         WorldStaticModel    =   BookClosedGround,
     }
 
-    item PERDSpear4
+    item Spear4
     {
         DisplayCategory = SkillBook,
         NumberOfPages       =   340,
@@ -606,7 +606,7 @@ module Perdition
         WorldStaticModel    =   BookClosedGround,
     }
 
-    item PERDSpear5
+    item Spear5
     {
         DisplayCategory = SkillBook,
         NumberOfPages       =   380,
@@ -626,7 +626,7 @@ module Perdition
 
 
 
-    item PERDLongBlunt1
+    item LongBlunt1
     {
         DisplayCategory = SkillBook,
         NumberOfPages       =   220,
@@ -641,7 +641,7 @@ module Perdition
         WorldStaticModel    =   BookClosedGround,
     }
 
-    item PERDLongBlunt2
+    item LongBlunt2
     {
         DisplayCategory = SkillBook,
         NumberOfPages       =   260,
@@ -656,7 +656,7 @@ module Perdition
         WorldStaticModel    =   BookClosedGround,
     }
 
-    item PERDLongBlunt3
+    item LongBlunt3
     {
         DisplayCategory = SkillBook,
         NumberOfPages       =   300,
@@ -671,7 +671,7 @@ module Perdition
         WorldStaticModel    =   BookClosedGround,
     }
 
-    item PERDLongBlunt4
+    item LongBlunt4
     {
         DisplayCategory = SkillBook,
         NumberOfPages       =   340,
@@ -686,7 +686,7 @@ module Perdition
         WorldStaticModel    =   BookClosedGround,
     }
 
-    item PERDLongBlunt5
+    item LongBlunt5
     {
         DisplayCategory = SkillBook,
         NumberOfPages       =   380,
@@ -705,7 +705,7 @@ module Perdition
 
 
 
-    item PERDShortBlunt1
+    item ShortBlunt1
     {
         DisplayCategory = SkillBook,
         NumberOfPages       =   220,
@@ -720,7 +720,7 @@ module Perdition
         WorldStaticModel    =   BookClosedGround,
     }
 
-    item PERDShortBlunt2
+    item ShortBlunt2
     {
         DisplayCategory = SkillBook,
         NumberOfPages       =   260,
@@ -735,7 +735,7 @@ module Perdition
         WorldStaticModel    =   BookClosedGround,
     }
 
-    item PERDShortBlunt3
+    item ShortBlunt3
     {
         DisplayCategory = SkillBook,
         NumberOfPages       =   300,
@@ -750,7 +750,7 @@ module Perdition
         WorldStaticModel    =   BookClosedGround,
     }
 
-    item PERDShortBlunt4
+    item ShortBlunt4
     {
         DisplayCategory = SkillBook,
         NumberOfPages       =   340,
@@ -765,7 +765,7 @@ module Perdition
         WorldStaticModel    =   BookClosedGround,
     }
 
-    item PERDShortBlunt5
+    item ShortBlunt5
     {
         DisplayCategory = SkillBook,
         NumberOfPages       =   380,
@@ -785,7 +785,7 @@ module Perdition
 
 
 
-    item PERDShortBlade1
+    item ShortBlade1
     {
         DisplayCategory = SkillBook,
         NumberOfPages       =   220,
@@ -800,7 +800,7 @@ module Perdition
         WorldStaticModel    =   BookClosedGround,
     }
 
-    item PERDShortBlade2
+    item ShortBlade2
     {
         DisplayCategory = SkillBook,
         NumberOfPages       =   260,
@@ -815,7 +815,7 @@ module Perdition
         WorldStaticModel    =   BookClosedGround,
     }
 
-    item PERDShortBlade3
+    item ShortBlade3
     {
         DisplayCategory = SkillBook,
         NumberOfPages       =   300,
@@ -830,7 +830,7 @@ module Perdition
         WorldStaticModel    =   BookClosedGround,
     }
 
-    item PERDShortBlade4
+    item ShortBlade4
     {
         DisplayCategory = SkillBook,
         NumberOfPages       =   340,
@@ -845,7 +845,7 @@ module Perdition
         WorldStaticModel    =   BookClosedGround,
     }
 
-    item PERDShortBlade5
+    item ShortBlade5
     {
         DisplayCategory = SkillBook,
         NumberOfPages       =   380,
@@ -865,7 +865,7 @@ module Perdition
 
 
 
-    item PERDLongBlade1
+    item LongBlade1
     {
         DisplayCategory = SkillBook,
         NumberOfPages       =   220,
@@ -880,7 +880,7 @@ module Perdition
         WorldStaticModel    =   BookClosedGround,
     }
 
-    item PERDLongBlade2
+    item LongBlade2
     {
         DisplayCategory = SkillBook,
         NumberOfPages       =   260,
@@ -895,7 +895,7 @@ module Perdition
         WorldStaticModel    =   BookClosedGround,
     }
 
-    item PERDLongBlade3
+    item LongBlade3
     {
         DisplayCategory = SkillBook,
         NumberOfPages       =   300,
@@ -910,7 +910,7 @@ module Perdition
         WorldStaticModel    =   BookClosedGround,
     }
 
-    item PERDLongBlade4
+    item LongBlade4
     {
         DisplayCategory = SkillBook,
         NumberOfPages       =   340,
@@ -925,7 +925,7 @@ module Perdition
         WorldStaticModel    =   BookClosedGround,
     }
 
-    item PERDLongBlade5
+    item LongBlade5
     {
         DisplayCategory = SkillBook,
         NumberOfPages       =   380,
