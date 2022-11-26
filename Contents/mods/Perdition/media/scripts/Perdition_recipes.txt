@@ -159,7 +159,7 @@ module Perdition
         OnCreate:BSItem_OnCreate,
         NeedToBeLearn:true,
         }
-
+    /****************************** Crating ******************************/
    recipe Unbox Scrap
     {
        100ScrapBox,
@@ -265,4 +265,5 @@ module Perdition
         Time:50.0,
         Category:Crate,
         } */
+    /****************************** Unassigned Recipes(Please place new recipes here for it to get sorted) ******************************/
 }
