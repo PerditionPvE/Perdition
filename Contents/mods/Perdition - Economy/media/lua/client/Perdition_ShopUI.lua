@@ -1,6 +1,7 @@
 require "Economy"
 ---@class ShopUI : ISPanel
 ShopUI = ISPanel:derive("ShopUI")
+ShopUI.windows = {}
 
 local good = {
     r = getCore():getGoodHighlitedColor():getR(),
@@ -21,10 +22,10 @@ function ShopUI:initialise()
     local buttonWidth = 100
     local buttonHeight = 25
     local padding = {
-        top = 5,
-        bottom = 5,
-        left = 5,
-        right = 5
+        top = 10,
+        bottom = 10,
+        left = 10,
+        right = 10
     }
     local listWidth = (self.width / 2) - 15
     local listHeight = 250
@@ -71,8 +72,8 @@ function ShopUI:initialise()
 
     -- edit listing tab
     self.edititems = ISButton:new(
-            self:getWidth() - padding.right - tabWidth,
-            padding.top,
+            self.offers.x,
+            self.offers.y + self.offers:getHeight() + tabHeight + padding.top,
             tabWidth,
             tabHeight,
             "Edit",
@@ -80,21 +81,21 @@ function ShopUI:initialise()
     self.edititems:initialise()
     self.edititems:instantiate()
     self.edititems.borderColor = defaultZomboidBorder
+
     self:addChild(self.edititems)
 
     -- shows how much money the player has total
     local mon = Economy.getWorth(self.player)
     print(mon)
     self.myCash = ISLabel:new(
-            self:getWidth(),
-            0,
+            self.cart.x + self.cart:getWidth() - padding.right - getTextManager():MeasureStringX(UIFont.Medium, "$" .. mon),
+            self.cart.y + self.cart:getHeight(),
             tabHeight,
             "$" .. mon,
             good.r, good.g, good.b, 1,
             UIFont.Medium)
     self.myCash:initialise()
     self.myCash:instantiate()
-    self.myCash.x = self:getWidth() - self.myCash:getWidth() - padding.right -- TODO: check if this positions well
     self:addChild(self.myCash)
 
     self.cost = nil -- how much the cart costs total
@@ -118,14 +119,12 @@ function ShopUI:new(x, y, width, height, player)
     o.moveWithMouse = true
     o.offers = nil
     o.cart = nil
-    ShopUI.instance = o
+    o.shop = nil
+    ShopUI.windows[player] = o
     return o
 end
 
 function ShopUI:prerender()
-    local z = 15
-    local splitPoint = 100
-    local x = 10
     self:drawRect(0, 0, self.width, self.height, self.backgroundColor.a, self.backgroundColor.r, self.backgroundColor.g, self.backgroundColor.b)
     -- draw the shop name
     self:drawText(
@@ -133,7 +132,25 @@ function ShopUI:prerender()
             self.width/2 - (getTextManager():MeasureStringX(UIFont.Medium, "Shop") / 2),
             z, 1, 1,1, 1, UIFont.Medium) -- why is this callback so irritatingly long?
 
-    z = z + 30
+    -- totals
+    local totalsHeight = getTextManager():MeasureStringY(UIFont.Medium, "T")
+    local cartEnd = self.cart.y + self.cart:getHeight() + padding.bottom
+    self:drawText(
+            "Checkout",
+            self.cart.x,
+            cartEnd, 1, 1, 1, 1, UIFont.Medium)
+    self:drawText(
+            "Total Funds:",
+            self.cart.x,
+            cartEnd + totalsHeight + padding.bottom, 1, 1, 1, 1, UIFont.Medium)
+    self:drawText(
+            "Total Cost:",
+            self.cart.x,
+            cartEnd + (totalsHeight + padding.bottom) * 2, 1, 1, 1, 1, UIFont.Medium)
+    self:drawText(
+            "Remainder:",
+            self.cart.x,
+            cartEnd + (totalsHeight + padding.bottom) * 3, 1, 1, 1, 1, UIFont.Medium)
 end
 
 function ShopUI.onClick(button)
