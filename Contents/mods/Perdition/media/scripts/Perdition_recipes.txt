@@ -159,6 +159,26 @@ module Perdition
         OnCreate:BSItem_OnCreate,
         NeedToBeLearn:true,
         }
+
+    recipe Make Padlock Cast
+        {
+        Sandbag=2,Padlock,
+
+        Result:PadlockSandCast,
+        Time:400.0,
+        Category:Welding,
+        }    
+
+    recipe Cast Padlock
+        {
+        PropaneTank=9,
+        keep PadlockSandCast,
+
+        Result:Padlock=4,
+        Time:550.0,
+        Category:Welding,
+        }
+    
     /****************************** Crating ******************************/
    recipe Unbox Scrap
     {
