@@ -17,7 +17,7 @@ module ATM
 }
     recipe Money from Dogtag
         {
-        Necklace_Dogtag,
+        Necklace_DogTag,
         keep MoneyTrader,
 
         Result:Money=5,
