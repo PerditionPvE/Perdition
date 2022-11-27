@@ -6,120 +6,83 @@ module ATM
     }
     recipe Money from Jewelry
         {
-        destroy Ring_Right_MiddleFinger_Gold/Ring_Left_MiddleFinger_Gold/Ring_Right_RingFinger_Gold/Ring_Left_RingFinger_Gold/Ring_Right_MiddleFinger_Silver/Ring_Left_MiddleFinger_Silver/Ring_Right_RingFinger_Silver/Ring_Left_RingFinger_Silver/Ring_Right_MiddleFinger_GoldRuby/Ring_Left_MiddleFinger_GoldRuby/Ring_Right_RingFinger_GoldRuby/Ring_Left_RingFinger_GoldRuby/Earring_LoopLrg_Gold/Earring_LoopLrg_Silver/Earring_LoopMed_Silver/Earring_LoopMed_Gold/Earring_LoopSmall_Silver_Both/Earring_LoopSmall_Silver_Top/Earring_LoopSmall_Gold_Both/Earring_LoopSmall_Gold_Top/Earring_Stud_Gold/Earring_Stud_Silver/Earring_Stone_Sapphire/Earring_Stone_Emerald/Earring_Stone_Ruby/Earring_Pearl/Earring_Dangly_Sapphire/Earring_Dangly_Emerald/Earring_Dangly_Ruby/Earring_Dangly_Pearl/NoseRing_Gold/NoseRing_Silver/NoseStud_Gold/NoseStud_Silver/WristWatch_Right_ClassicGold/WristWatch_Left_ClassicGold/Bracelet_BangleRightGold/Bracelet_BangleLeftGold/Bracelet_ChainRightGold/Bracelet_ChainLeftGold/Bracelet_BangleRightSilver/Bracelet_BangleLeftSilver/Bracelet_ChainRightSilver/Bracelet_ChainLeftSilver/Necklace_Choker_Sapphire/NecklaceLong_SilverSapphire/NecklaceLong_SilverEmerald/NecklaceLong_Silver/NecklaceLong_Gold/Necklace_SilverCrucifix/Necklace_SilverSapphire/Necklace_Silver/Necklace_GoldRuby/Necklace_Gold/Necklace_Pearl/BellyButton_RingSilver/BellyButton_RingGoldRuby/BellyButton_DangleGold/BellyButton_RingGoldRuby/BellyButton_RingGold/BellyButton_RingSilverAmethyst/BellyButton_RingSilverRuby/BellyButton_StudSilver/NoseStud_Gold/NoseStud_Silver/NoseRing_Gold/NoseRing_Silver/BellyButton_DangleSilver/BellyButton_DangleGoldRuby/BellyButton_StudGold/Earring_Dangly_Diamond/Ring_Right_MiddleFinger_SilverDiamond/Ring_Left_MiddleFinger_SilverDiamond/Ring_Right_RingFinger_SilverDiamond/Ring_Left_RingFinger_SilverDiamond/Ring_Right_MiddleFinger_GoldDiamond/Ring_Left_MiddleFinger_GoldDiamond/Ring_Right_RingFinger_GoldDiamond/Ring_Left_RingFinger_GoldDiamond/Necklace_Choker_Diamond/NecklaceLong_SilverDiamond/NecklaceLong_GoldDiamond/Necklace_SilverDiamond/Necklace_GoldDiamond/BellyButton_RingGoldDiamond/BellyButton_DangleSilverDiamond/BellyButton_RingSilverDiamond/BellyButton_StudGoldDiamond/BellyButton_StudSilverDiamond/Locket/Necklace_Crucifix/Necklace_YingYang/Necklace_Choker/Bracelet_RightFriendshipTINT/Bracelet_LeftFriendshipTINT/NecklaceLong_Amber/Necklace_Choker_Amber,
+        [Perdition.GetItemType.Jewelry]
         keep MoneyTrader,
 
         Result:Money=3,
         CanBeDoneFromFloor:true,
         Category:Money,
         Time:5,
-		/*OnCreate:ChangeMineral_2_to_1_OnCreate,*/
-        OnTest:Change_All_For_Money_OnTest,
-		/*RemoveResultItem:true,*/
-        }
-    recipe Money from Watches
-        {
-        destroy WristWatch_Right_ClassicBlack/WristWatch_Left_ClassicBlack/WristWatch_Right_ClassicBrown/WristWatch_Left_ClassicBrown/WristWatch_Right_ClassicMilitary/WristWatch_Left_ClassicMilitary/WristWatch_Right_DigitalBlack/WristWatch_Left_DigitalBlack/WristWatch_Right_DigitalRed/WristWatch_Left_DigitalRed/WristWatch_Right_DigitalDress/WristWatch_Left_DigitalDress/,
-        keep MoneyTrader,
-
-        Result:Money=3,
-        CanBeDoneFromFloor:true,
-        Category:Money,
-        Time:5,
-		/*OnCreate:ChangeMineral_2_to_1_OnCreate,*/
-        OnTest:Change_All_For_Money_OnTest,
-		/*RemoveResultItem:true,*/
         }
 }
     recipe Money from Dogtag
         {
-        destroy Necklace_Dogtag,
+        Necklace_Dogtag,
         keep MoneyTrader,
 
         Result:Money=5,
         CanBeDoneFromFloor:true,
         Category:Money,
         Time:5,
-		/*OnCreate:ChangeMineral_2_to_1_OnCreate,*/
-        OnTest:Change_All_For_Money_OnTest,
-		/*RemoveResultItem:true,*/
-        }
+		}
     recipe Money from Metal Scraps
         {
-        destroy ScrapMetal,
+        ScrapMetal,
         keep MoneyTrader,
 
         Result:Money=2,
         CanBeDoneFromFloor:true,
         Category:Money,
         Time:5,
-		/*OnCreate:ChangeMineral_2_to_1_OnCreate,*/
-        OnTest:Change_All_For_Money_OnTest,
-		/*RemoveResultItem:true,*/
-        }
+		}
     recipe Money from Electronic Scraps
         {
-        destroy ElectronicsScrap,
+        ElectronicsScrap,
         keep MoneyTrader,
 
         Result:Money=2,
         CanBeDoneFromFloor:true,
         Category:Money,
         Time:5,
-		/*OnCreate:ChangeMineral_2_to_1_OnCreate,*/
-        OnTest:Change_All_For_Money_OnTest,
-		/*RemoveResultItem:true,*/
-        }
+		}
     recipe Money from Gunpowder
         {
-        destroy GunPowder=10,
+        GunPowder,
         keep MoneyTrader,
 
         Result:Money=2,
         CanBeDoneFromFloor:true,
         Category:Money,
         Time:5,
-		/*OnCreate:ChangeMineral_2_to_1_OnCreate,*/
-        OnTest:Change_All_For_Money_OnTest,
-		/*RemoveResultItem:true,*/
-        }
+		 }
     recipe Money from Wallet
         {
-        destroy Wallet/Wallet2/Wallet3/Wallet4,
-        keep MoneyTrader,
-
-        Result:Money=30,
-        CanBeDoneFromFloor:true,
-        Category:Money,
-        Time:5,
-		/*OnCreate:ChangeMineral_2_to_1_OnCreate,*/
-        OnTest:Change_All_For_Money_OnTest,
-		/*RemoveResultItem:true,*/
-        }
-    recipe Money from Credit Card
-        {
-        destroy CreditCard,
-        keep MoneyTrader,
-
-        Result:Money=200,
-        CanBeDoneFromFloor:true,
-        Category:Money,
-        Time:5,
-		/*OnCreate:ChangeMineral_2_to_1_OnCreate,*/
-        OnTest:Change_All_For_Money_OnTest,
-		/*RemoveResultItem:true,*/
-        }
-    recipe Money from Medicine
-        {
-        destroy PillsBeta=10/PillsSleepingTablets=10/Pills=10/PillsVitamins=10,
+        Wallet/Wallet2/Wallet3/Wallet4,
         keep MoneyTrader,
 
         Result:Money=10,
         CanBeDoneFromFloor:true,
         Category:Money,
         Time:5,
-		/*OnCreate:ChangeMineral_2_to_1_OnCreate,*/
-        OnTest:Change_All_For_Money_OnTest,
-		/*RemoveResultItem:true,*/
-        }
+		}
+    recipe Money from Credit Card
+        {
+        CreditCard,
+        keep MoneyTrader,
+
+        Result:Money=200,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+		}
+    recipe Money from Medicine
+        {
+        PillsBeta/PillsSleepingTablets/Pills/PillsVitamins,
+        keep MoneyTrader,
+
+        Result:Money=10,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+		}
 }
