@@ -1,0 +1,319 @@
+module ATM
+{
+    imports
+    {
+        Base
+    }
+    recipe Katana
+        {
+        destroy Money=1500,
+        keep WeaponTrader,
+
+        Result:	Katana,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        OnTest:Change_All_For_Money_OnTest
+
+        }
+    recipe Machete
+        {
+        destroy Money=1000,
+        keep WeaponTrader,
+
+        Result:	Machete,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        OnTest:Change_All_For_Money_OnTest
+
+        }
+    recipe Fireaxe
+        {
+        destroy Money=1000,
+        keep WeaponTrader,
+
+        Result:	Axe,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        OnTest:Change_All_For_Money_OnTest
+
+        }
+    recipe Hunting Knife
+        {
+        destroy Money=500,
+        keep WeaponTrader,
+
+        Result:	HuntingKnife,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        OnTest:Change_All_For_Money_OnTest
+
+        }
+    recipe 5.56 ammo box
+        {
+        destroy Money=150,
+        keep WeaponTrader,
+
+        Result:	556Box,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        OnTest:Change_All_For_Money_OnTest
+
+        }
+    recipe 12g shell box
+        {
+        destroy Money=200,
+        keep WeaponTrader,
+
+        Result:	ShotgunShellsBox,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        OnTest:Change_All_For_Money_OnTest
+
+        }
+    recipe .45 ammo box
+        {
+        destroy Money=150,
+        keep WeaponTrader,
+
+        Result:	Bullets45Box,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        OnTest:Change_All_For_Money_OnTest
+
+        }
+    recipe 9mm ammo box
+        {
+        destroy Money=150,
+        keep WeaponTrader,
+
+        Result:	Bullets9mmBox,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        OnTest:Change_All_For_Money_OnTest
+
+        }
+    recipe 7.62x39 ammo box
+        {
+        destroy Money=200,
+        keep WeaponTrader,
+
+        Result:	762x39Box,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        OnTest:Change_All_For_Money_OnTest
+
+        }
+    recipe 7.62x51 ammo box
+        {
+        destroy Money=200,
+        keep WeaponTrader,
+
+        Result:	762x51Box,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        OnTest:Change_All_For_Money_OnTest
+
+        }
+    recipe .44 ammo box
+        {
+        destroy Money=150,
+        keep WeaponTrader,
+
+        Result:	Bullets44Box,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        OnTest:Change_All_For_Money_OnTest
+
+        }
+    recipe .44-40 ammo box
+        {
+        destroy Money=150,
+        keep WeaponTrader,
+
+        Result:	Bullets4440Box,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        OnTest:Change_All_For_Money_OnTest
+
+        }
+    recipe .38 ammo box
+        {
+        destroy Money=150,
+        keep WeaponTrader,
+
+        Result:	Bullets38Box,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        OnTest:Change_All_For_Money_OnTest
+
+        }
+    recipe .357 ammo box
+        {
+        destroy Money=150,
+        keep WeaponTrader,
+
+        Result:	Bullets357Box,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        OnTest:Change_All_For_Money_OnTest
+
+        }
+    recipe .223 ammo box
+        {
+        destroy Money=150,
+        keep WeaponTrader,
+
+        Result:	223Box,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        OnTest:Change_All_For_Money_OnTest
+
+        }
+    recipe .308 ammo box
+        {
+        destroy Money=150,
+        keep WeaponTrader,
+
+        Result:	308Box,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        OnTest:Change_All_For_Money_OnTest
+
+        }
+    recipe .22LR ammo box
+        {
+        destroy Money=150,
+        keep WeaponTrader,
+
+        Result:	Bullets22Box,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        OnTest:Change_All_For_Money_OnTest
+
+        }
+    recipe .30-06 ammo box
+        {
+        destroy Money=150,
+        keep WeaponTrader,
+
+        Result:	Bullets3006Box,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        OnTest:Change_All_For_Money_OnTest
+
+        }
+    recipe .22 Silencer
+        {
+        destroy Money=3000,
+        keep WeaponTrader,
+
+        Result:	22Silencer,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        OnTest:Change_All_For_Money_OnTest
+
+        }
+    recipe 9mm Silencer
+        {
+        destroy Money=3000,
+        keep WeaponTrader,
+
+        Result:	9mmSilencer,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        OnTest:Change_All_For_Money_OnTest
+
+        }
+    recipe .45 Silencer
+        {
+        destroy Money=2500,
+        keep WeaponTrader,
+
+        Result:	45Silencer,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        OnTest:Change_All_For_Money_OnTest
+
+        }
+    recipe .38 Silencer
+        {
+        destroy Money=2500,
+        keep WeaponTrader,
+
+        Result:	38Silencer,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        OnTest:Change_All_For_Money_OnTest
+
+        }
+    recipe .223 Silencer
+        {
+        destroy Money=2500,
+        keep WeaponTrader,
+
+        Result:	223Silencer,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        OnTest:Change_All_For_Money_OnTest
+
+        }
+    recipe .308 Silencer
+        {
+        destroy Money=2500,
+        keep WeaponTrader,
+
+        Result:	308Silencer,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        OnTest:Change_All_For_Money_OnTest
+
+        }
+    recipe Shotgun Silencer
+        {
+        destroy Money=2500,
+        keep WeaponTrader,
+
+        Result:	ShotgunSilencer,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        OnTest:Change_All_For_Money_OnTest
+
+        }
+    recipe Double Barrel Shotgun
+        {
+        destroy Money=1200,
+        keep WeaponTrader,
+
+        Result:	DoubleBarrelShotgun,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        OnTest:Change_All_For_Money_OnTest
+
+        }
+}

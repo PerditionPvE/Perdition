@@ -1,0 +1,117 @@
+module ATM
+{
+    imports
+    {
+        Base
+    }
+    recipe Spare Engine Part
+        {
+        destroy Money=100,
+        keep VehicleTrader,
+
+        Result: EngineParts,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        OnTest:Change_All_For_Money_OnTest,
+        }
+    recipe TowBar
+        {
+        destroy Money=500,
+        keep VehicleTrader,
+
+        Result: TowBar,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        OnTest:Change_All_For_Money_OnTest,
+        }
+    recipe RunFlat Tire
+        {
+        destroy Money=1000,
+        keep VehicleTrader,
+
+        Result: V100Tire2,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        OnTest:Change_All_For_Money_OnTest,
+        }
+    recipe Standard Hood
+        {
+        destroy Money=500,
+        keep VehicleTrader,
+
+        Result: EngineDoor1,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        OnTest:Change_All_For_Money_OnTest,
+        }
+    recipe Heavy Hood
+        {
+        destroy Money=700,
+        keep VehicleTrader,
+
+        Result: EngineDoor2,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        OnTest:Change_All_For_Money_OnTest,
+        }
+    recipe Sports Hood
+        {
+        destroy Money=1000,
+        keep VehicleTrader,
+
+        Result: EngineDoor3,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        OnTest:Change_All_For_Money_OnTest,
+        }
+    recipe Standard Windshield
+        {
+        destroy Money=350,
+        keep VehicleTrader,
+
+        Result: Windshield1,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        OnTest:Change_All_For_Money_OnTest,
+        }
+    recipe Heavy Windshield
+        {
+        destroy Money=450,
+        keep VehicleTrader,
+
+        Result: Windshield2,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        OnTest:Change_All_For_Money_OnTest,
+        }
+    recipe Sports Windshield
+        {
+        destroy Money=600,
+        keep VehicleTrader,
+
+        Result: Windshield1,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        OnTest:Change_All_For_Money_OnTest,
+        }
+    recipe w900 Bullbar
+        {
+        destroy Money=1000,
+        keep VehicleTrader,
+
+        Result: SemiTruckBullbar_Item2,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        OnTest:Change_All_For_Money_OnTest,
+        }
+}
