@@ -17,7 +17,7 @@ function Shop:new(owner, coreObject, isAdmin)
     setmetatable(o, self)
     self.__index = self
     o.name = "Shop"
-    ---@type int
+    ---@type number
     o.id = nil
     o.owner = owner:getUsername()
     o.isAdmin = isAdmin
@@ -107,34 +107,54 @@ function Shop:isValid()
     return room ~= nil or region:isPlayerRoom()
 end
 
-function Shop:getAllItemContainers()
-    local tiles = luautils.getNextTiles(getCell(), self:getSquare(), Shop.scanSize)
-    -- scan the tiles to see if it's part of the shop building
-    local valid = {}
-    for _, tile in ipairs(tiles) do
-        for _, region in Shop:getBuilding() do
-            if tile:getIsoWorldRegion() == region then
-                table.insert(valid, tile)
+function Shop:getStock()
+    local building = Shop:getBuilding()
+    local core = getCell():getGridSquare(self.core.x, self.core.y, self.core.z)
+    local coreRoom = building.rooms[core:getIsoWorldRegion():getID()]
+    local stockpiles = {}
+    if coreRoom then
+        local objects = building:getContainers()
+        for _, table in ipairs(objects) do
+            local object = table.object
+            local containers = table.containers
+            if #containers > 0 then
+                local modData = object:getModData()
+                local id = modData["ShopID"]
+                local objectType = modData["Shop"]
+                if id and objectType then
+                    if id == self.id and objectType == Shop.component.stockpile then
+                        table.insert(stockpiles, containers)
+                    end
+                end
             end
         end
+        return stockpiles
     end
 end
 
-function Shop:getBuilding()
-    local building = {self:getSquare():getIsoWorldRegion()}
-    local neighbors = building[1]:getNeighbors()
-    print(building[1]:size())
-    for i=0, neighbors:size()-1 do
-        local room = neighbors:get(i)
-        if room:isEnclosed() then table.insert(building, room)
+
+function Shop:getItemStock(item)
+    local stock = Shop:getStock()
+    local all = {}
+    for _, t in ipairs(stock) do
+        for _, container in ipairs(t) do
+            local items = container:findAll(item:getType())
+            for i=0, items:size()-1 do
+                local thing = items:get(i)
+                table.insert(all, thing)
+            end
         end
     end
-    return building
+    return all
+end
+
+function Shop:getBuilding()
+    return Building:get(self.core.x, self.core.y, self.core.z)
 end
 
 ---@param player IsoPlayer the player trying to add the item
 ---@param item Item
----@param price int the cost in dollars of the item
+---@param price number the cost in dollars of the item
 function Shop:addBuyItem(player, item, price)
     -- cancel if player lacks permissions
     if not self:hasPermission(player, "editItemListing") then return; end
