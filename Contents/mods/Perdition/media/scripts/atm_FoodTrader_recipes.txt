@@ -4,50 +4,45 @@ module ATM
     {
         Base
     }
-                                              ///////FOOD TRADER///////
     recipe Can Opener
         {
-        destroy Money=100,
+        Money=100,
         keep FoodTrader,
 
         Result:	TinOpener,
         CanBeDoneFromFloor:true,
         Category:Money,
         Time:5,
-        OnTest:Change_All_For_Money_OnTest,
         }
     recipe Milk
         {
-        destroy Money=50,
+        Money=50,
         keep FoodTrader,
 
         Result:	Milk,
         CanBeDoneFromFloor:true,
         Category:Money,
         Time:5,
-        OnTest:Change_All_For_Money_OnTest,
         }
     recipe Pasta
         {
-        destroy Money=50,
+        Money=50,
         keep FoodTrader,
 
         Result:	Pasta,
         CanBeDoneFromFloor:true,
         Category:Money,
         Time:5,
-        OnTest:Change_All_For_Money_OnTest,
         }
     recipe Rice
         {
-        destroy Money=50,
+        Money=50,
         keep FoodTrader,
 
         Result:	Rice,
         CanBeDoneFromFloor:true,
         Category:Money,
         Time:5,
-        OnTest:Change_All_For_Money_OnTest,
         }
     recipe Salt
         {
@@ -58,33 +53,30 @@ module ATM
         CanBeDoneFromFloor:true,
         Category:Money,
         Time:5,
-        OnTest:Change_All_For_Money_OnTest,
         }
     recipe Pepper
         {
-        destroy Money=20,
+        Money=20,
         keep FoodTrader,
 
         Result:	Pepper,
         CanBeDoneFromFloor:true,
         Category:Money,
         Time:5,
-        OnTest:Change_All_For_Money_OnTest,
         }
     recipe Vegetable Oil
         {
-        destroy Money=80,
+        Money=80,
         keep FoodTrader,
 
         Result:	OilVegetable,
         CanBeDoneFromFloor:true,
         Category:Money,
         Time:5,
-        OnTest:Change_All_For_Money_OnTest,
         }
     recipe Olive Oil
         {
-        destroy Money=100,
+        Money=100,
         keep FoodTrader,
 
         Result:	OilOlive,
@@ -95,46 +87,42 @@ module ATM
         }
     recipe Sugar
         {
-        destroy Money=200,
+        Money=200,
         keep FoodTrader,
 
         Result:	Sugar,
         CanBeDoneFromFloor:true,
         Category:Money,
         Time:5,
-        OnTest:Change_All_For_Money_OnTest,
         }
     recipe Brown Sugar
         {
-        destroy Money=200,
+        Money=200,
         keep FoodTrader,
 
         Result:	SugarBrown,
         CanBeDoneFromFloor:true,
         Category:Money,
         Time:5,
-        OnTest:Change_All_For_Money_OnTest,
         }
     recipe Water Bottle
         {
-        destroy Money=20,
+        Money=20,
         keep FoodTrader,
 
         Result:	WaterBottleFull,
         CanBeDoneFromFloor:true,
         Category:Money,
         Time:5,
-        OnTest:Change_All_For_Money_OnTest,
         }
     recipe Yeast
         {
-        destroy Money=100,
+        Money=100,
         keep FoodTrader,
 
         Result:	Yeast,
         CanBeDoneFromFloor:true,
         Category:Money,
         Time:5,
-        OnTest:Change_All_For_Money_OnTest,
         }
 }
