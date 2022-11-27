@@ -1,0 +1,128 @@
+module ATM
+{
+    imports
+    {
+        Base
+    }
+    recipe Can Opener
+        {
+        Money=100,
+        keep FoodTrader,
+
+        Result:	TinOpener,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        }
+    recipe Milk
+        {
+        Money=50,
+        keep FoodTrader,
+
+        Result:	Milk,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        }
+    recipe Pasta
+        {
+        Money=50,
+        keep FoodTrader,
+
+        Result:	Pasta,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        }
+    recipe Rice
+        {
+        Money=50,
+        keep FoodTrader,
+
+        Result:	Rice,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        }
+    recipe Salt
+        {
+        destroy Money=20,
+        keep FoodTrader,
+
+        Result:	Salt,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        }
+    recipe Pepper
+        {
+        Money=20,
+        keep FoodTrader,
+
+        Result:	Pepper,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        }
+    recipe Vegetable Oil
+        {
+        Money=80,
+        keep FoodTrader,
+
+        Result:	OilVegetable,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        }
+    recipe Olive Oil
+        {
+        Money=100,
+        keep FoodTrader,
+
+        Result:	OilOlive,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        OnTest:Change_All_For_Money_OnTest,
+        }
+    recipe Sugar
+        {
+        Money=200,
+        keep FoodTrader,
+
+        Result:	Sugar,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        }
+    recipe Brown Sugar
+        {
+        Money=200,
+        keep FoodTrader,
+
+        Result:	SugarBrown,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        }
+    recipe Water Bottle
+        {
+        Money=20,
+        keep FoodTrader,
+
+        Result:	WaterBottleFull,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        }
+    recipe Yeast
+        {
+        Money=100,
+        keep FoodTrader,
+
+        Result:	Yeast,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        }
+}

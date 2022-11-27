@@ -34,4 +34,8 @@ module Base
 		texture = WorldItems/FoodTrader,
 		scale = 0.6,
 	}
+	    model BookTrader
+	    mesh = dispenser,
+	    texture = WorldItems/BookTrader,
+	    scale = 0.6
 }

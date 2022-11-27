@@ -1,0 +1,507 @@
+module ATM
+{
+    imports
+    {
+        Base
+    }
+    recipe Vol.1 Strength
+        {
+        Money=2000,
+        keep BookTrader,
+
+        Result: PERDStrength1,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        }
+    recipe Vol.2 Strength
+        {
+        Money=2250,
+        keep BookTrader,
+
+        Result: PERDStrength2,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        }
+    recipe Vol.3 Strength
+        {
+        Money=2500,
+        keep BookTrader,
+
+        Result: PERDStrength3,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        }
+    recipe Vol.4 Strength
+        {
+        Money=2750,
+        keep BookTrader,
+
+        Result: PERDStrength4,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        }
+    recipe Vol.5 Strength
+        {
+        Money=3000,
+        keep BookTrader,
+
+        Result: PERDStrength5,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        }
+    recipe Vol.1 Fitness
+        {
+        Money=2000,
+        keep BookTrader,
+
+        Result: PERDFitness1,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        }
+    recipe Vol.2 Fitness
+        {
+        Money=2250,
+        keep BookTrader,
+
+        Result: PERDFitness2,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        }
+    recipe Vol.3 Fitness
+        {
+        Money=2500,
+        keep BookTrader,
+
+        Result: PERDFitness3,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        }
+    recipe Vol.4 Fitness
+        {
+        Money=2750,
+        keep BookTrader,
+
+        Result: PERDFitness4,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        }
+    recipe Vol.5 Fitness
+        {
+        Money=3000,
+        keep BookTrader,
+
+        Result: PERDFitness5,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        }
+    recipe Vol.1 Nimble
+        {
+        Money=2000,
+        keep BookTrader,
+
+        Result: PERDNimble1,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        }
+    recipe Vol.2 Nimble
+        {
+        Money=2250,
+        keep BookTrader,
+
+        Result: PERDNimble2,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        }
+    recipe Vol.3 Nimble
+        {
+        Money=2500,
+        keep BookTrader,
+
+        Result: PERDNimble3,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        }
+    recipe Vol.4 Nimble
+        {
+        Money=2750,
+        keep BookTrader,
+
+        Result: PERDNimble4,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        }
+    recipe Vol.5 Nimble
+        {
+        Money=3000,
+        keep BookTrader,
+
+        Result: PERDNimble5,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        }
+    recipe Vol.1 Axe
+        {
+        Money=2000,
+        keep BookTrader,
+
+        Result: PERDAxe1,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        }
+    recipe Vol.2 Axe
+        {
+        Money=2250,
+        keep BookTrader,
+
+        Result: PERDAxe2,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        }
+    recipe Vol.3 Axe
+        {
+        Money=2500,
+        keep BookTrader,
+
+        Result: PERDAxe3,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        }
+    recipe Vol.4 Axe
+        {
+        Money=2750,
+        keep BookTrader,
+
+        Result: PERDAxe4,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        }
+    recipe Vol.5 Axe
+        {
+        Money=3000,
+        keep BookTrader,
+
+        Result: PERDAxe5,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        }
+    recipe Vol.1 Long Blunt
+        {
+        Money=2000,
+        keep BookTrader,
+
+        Result: PERDLongBlunt1,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        }
+    recipe Vol.2 Long Blunt
+        {
+        Money=2250,
+        keep BookTrader,
+
+        Result: PERDLongBlunt2,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        }
+    recipe Vol.3 Long Blunt
+        {
+        Money=2500,
+        keep BookTrader,
+
+        Result: PERDLongBlunt3,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        }
+    recipe Vol.4 Long Blunt
+        {
+        Money=2750,
+        keep BookTrader,
+
+        Result: PERDLongBlunt4,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        }
+    recipe Vol.5 Long Blunt
+        {
+        Money=3000,
+        keep BookTrader,
+
+        Result: PERDLongBlunt5,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        }
+    recipe Vol.1 Short Blunt
+        {
+        Money=2000,
+        keep BookTrader,
+
+        Result: PERDShortBlunt1,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        }
+    recipe Vol.2 Short Blunt
+        {
+        Money=2250,
+        keep BookTrader,
+
+        Result: PERDShortBlunt2,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        }
+    recipe Vol.3 Short Blunt
+        {
+        Money=2500,
+        keep BookTrader,
+
+        Result: PERDShortBlunt3,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        }
+    recipe Vol.4 Short Blunt
+        {
+        Money=2750,
+        keep BookTrader,
+
+        Result: PERDShortBlunt4,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        }
+    recipe Vol.5 Short Blunt
+        {
+        Money=3000,
+        keep BookTrader,
+
+        Result: PERDShortBlunt5,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        }
+    recipe Vol.1 Long Blade
+        {
+        Money=2000,
+        keep BookTrader,
+
+        Result: PERDLongBlade1,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        }
+    recipe Vol.2 Long Blade
+        {
+        Money=2250,
+        keep BookTrader,
+
+        Result: PERDLongBlade2,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        }
+    recipe Vol.3 Long Blade
+        {
+        Money=2500,
+        keep BookTrader,
+
+        Result: PERDLongBlade3,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        }
+    recipe Vol.4 Long Blade
+        {
+        Money=2750,
+        keep BookTrader,
+
+        Result: PERDLongBlade4,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        }
+    recipe Vol.5 Long Blade
+        {
+        Money=3000,
+        keep BookTrader,
+
+        Result: PERDLongBlade5,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        }
+    recipe Vol.1 Short Blade
+        {
+        Money=2000,
+        keep BookTrader,
+
+        Result: PERDShortBlade1,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        }
+    recipe Vol.2 Short Blade
+        {
+        Money=2250,
+        keep BookTrader,
+
+        Result: PERDShortBlade2,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        }
+    recipe Vol.3 Short Blade
+        {
+        Money=2500,
+        keep BookTrader,
+
+        Result: PERDShortBlade3,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        }
+    recipe Vol.4 Short Blade
+        {
+        Money=2750,
+        keep BookTrader,
+
+        Result: PERDShortBlade4,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        }
+    recipe Vol.5 Short Blade
+        {
+        Money=3000,
+        keep BookTrader,
+
+        Result: PERDShortBlade5,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        }
+    recipe Vol.1 Spear
+        {
+        Money=2000,
+        keep BookTrader,
+
+        Result: PERDSpear1,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        }
+    recipe Vol.2 Spear
+        {
+        Money=2250,
+        keep BookTrader,
+
+        Result: PERDSpear2,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        }
+    recipe Vol.3 Spear
+        {
+        Money=2500,
+        keep BookTrader,
+
+        Result: PERDSpear3,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        }
+    recipe Vol.4 Spear
+        {
+        Money=2750,
+        keep BookTrader,
+
+        Result: PERDSpear4,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        }
+    recipe Vol.5 Spear
+        {
+        Money=3000,
+        keep BookTrader,
+
+        Result: PERDSpear5,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        }
+    recipe Vol.1 Maintenance
+        {
+        Money=2000,
+        keep BookTrader,
+
+        Result: PERDMaintenance1,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        }
+    recipe Vol.2 Maintenance
+        {
+        Money=2250,
+        keep BookTrader,
+
+        Result: PERDMaintenance2,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        }
+    recipe Vol.3 Maintenance
+        {
+        Money=2500,
+        keep BookTrader,
+
+        Result: PERDMaintenance3,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        }
+    recipe Vol.4 Maintenance
+        {
+        Money=2750,
+        keep BookTrader,
+
+        Result: PERDMaintenance4,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        }
+    recipe Vol.5 Maintenance
+        {
+        Money=3000,
+        keep BookTrader,
+
+        Result: PERDMaintenance5,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        }
+}

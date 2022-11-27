@@ -1,0 +1,167 @@
+module ATM
+{
+    imports
+    {
+        Base
+    }
+    recipe Crowbar
+        {
+        Money=800,
+        keep ToolTrader,
+
+        Result:	Crowbar,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        }
+    recipe Woodaxe
+        {
+        Money=1000,
+        keep ToolTrader,
+
+        Result:	WoodAxe,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        }
+    recipe Pickaxe
+        {
+        Money=800,
+        keep ToolTrader,
+
+        Result:	PickAxe,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        }
+    recipe Propane Tank
+        {
+        Money=500,
+        keep ToolTrader,
+
+        Result:	PropaneTank,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        }
+    recipe Welder Mask
+        {
+        Money=500,
+        keep ToolTrader,
+
+        Result:	WeldingMask,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        }
+    recipe Propane Torch
+        {
+        Money=500,
+        keep ToolTrader,
+
+        Result:	BlowTorch,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        }
+    recipe Jack
+        {
+        Money=400,
+        keep ToolTrader,
+
+        Result:	Jack,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        }
+    recipe Tirepump
+        {
+        Money=400,
+        keep ToolTrader,
+
+        Result:	TirePump,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        }
+    recipe Lugwrench
+        {
+        Money=400,
+        keep ToolTrader,
+
+        Result:	LugWrench,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        }
+    recipe Wrench
+        {
+        Money=300,
+        keep ToolTrader,
+
+        Result:	Spanner,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        }
+    recipe Screwdriver
+        {
+        Money=300,
+        keep ToolTrader,
+
+        Result:	Screwdriver,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        }
+    recipe Battery Charger
+        {
+        Money=700,
+        keep ToolTrader,
+
+        Result:	CarBatteryCharger,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        }
+    recipe Box of Nails
+        {
+        Money=250,
+        keep ToolTrader,
+
+        Result:	NailsBox,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        }
+    recipe Box of Screws
+        {
+        Money=200,
+        keep ToolTrader,
+
+        Result:	Screws,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        }
+    recipe Fishing Rod
+        {
+        Money=200,
+        keep ToolTrader,
+
+        Result:	FishingRod,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        }
+    recipe Needle
+        {
+        Money=300,
+        keep ToolTrader,
+
+        Result: Needle,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        }
+}

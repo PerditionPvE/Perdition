@@ -59,4 +59,14 @@ module ATM
         WorldStaticModel = MoneyTrader,
         DisplayCategory	= Money,
     }
+	item BookTrader
+        {
+        Weight          = 60.0,
+        Type            = Normal,
+        DisplayName     = Book Vendor,
+        icon            = MoneyTrader,
+		StaticModel = BookTrader,
+		WorldStaticModel = BookTrader,
+		DisplayCategory	= Money,
+        }
 }

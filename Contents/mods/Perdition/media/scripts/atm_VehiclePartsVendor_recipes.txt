@@ -1,0 +1,107 @@
+module ATM
+{
+    imports
+    {
+        Base
+    }
+    recipe Spare Engine Part
+        {
+        Money=100,
+        keep VehicleTrader,
+
+        Result: EngineParts,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        }
+    recipe TowBar
+        {
+        Money=500,
+        keep VehicleTrader,
+
+        Result: TowBar,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        }
+    recipe RunFlat Tire
+        {
+        Money=1000,
+        keep VehicleTrader,
+
+        Result: V100Tire2,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        }
+    recipe Standard Hood
+        {
+        Money=500,
+        keep VehicleTrader,
+
+        Result: EngineDoor1,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        }
+    recipe Heavy Hood
+        {
+        Money=700,
+        keep VehicleTrader,
+
+        Result: EngineDoor2,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        }
+    recipe Sports Hood
+        {
+        Money=1000,
+        keep VehicleTrader,
+
+        Result: EngineDoor3,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        }
+    recipe Standard Windshield
+        {
+        Money=350,
+        keep VehicleTrader,
+
+        Result: Windshield1,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        }
+    recipe Heavy Windshield
+        {
+        Money=450,
+        keep VehicleTrader,
+
+        Result: Windshield2,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        }
+    recipe Sports Windshield
+        {
+        Money=600,
+        keep VehicleTrader,
+
+        Result: Windshield1,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        }
+    recipe w900 Bullbar
+        {
+        Money=1000,
+        keep VehicleTrader,
+
+        Result: Rotators.SemiTruckBullbar_Item2,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        }
+}
