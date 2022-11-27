@@ -159,27 +159,66 @@ module Perdition
         OnCreate:BSItem_OnCreate,
         NeedToBeLearn:true,
         }
-
-    recipe Make Padlock Cast
+   /*** Assemble ***/
+    recipe Make Padlock Body Cast
         {
-        Sandbag=2,Padlock,
+        Sandbag=2,
 
-        Result:PadlockSandCast,
+        Result:PadlockBodySandCast,
+        Time:200.0,
+        Category:Welding,
+        }    
+    recipe Make Padlock Shackle Cast
+        {
+        Sandbag=2,
+
+        Result:PadlockShackleSandCast,
+        Time:200.0,
+        Category:Welding,
+        }    
+    recipe Assemble Lock Assembly 
+        {
+        Scrap=2,
+        Keep Hammer,
+
+        Result:PadlockShackle=1,
         Time:400.0,
         Category:Welding,
         }    
-
-    recipe Cast Padlock
+   /*** Cast ***/
+    recipe Cast Padlock Body Cast
         {
-        PropaneTank=9,
-        keep PadlockSandCast,
+        Scrap=5,
+        Propane=6,
 
+        Result:PadlockBody=2,
+        Time:400.0,
+        Category:Welding,
+        }
+
+    recipe Cast Padlock Shackle Cast
+        {
+        Scrap=4,
+        Propane=6,
+
+        Result:PadlockShackle=2,
+        Time:400.0,
+        Category:Welding,
+        }      
+
+        /*** Assemble ***/
+    recipe Assemble Padlock
+        {
+        LockAssembly=4,PadlockShackle=4,PadlockBody=4,
+        keep Screwdriver,
+        keep BallPeenHammer,
+        
         Result:Padlock=4,
         Time:550.0,
         Category:Welding,
         }
-    
-    /****************************** Crating ******************************/
+
+/****************************** Crating ******************************/
    recipe Unbox Scrap
     {
        100ScrapBox,
