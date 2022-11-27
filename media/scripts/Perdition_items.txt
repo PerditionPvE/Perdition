@@ -581,7 +581,14 @@ module Perdition
         StaticModel = Book,
         WorldStaticModel = BookClosedGround,
     }
-
+/********************************************** Metalworking Components **********************************************/
+    item PadlockSandCast
+        {
+		Weight		= 0.1,
+		Type		= Normal,
+		DisplayName	= Padlock Cast,
+		Icon		= Box,
+    }
 /********************************************** Ammo Crates **********************************************/
     item Ammocrate556
         {
