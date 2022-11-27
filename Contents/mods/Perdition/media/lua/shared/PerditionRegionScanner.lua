@@ -1,7 +1,9 @@
 ---@class Building
 Building = {}
 
-local function bloom(x, y, z)
+--- binary search to find all the squares in a building including player made rooms
+---@param startSquare IsoGridSquare starting square
+local function bloom(startSquare)
     local result = {}
     ---@param square IsoGridSquare
     local function petal(square)
@@ -14,12 +16,14 @@ local function bloom(x, y, z)
             end
         end
     end
+    petal(startSquare)
     return result
 end
 
-local function getRooms(x, y, z)
+---@param startSquare IsoGridSquare the starting square
+local function getRooms(startSquare)
     local rooms = {}
-    local squares = bloom(x, y, z)
+    local squares = bloom(startSquare)
     for _, square in pairs(squares) do
         local region = square:getIsoWorldRegion()
         if rooms[region:getID()] == nil then rooms[region:getID()] = {} end
@@ -32,7 +36,8 @@ function Building:get(x, y, z)
     local b = {}
     setmetatable(b, self)
     self.__index = self
-    b.rooms = getRooms(x, y, z) -- agony
+    local square = getCell():getGridSquare(x, y, z)
+    b.rooms = getRooms(square) -- agony
     return b
 end
 
