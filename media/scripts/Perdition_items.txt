@@ -582,11 +582,47 @@ module Perdition
         WorldStaticModel = BookClosedGround,
     }
 /********************************************** Metalworking Components **********************************************/
-    item PadlockSandCast
+   /*** padlock ***/
+    item PadlockBodySandCast
         {
 		Weight		= 0.1,
 		Type		= Normal,
 		DisplayName	= Padlock Cast,
+		Icon		= Box,
+    }
+    item PadlockShackleSandCast
+        {
+		Weight		= 0.1,
+		Type		= Normal,
+		DisplayName	= Padlock Shackle Cast,
+		Icon		= Box,
+    }
+    item PadlockLockAssemblySandCast
+        {
+		Weight		= 0.1,
+		Type		= Normal,
+		DisplayName	= Key Lock Assemblly Cast,
+		Icon		= Box,
+    }
+    item LockAssembly
+        {
+		Weight		= 0.1,
+		Type		= Normal,
+		DisplayName	= Lock Assembly,
+		Icon		= Box,
+    }
+    item PadlockShackle
+        {
+		Weight		= 0.1,
+		Type		= Normal,
+		DisplayName	= Padlock Shackle,
+		Icon		= Box,
+    }
+    item PadlockBody
+        {
+		Weight		= 0.1,
+		Type		= Normal,
+		DisplayName	= Padlock Body,
 		Icon		= Box,
     }
 /********************************************** Ammo Crates **********************************************/
