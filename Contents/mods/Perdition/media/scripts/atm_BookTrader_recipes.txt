@@ -9,7 +9,7 @@ module ATM
         Money=2000,
         keep BookTrader,
 
-        Result: PERDStrength1,
+        Result:PERDStrength1,
         CanBeDoneFromFloor:true,
         Category:Money,
         Time:5,
@@ -19,7 +19,7 @@ module ATM
         Money=2250,
         keep BookTrader,
 
-        Result: PERDStrength2,
+        Result:PERDStrength2,
         CanBeDoneFromFloor:true,
         Category:Money,
         Time:5,
@@ -29,7 +29,7 @@ module ATM
         Money=2500,
         keep BookTrader,
 
-        Result: PERDStrength3,
+        Result:PERDStrength3,
         CanBeDoneFromFloor:true,
         Category:Money,
         Time:5,
@@ -39,7 +39,7 @@ module ATM
         Money=2750,
         keep BookTrader,
 
-        Result: PERDStrength4,
+        Result:PERDStrength4,
         CanBeDoneFromFloor:true,
         Category:Money,
         Time:5,
@@ -49,7 +49,7 @@ module ATM
         Money=3000,
         keep BookTrader,
 
-        Result: PERDStrength5,
+        Result:PERDStrength5,
         CanBeDoneFromFloor:true,
         Category:Money,
         Time:5,
@@ -59,7 +59,7 @@ module ATM
         Money=2000,
         keep BookTrader,
 
-        Result: PERDFitness1,
+        Result:PERDFitness1,
         CanBeDoneFromFloor:true,
         Category:Money,
         Time:5,
@@ -69,7 +69,7 @@ module ATM
         Money=2250,
         keep BookTrader,
 
-        Result: PERDFitness2,
+        Result:PERDFitness2,
         CanBeDoneFromFloor:true,
         Category:Money,
         Time:5,
@@ -79,7 +79,7 @@ module ATM
         Money=2500,
         keep BookTrader,
 
-        Result: PERDFitness3,
+        Result:PERDFitness3,
         CanBeDoneFromFloor:true,
         Category:Money,
         Time:5,
@@ -89,7 +89,7 @@ module ATM
         Money=2750,
         keep BookTrader,
 
-        Result: PERDFitness4,
+        Result:PERDFitness4,
         CanBeDoneFromFloor:true,
         Category:Money,
         Time:5,
@@ -99,7 +99,7 @@ module ATM
         Money=3000,
         keep BookTrader,
 
-        Result: PERDFitness5,
+        Result:PERDFitness5,
         CanBeDoneFromFloor:true,
         Category:Money,
         Time:5,
@@ -109,7 +109,7 @@ module ATM
         Money=2000,
         keep BookTrader,
 
-        Result: PERDNimble1,
+        Result:PERDNimble1,
         CanBeDoneFromFloor:true,
         Category:Money,
         Time:5,
@@ -119,7 +119,7 @@ module ATM
         Money=2250,
         keep BookTrader,
 
-        Result: PERDNimble2,
+        Result:PERDNimble2,
         CanBeDoneFromFloor:true,
         Category:Money,
         Time:5,
@@ -129,7 +129,7 @@ module ATM
         Money=2500,
         keep BookTrader,
 
-        Result: PERDNimble3,
+        Result:PERDNimble3,
         CanBeDoneFromFloor:true,
         Category:Money,
         Time:5,
@@ -139,7 +139,7 @@ module ATM
         Money=2750,
         keep BookTrader,
 
-        Result: PERDNimble4,
+        Result:PERDNimble4,
         CanBeDoneFromFloor:true,
         Category:Money,
         Time:5,
@@ -149,7 +149,7 @@ module ATM
         Money=3000,
         keep BookTrader,
 
-        Result: PERDNimble5,
+        Result:PERDNimble5,
         CanBeDoneFromFloor:true,
         Category:Money,
         Time:5,
@@ -159,7 +159,7 @@ module ATM
         Money=2000,
         keep BookTrader,
 
-        Result: PERDAxe1,
+        Result:PERDAxe1,
         CanBeDoneFromFloor:true,
         Category:Money,
         Time:5,
@@ -169,7 +169,7 @@ module ATM
         Money=2250,
         keep BookTrader,
 
-        Result: PERDAxe2,
+        Result:PERDAxe2,
         CanBeDoneFromFloor:true,
         Category:Money,
         Time:5,
@@ -179,7 +179,7 @@ module ATM
         Money=2500,
         keep BookTrader,
 
-        Result: PERDAxe3,
+        Result:PERDAxe3,
         CanBeDoneFromFloor:true,
         Category:Money,
         Time:5,
@@ -189,7 +189,7 @@ module ATM
         Money=2750,
         keep BookTrader,
 
-        Result: PERDAxe4,
+        Result:PERDAxe4,
         CanBeDoneFromFloor:true,
         Category:Money,
         Time:5,
@@ -199,7 +199,7 @@ module ATM
         Money=3000,
         keep BookTrader,
 
-        Result: PERDAxe5,
+        Result:PERDAxe5,
         CanBeDoneFromFloor:true,
         Category:Money,
         Time:5,
@@ -209,7 +209,7 @@ module ATM
         Money=2000,
         keep BookTrader,
 
-        Result: PERDLongBlunt1,
+        Result:PERDLongBlunt1,
         CanBeDoneFromFloor:true,
         Category:Money,
         Time:5,
@@ -219,7 +219,7 @@ module ATM
         Money=2250,
         keep BookTrader,
 
-        Result: PERDLongBlunt2,
+        Result:PERDLongBlunt2,
         CanBeDoneFromFloor:true,
         Category:Money,
         Time:5,
@@ -229,7 +229,7 @@ module ATM
         Money=2500,
         keep BookTrader,
 
-        Result: PERDLongBlunt3,
+        Result:PERDLongBlunt3,
         CanBeDoneFromFloor:true,
         Category:Money,
         Time:5,
@@ -239,7 +239,7 @@ module ATM
         Money=2750,
         keep BookTrader,
 
-        Result: PERDLongBlunt4,
+        Result:PERDLongBlunt4,
         CanBeDoneFromFloor:true,
         Category:Money,
         Time:5,
@@ -249,7 +249,7 @@ module ATM
         Money=3000,
         keep BookTrader,
 
-        Result: PERDLongBlunt5,
+        Result:PERDLongBlunt5,
         CanBeDoneFromFloor:true,
         Category:Money,
         Time:5,
@@ -259,7 +259,7 @@ module ATM
         Money=2000,
         keep BookTrader,
 
-        Result: PERDShortBlunt1,
+        Result:PERDShortBlunt1,
         CanBeDoneFromFloor:true,
         Category:Money,
         Time:5,
@@ -269,7 +269,7 @@ module ATM
         Money=2250,
         keep BookTrader,
 
-        Result: PERDShortBlunt2,
+        Result:PERDShortBlunt2,
         CanBeDoneFromFloor:true,
         Category:Money,
         Time:5,
@@ -279,7 +279,7 @@ module ATM
         Money=2500,
         keep BookTrader,
 
-        Result: PERDShortBlunt3,
+        Result:PERDShortBlunt3,
         CanBeDoneFromFloor:true,
         Category:Money,
         Time:5,
@@ -289,7 +289,7 @@ module ATM
         Money=2750,
         keep BookTrader,
 
-        Result: PERDShortBlunt4,
+        Result:PERDShortBlunt4,
         CanBeDoneFromFloor:true,
         Category:Money,
         Time:5,
@@ -299,7 +299,7 @@ module ATM
         Money=3000,
         keep BookTrader,
 
-        Result: PERDShortBlunt5,
+        Result:PERDShortBlunt5,
         CanBeDoneFromFloor:true,
         Category:Money,
         Time:5,
@@ -309,7 +309,7 @@ module ATM
         Money=2000,
         keep BookTrader,
 
-        Result: PERDLongBlade1,
+        Result:PERDLongBlade1,
         CanBeDoneFromFloor:true,
         Category:Money,
         Time:5,
@@ -319,7 +319,7 @@ module ATM
         Money=2250,
         keep BookTrader,
 
-        Result: PERDLongBlade2,
+        Result:PERDLongBlade2,
         CanBeDoneFromFloor:true,
         Category:Money,
         Time:5,
@@ -329,7 +329,7 @@ module ATM
         Money=2500,
         keep BookTrader,
 
-        Result: PERDLongBlade3,
+        Result:PERDLongBlade3,
         CanBeDoneFromFloor:true,
         Category:Money,
         Time:5,
@@ -339,7 +339,7 @@ module ATM
         Money=2750,
         keep BookTrader,
 
-        Result: PERDLongBlade4,
+        Result:PERDLongBlade4,
         CanBeDoneFromFloor:true,
         Category:Money,
         Time:5,
@@ -349,7 +349,7 @@ module ATM
         Money=3000,
         keep BookTrader,
 
-        Result: PERDLongBlade5,
+        Result:PERDLongBlade5,
         CanBeDoneFromFloor:true,
         Category:Money,
         Time:5,
@@ -359,7 +359,7 @@ module ATM
         Money=2000,
         keep BookTrader,
 
-        Result: PERDShortBlade1,
+        Result:PERDShortBlade1,
         CanBeDoneFromFloor:true,
         Category:Money,
         Time:5,
@@ -369,7 +369,7 @@ module ATM
         Money=2250,
         keep BookTrader,
 
-        Result: PERDShortBlade2,
+        Result:PERDShortBlade2,
         CanBeDoneFromFloor:true,
         Category:Money,
         Time:5,
@@ -379,7 +379,7 @@ module ATM
         Money=2500,
         keep BookTrader,
 
-        Result: PERDShortBlade3,
+        Result:PERDShortBlade3,
         CanBeDoneFromFloor:true,
         Category:Money,
         Time:5,
@@ -389,7 +389,7 @@ module ATM
         Money=2750,
         keep BookTrader,
 
-        Result: PERDShortBlade4,
+        Result:PERDShortBlade4,
         CanBeDoneFromFloor:true,
         Category:Money,
         Time:5,
@@ -399,7 +399,7 @@ module ATM
         Money=3000,
         keep BookTrader,
 
-        Result: PERDShortBlade5,
+        Result:PERDShortBlade5,
         CanBeDoneFromFloor:true,
         Category:Money,
         Time:5,
@@ -409,7 +409,7 @@ module ATM
         Money=2000,
         keep BookTrader,
 
-        Result: PERDSpear1,
+        Result:PERDSpear1,
         CanBeDoneFromFloor:true,
         Category:Money,
         Time:5,
@@ -419,7 +419,7 @@ module ATM
         Money=2250,
         keep BookTrader,
 
-        Result: PERDSpear2,
+        Result:PERDSpear2,
         CanBeDoneFromFloor:true,
         Category:Money,
         Time:5,
@@ -429,7 +429,7 @@ module ATM
         Money=2500,
         keep BookTrader,
 
-        Result: PERDSpear3,
+        Result:PERDSpear3,
         CanBeDoneFromFloor:true,
         Category:Money,
         Time:5,
@@ -439,7 +439,7 @@ module ATM
         Money=2750,
         keep BookTrader,
 
-        Result: PERDSpear4,
+        Result:PERDSpear4,
         CanBeDoneFromFloor:true,
         Category:Money,
         Time:5,
@@ -449,7 +449,7 @@ module ATM
         Money=3000,
         keep BookTrader,
 
-        Result: PERDSpear5,
+        Result:PERDSpear5,
         CanBeDoneFromFloor:true,
         Category:Money,
         Time:5,
@@ -459,7 +459,7 @@ module ATM
         Money=2000,
         keep BookTrader,
 
-        Result: PERDMaintenance1,
+        Result:PERDMaintenance1,
         CanBeDoneFromFloor:true,
         Category:Money,
         Time:5,
@@ -469,7 +469,7 @@ module ATM
         Money=2250,
         keep BookTrader,
 
-        Result: PERDMaintenance2,
+        Result:PERDMaintenance2,
         CanBeDoneFromFloor:true,
         Category:Money,
         Time:5,
@@ -479,7 +479,7 @@ module ATM
         Money=2500,
         keep BookTrader,
 
-        Result: PERDMaintenance3,
+        Result:PERDMaintenance3,
         CanBeDoneFromFloor:true,
         Category:Money,
         Time:5,
@@ -489,7 +489,7 @@ module ATM
         Money=2750,
         keep BookTrader,
 
-        Result: PERDMaintenance4,
+        Result:PERDMaintenance4,
         CanBeDoneFromFloor:true,
         Category:Money,
         Time:5,
@@ -499,7 +499,7 @@ module ATM
         Money=3000,
         keep BookTrader,
 
-        Result: PERDMaintenance5,
+        Result:PERDMaintenance5,
         CanBeDoneFromFloor:true,
         Category:Money,
         Time:5,

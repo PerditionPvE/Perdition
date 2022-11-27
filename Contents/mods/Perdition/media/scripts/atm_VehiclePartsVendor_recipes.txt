@@ -9,7 +9,7 @@ module ATM
         Money=100,
         keep VehicleTrader,
 
-        Result: EngineParts,
+        Result:EngineParts,
         CanBeDoneFromFloor:true,
         Category:Money,
         Time:5,
@@ -19,7 +19,7 @@ module ATM
         Money=500,
         keep VehicleTrader,
 
-        Result: TowBar,
+        Result:TowBar,
         CanBeDoneFromFloor:true,
         Category:Money,
         Time:5,
@@ -29,7 +29,7 @@ module ATM
         Money=1000,
         keep VehicleTrader,
 
-        Result: V100Tire2,
+        Result:V100Tire2,
         CanBeDoneFromFloor:true,
         Category:Money,
         Time:5,
@@ -39,7 +39,7 @@ module ATM
         Money=500,
         keep VehicleTrader,
 
-        Result: EngineDoor1,
+        Result:EngineDoor1,
         CanBeDoneFromFloor:true,
         Category:Money,
         Time:5,
@@ -49,7 +49,7 @@ module ATM
         Money=700,
         keep VehicleTrader,
 
-        Result: EngineDoor2,
+        Result:EngineDoor2,
         CanBeDoneFromFloor:true,
         Category:Money,
         Time:5,
@@ -59,7 +59,7 @@ module ATM
         Money=1000,
         keep VehicleTrader,
 
-        Result: EngineDoor3,
+        Result:EngineDoor3,
         CanBeDoneFromFloor:true,
         Category:Money,
         Time:5,
@@ -69,7 +69,7 @@ module ATM
         Money=350,
         keep VehicleTrader,
 
-        Result: Windshield1,
+        Result:Windshield1,
         CanBeDoneFromFloor:true,
         Category:Money,
         Time:5,
@@ -79,7 +79,7 @@ module ATM
         Money=450,
         keep VehicleTrader,
 
-        Result: Windshield2,
+        Result:Windshield2,
         CanBeDoneFromFloor:true,
         Category:Money,
         Time:5,
@@ -89,7 +89,7 @@ module ATM
         Money=600,
         keep VehicleTrader,
 
-        Result: Windshield1,
+        Result:Windshield1,
         CanBeDoneFromFloor:true,
         Category:Money,
         Time:5,
@@ -99,7 +99,7 @@ module ATM
         Money=1000,
         keep VehicleTrader,
 
-        Result: Rotators.SemiTruckBullbar_Item2,
+        Result:Rotators.SemiTruckBullbar_Item2,
         CanBeDoneFromFloor:true,
         Category:Money,
         Time:5,
