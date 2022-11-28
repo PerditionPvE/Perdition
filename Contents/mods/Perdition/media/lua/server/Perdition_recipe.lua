@@ -38,7 +38,9 @@ function Perdition.GetItemTypes.Jewelry(scriptItems)
         or string.contains(item:getName(), "Silver")
         or string.contains(item:getName(), "Earring")
         then
-            scriptItems:add(item)
+            if item:isCosmetic() then
+                scriptItems:add(item)
+            end
         end
     end
 end
