@@ -9,7 +9,7 @@ module ATM
         Money=100,
         keep FoodTrader,
 
-        Result:	TinOpener,
+        Result:TinOpener,
         CanBeDoneFromFloor:true,
         Category:Money,
         Time:5,
@@ -19,7 +19,7 @@ module ATM
         Money=50,
         keep FoodTrader,
 
-        Result:	Milk,
+        Result:Milk,
         CanBeDoneFromFloor:true,
         Category:Money,
         Time:5,
@@ -29,7 +29,7 @@ module ATM
         Money=50,
         keep FoodTrader,
 
-        Result:	Pasta,
+        Result:Pasta,
         CanBeDoneFromFloor:true,
         Category:Money,
         Time:5,
@@ -39,7 +39,7 @@ module ATM
         Money=50,
         keep FoodTrader,
 
-        Result:	Rice,
+        Result:Rice,
         CanBeDoneFromFloor:true,
         Category:Money,
         Time:5,
@@ -49,7 +49,7 @@ module ATM
         destroy Money=20,
         keep FoodTrader,
 
-        Result:	Salt,
+        Result:Salt,
         CanBeDoneFromFloor:true,
         Category:Money,
         Time:5,
@@ -59,7 +59,7 @@ module ATM
         Money=20,
         keep FoodTrader,
 
-        Result:	Pepper,
+        Result:Pepper,
         CanBeDoneFromFloor:true,
         Category:Money,
         Time:5,
@@ -69,7 +69,7 @@ module ATM
         Money=80,
         keep FoodTrader,
 
-        Result:	OilVegetable,
+        Result:OilVegetable,
         CanBeDoneFromFloor:true,
         Category:Money,
         Time:5,
@@ -79,7 +79,7 @@ module ATM
         Money=100,
         keep FoodTrader,
 
-        Result:	OilOlive,
+        Result:OilOlive,
         CanBeDoneFromFloor:true,
         Category:Money,
         Time:5,
@@ -90,7 +90,7 @@ module ATM
         Money=200,
         keep FoodTrader,
 
-        Result:	Sugar,
+        Result:Sugar,
         CanBeDoneFromFloor:true,
         Category:Money,
         Time:5,
@@ -100,7 +100,7 @@ module ATM
         Money=200,
         keep FoodTrader,
 
-        Result:	SugarBrown,
+        Result:SugarBrown,
         CanBeDoneFromFloor:true,
         Category:Money,
         Time:5,
@@ -110,7 +110,7 @@ module ATM
         Money=20,
         keep FoodTrader,
 
-        Result:	WaterBottleFull,
+        Result:WaterBottleFull,
         CanBeDoneFromFloor:true,
         Category:Money,
         Time:5,
@@ -120,7 +120,7 @@ module ATM
         Money=100,
         keep FoodTrader,
 
-        Result:	Yeast,
+        Result:Yeast,
         CanBeDoneFromFloor:true,
         Category:Money,
         Time:5,
