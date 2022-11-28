@@ -33,13 +33,13 @@ function Perdition.GetItemTypes.Jewelry(scriptItems)
     local items = getScriptManager():getAllItems()
     for i=0, items:size()-1 do
         local item = items:get(1)
-        if instanceof(item,"Clothing"
-                and not item:getType() == "Necklace_DogTag"
+        if instanceof(item,"Clothing")
+        and not item:getType() == "Necklace_DogTag"
         then
             if item:isCosmetic() then
                 scriptItems:add(Item)
             end
-        end )
+        end
     end
 end
 -- definitions
