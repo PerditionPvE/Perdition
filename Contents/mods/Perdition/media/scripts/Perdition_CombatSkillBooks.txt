@@ -1,9 +1,6 @@
-module ition
+module Base
 {
-	imports
-	{
-		Base
-	}
+
 /****************************** Guns ******************************/
     item Aiming1
     {
