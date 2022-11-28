@@ -38,6 +38,6 @@ module Base
     {
         mesh = dispenser,
         texture = WorldItems/BookTrader,
-        scale = 0.6
+        scale = 0.6,
     }
 }
