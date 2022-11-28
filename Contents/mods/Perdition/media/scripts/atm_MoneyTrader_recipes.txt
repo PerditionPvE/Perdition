@@ -6,7 +6,7 @@ module ATM
     }
     recipe Money from Jewelry
         {
-        [Perdition.GetItemType.Jewelry]
+        [Perdition.GetItemTypes.Jewelry]
         keep MoneyTrader,
 
         Result:Money=3,
