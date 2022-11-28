@@ -6,7 +6,7 @@ module ATM
     }
     recipe Money from Jewelry
         {
-        [Perdition.GetItemTypes.Jewelry]
+        destroy [Perdition.GetItemTypes.Jewelry],
         keep MoneyTrader,
 
         Result:Money=3,
@@ -14,7 +14,6 @@ module ATM
         Category:Money,
         Time:5,
         }
-}
     recipe Money from Dogtag
         {
         Necklace_DogTag,
