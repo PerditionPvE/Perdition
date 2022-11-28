@@ -3,7 +3,7 @@ module Base
 	model MoneyTrader
 	{
 		mesh = dispenser,
-		texture = WorldItems/MoneyDispenser,
+		texture = WorldItems/MoneyTrader,
 		scale = 0.6,
 	}
 
