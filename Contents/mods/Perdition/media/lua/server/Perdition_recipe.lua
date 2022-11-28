@@ -19,6 +19,11 @@ function Perdition.OnCreate.DismantleCarBattery(items, result, player)
     player:getInventory():AddItem("Base.UnusableMetal")
 end
 
+function Perdition.OnCreate.Masterwork(items, result, player)
+    local condPerc = ZombRand(50 + (player:getPerkLevel(Perks.Blacksmith) * 5), 80 + (player:getPerkLevel(Perks.Blacksmith) * 2));
+    result:setCondition(round(result:getCondition() * (condPerc/100)))
+end
+
 function Perdition.GetItemTypes.Sack(scriptItems)
     scriptItems:addAll(getScriptManager():getItemsTag("HoldDirt"))
 end
