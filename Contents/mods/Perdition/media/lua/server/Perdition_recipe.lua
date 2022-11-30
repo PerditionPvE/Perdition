@@ -19,6 +19,11 @@ function Perdition.OnCreate.DismantleCarBattery(items, result, player)
     player:getInventory():AddItem("Base.UnusableMetal")
 end
 
+function Perdition.OnCreate.Masterwork(items, result, player)
+    local condPerc = ZombRand(50 + (player:getPerkLevel(Perks.Blacksmith) * 5), 80 + (player:getPerkLevel(Perks.Blacksmith) * 2));
+    result:setCondition(round(result:getCondition() * (condPerc/100)))
+end
+
 function Perdition.GetItemTypes.Sack(scriptItems)
     scriptItems:addAll(getScriptManager():getItemsTag("HoldDirt"))
 end
@@ -27,14 +32,16 @@ end
 function Perdition.GetItemTypes.Jewelry(scriptItems)
     local items = getScriptManager():getAllItems()
     for i=0, items:size()-1 do
-        local item = items:get(1)
-        if instanceof(item,"Clothing"
-                and not item:getType() == "Necklace_DogTag"
+        local item = items:get(i)
+        if string.contains(item:getName(), "Watch")
+        or string.contains(item:getName(), "Gold")
+        or string.contains(item:getName(), "Silver")
+        or string.contains(item:getName(), "Earring")
         then
             if item:isCosmetic() then
-                scriptItems:add(Item)
+                scriptItems:add(item)
             end
-        end )
+        end
     end
 end
 -- definitions

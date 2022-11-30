@@ -12,7 +12,7 @@ module ATM
         Result:Crowbar,
         CanBeDoneFromFloor:true,
         Category:Money,
-        Time:5,
+        Time:5.0,
         }
     recipe Woodaxe
         {
@@ -22,7 +22,7 @@ module ATM
         Result:WoodAxe,
         CanBeDoneFromFloor:true,
         Category:Money,
-        Time:5,
+        Time:5.0,
         }
     recipe Pickaxe
         {
@@ -32,7 +32,7 @@ module ATM
         Result:PickAxe,
         CanBeDoneFromFloor:true,
         Category:Money,
-        Time:5,
+        Time:5.0,
         }
     recipe Propane Tank
         {
@@ -42,7 +42,7 @@ module ATM
         Result:PropaneTank,
         CanBeDoneFromFloor:true,
         Category:Money,
-        Time:5,
+        Time:5.0,
         }
     recipe Welder Mask
         {
@@ -52,7 +52,7 @@ module ATM
         Result:WeldingMask,
         CanBeDoneFromFloor:true,
         Category:Money,
-        Time:5,
+        Time:5.0,
         }
     recipe Propane Torch
         {
@@ -62,7 +62,7 @@ module ATM
         Result:BlowTorch,
         CanBeDoneFromFloor:true,
         Category:Money,
-        Time:5,
+        Time:5.0,
         }
     recipe Jack
         {
@@ -72,7 +72,7 @@ module ATM
         Result:Jack,
         CanBeDoneFromFloor:true,
         Category:Money,
-        Time:5,
+        Time:5.0,
         }
     recipe Tirepump
         {

@@ -19,7 +19,7 @@ module Perdition
         Category:Perdition,
         SkillRequired:MetalWelding=8,
         OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
-        OnCreate:BSItem_OnCreate,
+        OnCreate:Perdition.OnCreate.Masterwork,
         NeedToBeLearn:true,
     }
     recipe Masterwork Axe
@@ -35,7 +35,7 @@ module Perdition
         Category:Perdition,
         SkillRequired:MetalWelding=9,
         OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
-        OnCreate:BSItem_OnCreate,
+        OnCreate:Perdition.OnCreate.Masterwork,
         NeedToBeLearn:true,
         }
     recipe Masterwork Katana
@@ -51,7 +51,7 @@ module Perdition
         Category:Perdition,
         SkillRequired:MetalWelding=10,
         OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
-        OnCreate:BSItem_OnCreate,
+        OnCreate:Perdition.OnCreate.Masterwork,
         NeedToBeLearn:true,
         }
     recipe Masterwork Pickaxe
@@ -67,7 +67,7 @@ module Perdition
         Category:Perdition,
         SkillRequired:MetalWelding=8,
         OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
-        OnCreate:BSItem_OnCreate,
+        OnCreate:Perdition.OnCreate.Masterwork,
         NeedToBeLearn:true,
         }
     recipe Masterwork Machete
@@ -84,7 +84,7 @@ module Perdition
         Category:Perdition,
         SkillRequired:MetalWelding=9,
         OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
-        OnCreate:BSItem_OnCreate,
+        OnCreate:Perdition.OnCreate.Masterwork,
         NeedToBeLearn:true,
         }
 
@@ -102,7 +102,7 @@ module Perdition
         Category:Perdition,
         SkillRequired:MetalWelding=9,
         OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
-        OnCreate:BSItem_OnCreate,
+        OnCreate:Perdition.OnCreate.Masterwork,
         NeedToBeLearn:true,
         }
 
@@ -120,7 +120,7 @@ module Perdition
         Category:Perdition,
         SkillRequired:MetalWelding=9,
         OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
-        OnCreate:BSItem_OnCreate,
+        OnCreate:Perdition.OnCreate.Masterwork,
         NeedToBeLearn:true,
         }
 
@@ -138,7 +138,7 @@ module Perdition
         Category:Perdition,
         SkillRequired:MetalWelding=9,
         OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
-        OnCreate:BSItem_OnCreate,
+        OnCreate:Perdition.OnCreate.Masterwork,
         NeedToBeLearn:true,
         }
 
@@ -156,7 +156,7 @@ module Perdition
         Category:Perdition,
         SkillRequired:MetalWelding=9,
         OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
-        OnCreate:BSItem_OnCreate,
+        OnCreate:Perdition.OnCreate.Masterwork,
         NeedToBeLearn:true,
         }
 
