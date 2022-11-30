@@ -47,7 +47,7 @@ module ATM
 		}
     recipe Money from Gunpowder
         {
-        GunPowder=10,
+        destroy GunPowder=10,
         keep MoneyTrader,
 
         Result:Money=2,
