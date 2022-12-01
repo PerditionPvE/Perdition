@@ -9,16 +9,32 @@ Shop.component.stockpile = 2
 Shop.component.display = 3
 
 
+---@return number the nearest available ID
+local function getAvailableID()
+    local file = Perdition.FileManager:open(Shop.directory .. "/shop_meta.txt")
+    if #file.lines == 0 then
+        file.lines[1] = "recentID=0"
+        file:save()
+    end
+    local recentID = tonumber(parseLine(file.lines[1])['recentID'])
+    return recentID + 1
+end
+
+local function updateRecentID()
+    local file = Perdition.FileManager:open(Shop.directory .. "/shop_meta.txt")
+    file:editLine("recentID=" .. getAvailableID(), 1)
+    file:save()
+end
+
 ---@param owner IsoPlayer the player starting the shop
----@param coreObject IsoObject the core object of the store, usually the register
 ---@param isAdmin boolean is this shop only editable by admins?
-function Shop:new(owner, coreObject, isAdmin)
+function Shop:new(owner, isAdmin)
     local o = {}
     setmetatable(o, self)
     self.__index = self
     o.name = "Shop"
     ---@type number
-    o.id = nil
+    o.id = getAvailableID()
     o.owner = owner:getUsername()
     o.isAdmin = isAdmin
     local square = owner:getSquare()
@@ -53,7 +69,8 @@ function Shop:new(owner, coreObject, isAdmin)
             whitelist = {}
         },
     }
-    Shop.list[owner:getUsername()] = o
+    Shop.list[o.id] = o
+    updateRecentID()
     return o
     -- TODO write metavalues for a shop and define player vs admin
 end
@@ -132,7 +149,6 @@ function Shop:getStock()
     end
 end
 
-
 function Shop:getItemStock(item)
     local stock = Shop:getStock()
     local all = {}
@@ -205,17 +221,17 @@ local function parseLine(line)
         local data = split(line, ".")
         local node = data[1]
         local newline = table.concat(table.slice(data, 2))
-        return {node=parseLine(newline)}
+        return {[node]=parseLine(newline)}
     elseif string.match(line, ":") then
         local data = split(line, ":")
         local node = data[1]
         local list = table.concat(table.slice(data, 2))
-        return {node=parseLine(list)}
+        return {[node]=parseLine(list)}
     elseif string.match(line, "=") then -- this is a key value
         local data = split(line, "=")
         local node = data[1]
         local value = data[2]
-        return {node=value}
+        return {[node]=value}
     elseif string.match(line, ";") then
         local data = split(line, ";")
         local result = {}
@@ -269,3 +285,42 @@ function Shop:save()
         file:save()
     end
 end
+
+Events.OnTick.Add(function()
+    -- prevent player from siphoning cash registers and stockpiles
+    for _, queue in pairs(ISTimedActionQueue.queues) do
+        if instanceof(queue, "ISInventoryTransferAction") then -- this should catch the crafting menu as well
+            if queue.srcContainer and queue.destContainer then
+                -- must be an inventory transfer queue
+                local srcData = queue.srcContainer:getModData()
+                local destData = queue.srcContainer:getModData()
+                if srcData["ShopID"] ~= nil or destData["ShopID"] ~= nil then
+                    local id = srcData["ShopID"] or destData["ShopID"]
+                    local component = srcData["ShopComponent"] or destData["ShopComponent"]
+                    if Shop.list[id] then
+                        ---@type IsoPlayer
+                        local player = getSpecificPlayer(queue.character)
+                        if player:getUsername() then
+                            local shop = Shop.list[id]
+                            if shop.owner ~= player:getUsername() then
+                                if component == Shop.component.register then
+                                    if not self:hasPermission(player, "takeMoney") then
+                                        queue:stop()
+                                    end
+                                elseif component == Shop.component.stockpile then
+                                    if not self:hasPermission(player, "takeFromStockpiles") then
+                                        queue:stop()
+                                    end
+                                end
+                            end
+                        end
+                    end
+                end
+            end
+        end
+    end
+end)
+
+Events.OnGameStart.Add(function()
+    -- TODO: load all store metadata
+end)

@@ -16,7 +16,8 @@ function Perdition.FileManager:open(path)
         end
         reader:close()
     else
-        assert(reader, "Cannot open file.")
+        getFileWriter(path, true, false)
+        self:open(path) -- attempt recursive call
     end
     return file
 end
@@ -26,9 +27,9 @@ end
 function Perdition.FileManager:addLine(line, index)
     line = tostring(line) -- convert to string
     if index then
-        table.insert(self.lines, line)
-    else
         table.insert(self.lines, index, line)
+    else
+        table.insert(self.lines, line)
     end
 end
 
