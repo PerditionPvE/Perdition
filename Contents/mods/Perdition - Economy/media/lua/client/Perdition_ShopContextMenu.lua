@@ -32,7 +32,6 @@ ShopMenu.doShopMenu = function(player, context, worldobjects, test)
 end
 
 ShopMenu.goToRegister = function(_, player, building)
-    local register = nil
     for room_id, _ in pairs(building.rooms) do
         local containers = building:getContainers(room_id)
         for _, container in pairs(containers) do
