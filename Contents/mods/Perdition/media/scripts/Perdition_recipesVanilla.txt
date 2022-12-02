@@ -293,6 +293,7 @@ recipe Build Baseball Bat
 
         Result:Battery=4,
         Time:50.0,
+        Sound:Dismantle,
         }
     
     recipe Open 8 Battery Pack
@@ -301,6 +302,7 @@ recipe Build Baseball Bat
 
         Result:Battery=8,
         Time:50.0,
+        Sound:Dismantle,
         }
     
     recipe Open 12 Battery Pack
@@ -309,6 +311,7 @@ recipe Build Baseball Bat
 
         Result:Battery=12,
         Time:50.0,
+        Sound:Dismantle,
         }
     
     recipe Open 16 Battery Pack
@@ -317,6 +320,19 @@ recipe Build Baseball Bat
 
         Result:Battery=16,
         Time:50.0,
+        Sound:Dismantle,
+        }
+    
+    recipe Disassemble AC/DC Adapter
+        {
+        ACDCAdapter,
+        Screwdriver,
+
+        Result:ElectronicsScrap=4,ScrapMetal=2,
+        Time:75.0,
+        AnimNode:Disassemble,
+        Prop1:Screwdriver,
+        Sound:Dismantle,
         }
     
     recipe Make Rubber Duck
