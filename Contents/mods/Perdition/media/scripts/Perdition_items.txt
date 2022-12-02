@@ -681,4 +681,11 @@ item 100ScrapBox
     Icon		= Box,
     DisplayCategory = Crate,
     }
+
+/****************************** Misc Items ******************************/
+item ACDCAdapter
+            Weight		= 0.5,
+            Type		= Normal,
+            DisplayName	= AC/DC Wall Adapter,
+            Icon		= ElectronicsScrap,    
 }
