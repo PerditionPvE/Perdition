@@ -1,0 +1,129 @@
+module Perdition
+{
+	imports
+    	{
+             Base, Radio
+    	}
+
+	/****************************** HAM Radios *******************************/
+
+	item HamRadio1_AC
+	{
+	    DisplayCategory = Communications,
+		Type			= Radio,
+		Icon			= HamRadioCivilian,
+		Weight          	= 20.0,
+		ConditionMax	= 100,
+
+		DisplayName		= HAM - Civilian (AC),
+		UseDelta		= 0.010, 
+		UseWhileEquipped	= FALSE,
+		DisappearOnUse		= FALSE,
+		TwoWay			= TRUE,
+		TransmitRange		= 7500,
+		MicRange		= 5,
+		BaseVolumeRange		= 10,
+		IsPortable		= FALSE,
+		IsTelevision		= FALSE,
+		MinChannel		= 10000,
+		MaxChannel		= 500000,
+		UsesBattery		= FALSE,
+		IsHighTier		= FALSE,
+		WorldObjectSprite	= appliances_com_01_0,
+	}
+	item HamRadio2_AC
+	{
+	    DisplayCategory = Communications,
+		Type			= Radio,
+		Icon			= HamRadioMilitary,
+		Weight          	= 20.0,
+		ConditionMax	= 100,
+
+		DisplayName		= HAM - Military (AC),
+		UseDelta		= 0.014, 
+		UseWhileEquipped	= FALSE,
+		DisappearOnUse		= FALSE,
+		TwoWay			= TRUE,
+		TransmitRange		= 20000,
+		MicRange		= 5,
+		BaseVolumeRange		= 15,
+		IsPortable		= FALSE,
+		IsTelevision		= FALSE,
+		MinChannel		= 200,
+		MaxChannel		= 1000000,
+		UsesBattery		= FALSE,
+		IsHighTier		= TRUE,
+		WorldObjectSprite	= appliances_com_01_8,
+	}
+    item HamRadioMakeShift_AC
+    {
+        DisplayCategory = Communications,
+        Type			= Radio,
+        Icon			= HamRadioCivilian,
+        Weight          	= 20.0,
+
+        DisplayName		= HAM - Makeshift (AC),
+        UseDelta		= 0.010,
+        UseWhileEquipped	= FALSE,
+        DisappearOnUse		= FALSE,
+        TwoWay			= TRUE,
+        TransmitRange		= 6000,
+        MicRange		= 5,
+        BaseVolumeRange		= 10,
+        IsPortable		= FALSE,
+        IsTelevision		= FALSE,
+        MinChannel		= 10000,
+        MaxChannel		= 500000,
+        UsesBattery		= FALSE,
+        IsHighTier		= FALSE,
+        WorldObjectSprite	= appliances_com_01_56,
+    }
+	/****************************** AC Conversion Recipes *******************************/
+
+    recipe Convert Premium Technologies Ham Radio to AC Power
+    {
+        HamRadioMakeShift,
+        ElectronicsScrap=2, 
+        ACDCAdapter,
+        keep Screwdriver,
+
+    
+        NoBrokenItems:true,
+        Result:HamRadio1_AC,
+        SkillRequired:Electricity=1,
+        NeedToBeLearn:false,
+        Time:80.0,
+        Category:Electrical,
+    }
+	
+    recipe Convert US ARMY COMM. Ham Radio to AC Power
+    {
+        HamRadioMakeShift,
+        ElectronicsScrap=2, 
+        ACDCAdapter,
+        keep Screwdriver,
+
+
+        NoBrokenItems:true,
+        Result:HamRadio2_AC,
+        SkillRequired:Electricity=1,
+        NeedToBeLearn:false,
+        Time:80.0,
+        Category:Electrical,
+    }
+	
+    recipe Connect Makeshift Ham Radio to AC Power
+    {
+        HamRadioMakeShift,
+        ElectronicsScrap=2, 
+        ACDCAdapter,
+        keep Screwdriver,
+
+        NoBrokenItems:true,
+        Result:HamRadioMakeShift_AC,
+        SkillRequired:Electricity=1,
+        NeedToBeLearn:false,
+        Time:80.0,
+        Category:Electrical,
+    }
+}
