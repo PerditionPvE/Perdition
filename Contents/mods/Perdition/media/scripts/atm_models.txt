@@ -1,0 +1,43 @@
+module Base
+{
+	model MoneyTrader
+	{
+		mesh = dispenser,
+		texture = WorldItems/MoneyTrader,
+		scale = 0.6,
+	}
+
+		model VehicleTrader
+	{
+		mesh = dispenser,
+		texture = WorldItems/VehicleTrader,
+		scale = 0.6,
+	}
+
+		model WeaponTrader
+	{
+		mesh = dispenser,
+		texture = WorldItems/WeaponTrader,
+		scale = 0.6,
+	}
+
+	model ToolTrader
+	{
+		mesh = dispenser,
+		texture = WorldItems/ToolTrader,
+		scale = 0.6,
+	}
+
+		model FoodTrader
+	{
+		mesh = dispenser,
+		texture = WorldItems/FoodTrader,
+		scale = 0.6,
+	}
+	    model BookTrader
+    {
+        mesh = dispenser,
+        texture = WorldItems/BookTrader,
+        scale = 0.6,
+    }
+}

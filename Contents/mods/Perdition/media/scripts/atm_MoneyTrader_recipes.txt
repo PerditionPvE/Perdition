@@ -1,0 +1,87 @@
+module ATM
+{
+    imports
+    {
+        Base
+    }
+    recipe Money from Jewelry
+        {
+        destroy [Perdition.GetItemTypes.Jewelry],
+        keep MoneyTrader,
+
+        Result:Money=3,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        }
+    recipe Money from Dogtag
+        {
+        Necklace_DogTag,
+        keep MoneyTrader,
+
+        Result:Money=5,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+		}
+    recipe Money from Metal Scraps
+        {
+        ScrapMetal,
+        keep MoneyTrader,
+
+        Result:Money=2,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+		}
+    recipe Money from Electronic Scraps
+        {
+        ElectronicsScrap,
+        keep MoneyTrader,
+
+        Result:Money=2,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+		}
+    recipe Money from Gunpowder
+        {
+        destroy GunPowder=10,
+        keep MoneyTrader,
+
+        Result:Money=2,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+		 }
+    recipe Money from Wallet
+        {
+        Wallet/Wallet2/Wallet3/Wallet4,
+        keep MoneyTrader,
+
+        Result:Money=10,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+		}
+    recipe Money from Credit Card
+        {
+        CreditCard,
+        keep MoneyTrader,
+
+        Result:Money=200,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+		}
+    recipe Money from Medicine
+        {
+        destroy PillsBeta/PillsSleepingTablets/Pills/PillsVitamins,
+        keep MoneyTrader,
+
+        Result:Money=10,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+		}
+}

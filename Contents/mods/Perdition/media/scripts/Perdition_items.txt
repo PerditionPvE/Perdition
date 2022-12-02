@@ -582,21 +582,6 @@ module Perdition
         WorldStaticModel = BookClosedGround,
     }
 
-    item HowToSkillShuMagazine
-        {
-        DisplayName = HowTo Resolve Skill issue Vol.1,
-        DisplayCategory = SkillBook,
-        Type = Literature,
-        Weight = 0.5,
-        Icon = ComicBook,
-        NumberOfPages	=	16,
-        StressChange	= -10,
-        BoredomChange	=	-80,
-        UnhappyChange	=	-100,
-        StaticModel = Magazine,
-        WorldStaticModel = Magazine,
-    }
-
 /********************************************** Ammo Crates **********************************************/
     /* TODO: fix quacc's weird system
     item Ammocrate556
