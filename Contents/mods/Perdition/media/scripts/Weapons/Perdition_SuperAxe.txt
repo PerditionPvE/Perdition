@@ -1,0 +1,101 @@
+module Perdition
+{
+    imports {
+        Base
+    }
+
+    item SuperAxe
+        {
+                /* Metadata */
+        DisplayName = Helmsplitter,
+        DisplayCategory = ToolWeapon,
+        Categories	=	Axe,
+        Type	=	Weapon,
+        SubCategory	=	Swinging,
+        WeaponSprite	=	FireAxe,
+        TwoHandWeapon = TRUE,
+        Icon	=	Axe,
+        Weight	=	3.5,
+        Tags = ChopTree;CutPlant,
+
+                /* Damage */
+        MinDamage	=	1.6,
+        MaxDamage	=	4,
+        CriticalChance	=	20,
+        CritDmgMultiplier = 5,
+        KnockBackOnNoDeath	=	TRUE,
+        PushBackMod	=	0.3,
+        KnockdownMod	=	2,
+        DoorDamage	=	65,
+        TreeDamage  =   80,
+
+        DamageCategory = Slash,
+        DamageMakeHole = TRUE,
+
+                /* Range */
+        WeaponLength = 0.38,
+        MinRange	=	0.67,
+        MaxRange	=	1.8,
+        MinAngle	=	0.72,
+        MaxHitCount	=	2,
+        HitAngleMod	=	-30,
+
+                /* Speed */
+        BaseSpeed = 1,
+        SwingTime	=	2.5,
+        MinimumSwingTime	=	2.5,
+        SwingAmountBeforeImpact	=	0.002,
+
+                /* Durability */
+        ConditionMax	=	26,
+        ConditionLowerChanceOneIn	=	15,
+
+                /* Animation */
+        SplatBloodOnNoDeath	=	TRUE,
+        SplatNumber	=	3,
+        SplatSize	=	5,
+        IdleAnim	=	Idle_Weapon2,
+        SwingAnim	=	Bat,
+        RunAnim	=	Run_Weapon2,
+
+                /* Sound */
+        DoorHitSound = AxeHit,
+        HitSound = AxeHit,
+        HitFloorSound = AxeHit,
+        SwingSound = AxeSwing,
+        BreakSound  =   AxeBreak,
+
+                /* Other */
+        MetalValue = 120,
+        AttachmentType = BigWeapon,
+    }
+
+    item AxeUpgradeManual
+    {
+        DisplayName = The Master's Forge: Axes,
+        DisplayCategory = SkillBook,
+        Type = Literature,
+        Weight = 0.5,
+        Icon = Book,
+        TeachedRecipes = Masterwork Axe,
+        StaticModel = Book,
+        WorldStaticModel = BookClosedGround,
+    }
+
+    recipe Masterwork Axe
+        {
+        MetalBar,
+        Charcoal=1,
+        Matches/Lighter=1,
+        keep Hammer/BallPeenHammer,
+        keep Tongs,
+
+        Result:SuperAxe,
+        Time:1000.0,
+        Category:Perdition,
+        SkillRequired:MetalWelding=9,
+        OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
+        OnCreate:BSItem_OnCreate,
+        NeedToBeLearn:true,
+        }
+}

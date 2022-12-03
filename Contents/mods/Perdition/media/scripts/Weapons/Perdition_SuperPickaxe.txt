@@ -1,0 +1,79 @@
+module Perdition
+{
+    imports {
+        Base
+    }
+
+        item SuperPickaxe
+            {
+            MaxRange	=	1.6,
+            WeaponSprite	=	PickAxe,
+            MinAngle	=	0.65,
+            Type	=	Weapon,
+            MinimumSwingTime	=	3.0,
+            KnockBackOnNoDeath	=	TRUE,
+            SwingAmountBeforeImpact	=	0.002,
+            Categories	=	Axe,
+            ConditionLowerChanceOneIn	=	90,
+            Weight	=	3,
+            SplatNumber	=	3,
+            PushBackMod	=	0.3,
+            SubCategory	=	Swinging,
+            ConditionMax	=	13,
+            MaxHitCount	=	2,
+            DoorDamage	=	35,
+            IdleAnim	=	Idle_Weapon2,
+            SwingAnim	=	Bat,
+            DisplayName	=	PickAxe,
+            MinRange	=	0.61,
+            SwingTime	=	3.0,
+            HitAngleMod	=	-30,
+            SplatSize	=	5,
+            KnockdownMod	=	2,
+            SplatBloodOnNoDeath	=	TRUE,
+            Icon	=	PickAxe,
+            RunAnim	=	Run_Weapon2,
+            TwoHandWeapon = TRUE,
+            BreakSound  =   BreakWoodItem,
+            TreeDamage  =   35,
+            MetalValue = 120,
+            CriticalChance	=	25,
+            CritDmgMultiplier = 9,
+            MinDamage	=	1,
+            MaxDamage	=	2.2,
+            BaseSpeed = 0.8,
+            DamageCategory = Slash,
+            DamageMakeHole = TRUE,
+            AttachmentType = BigBlade,
+            Tags = DigPlow,
+        }
+
+        item PickaxeUpgradeManual
+            {
+            DisplayName = The Master's Forge: Pickaxe,
+            DisplayCategory = SkillBook,
+            Type = Literature,
+            Weight = 0.5,
+            Icon = Book,
+            TeachedRecipes = Masterwork Pickaxe,
+            StaticModel = Book,
+            WorldStaticModel = BookClosedGround,
+        }
+
+        recipe Masterwork Pickaxe
+            {
+            MetalBar,
+            Charcoal=1,
+            Matches/Lighter=1,
+            keep Hammer/BallPeenHammer,
+            keep Tongs,
+
+            Result:SuperPickaxe,
+            Time:1000.0,
+            Category:Perdition,
+            SkillRequired:MetalWelding=8,
+            OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
+            OnCreate:BSItem_OnCreate,
+            NeedToBeLearn:true,
+            }
+}

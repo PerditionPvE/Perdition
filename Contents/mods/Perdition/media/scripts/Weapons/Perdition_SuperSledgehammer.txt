@@ -1,0 +1,85 @@
+module Perdition
+{
+    imports {
+        Base
+    }
+
+    item SuperSledgehammer
+        {
+        DisplayCategory = ToolWeapon,
+        MaxRange	=	1.35,
+        WeaponSprite	=	SledgeHammer,
+        MinAngle	=	0.8,
+        Type	=	Weapon,
+        MinimumSwingTime	=	4,
+        EnduranceMod	=	4,
+        KnockBackOnNoDeath	=	TRUE,
+        SwingAmountBeforeImpact	=	0.04,
+        Categories	=	Blunt,
+        ConditionLowerChanceOneIn	=	40,
+        Weight	=	6,
+        SplatNumber	=	3,
+        PushBackMod	=	1,
+        SubCategory	=	Swinging,
+        ConditionMax	=	10,
+        MaxHitCount	=	3,
+        DoorDamage	=	40,
+        IdleAnim	=	Idle_Weapon2,
+        CantAttackWithLowestEndurance	=	TRUE,
+        SwingAnim	=	Heavy,
+        DisplayName	=	Super Sledgehammer,
+        MinRange	=	0.7,
+        SwingTime	=	2,
+        HitSound = SledgehammerHit,
+        HitFloorSound = SledgehammerHit,
+        SwingSound = SledgehammerSwing,
+        DoorHitSound	=	SledgehammerHit,
+        KnockdownMod	=	3,
+        SplatBloodOnNoDeath	=	FALSE,
+        Icon	=	Sledgehamer,
+        RunAnim	=	Run_Weapon2,
+        TwoHandWeapon = TRUE,
+        BreakSound  =   SledgehammerBreak,
+        TreeDamage  =   10,
+        MinDamage	=	2,
+        MaxDamage	=	3,
+        MetalValue = 120,
+        AlwaysKnockdown = TRUE,
+        CritDmgMultiplier = 2
+        BaseSpeed = 0.9,
+        WeaponLength = 0.65,
+        RequiresEquippedBothHands = TRUE,
+        AttachmentType = BigBlade,
+        Tags = Sledgehammer,
+        }
+
+    item SHammerUpgradeManual
+        {
+        DisplayName = The Master's Forge: The Maul,
+        DisplayCategory = SkillBook,
+        Type = Literature,
+        Weight = 0.5,
+        Icon = Book,
+        TeachedRecipes = Masterwork Sledgehammer,
+        StaticModel = Book,
+        WorldStaticModel = BookClosedGround,
+    }
+
+    recipe Masterwork Sledgehammer
+        {
+        MetalBar=2,
+        IronIngot=1,
+        Charcoal=1,
+        Matches/Lighter=1,
+        keep Hammer/BallPeenHammer,
+        keep Tongs,
+
+        Result:SuperSledgehammer,
+        Time:1000.0,
+        Category:Perdition,
+        SkillRequired:MetalWelding=9,
+        OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
+        OnCreate:BSItem_OnCreate,
+        NeedToBeLearn:true,
+    }
+}

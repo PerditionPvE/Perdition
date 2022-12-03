@@ -1,0 +1,84 @@
+module Perdition
+{
+    imports {
+        Base
+    }
+
+    item SuperMachete
+        {
+        MaxRange	=	1.23,
+        WeaponSprite	=	Machete,
+        MinAngle	=	0.7,
+        Type	=	Weapon,
+        SwingSound = MacheteSwing,
+        HitFloorSound	=	MacheteHit,
+        ImpactSound	=	MacheteHit,
+        DoorHitSound = MacheteHit,
+        HitSound	=	MacheteHit,
+        MinimumSwingTime	=	4,
+        KnockBackOnNoDeath	=	FALSE,
+        SwingAmountBeforeImpact	=	0.02,
+        Categories	=	LongBlade,
+        ConditionLowerChanceOneIn	=	25,
+        Weight	=	2,
+        SplatNumber	=	2,
+        PushBackMod	=	0.3,
+        SubCategory	=	Swinging,
+        ConditionMax	=	13,
+        MaxHitCount	=	2,
+        DoorDamage	=	10,
+        SwingAnim	=	Bat,
+        DisplayName	=	Explorer Machete,
+        MinRange	=	0.61,
+        SwingTime	=	4,
+        KnockdownMod	=	2,
+        SplatBloodOnNoDeath	=	FALSE,
+        Icon	=	Machete,
+        TreeDamage  =   10,
+        CriticalChance	=	20,
+        CritDmgMultiplier = 5,
+        MinDamage	=	2,
+        MaxDamage	=	3,
+        BaseSpeed = 1,
+        WeaponLength = 0.3,
+        DamageCategory = Slash,
+        DamageMakeHole = TRUE,
+        AttachmentType = BigBlade,
+        Tags = CutPlant,
+        DoorHitSound = MacheteHit,
+        HitSound = MacheteHit,
+        HitFloorSound = MacheteHit,
+        BreakSound  =   MacheteBreak,
+        SwingSound = MacheteSwing,
+    }
+
+    item MacheteUpgradeManual
+        {
+        DisplayName = The Master's Forge: Machete,
+        DisplayCategory = SkillBook,
+        Type = Literature,
+        Weight = 0.5,
+        Icon = Book,
+        TeachedRecipes = Masterwork Machete,
+        StaticModel = Book,
+        WorldStaticModel = BookClosedGround,
+    }
+
+    recipe Masterwork Machete
+        {
+        MetalBar=2,
+        IronIngot,
+        Charcoal=1,
+        Matches/Lighter=1,
+        keep Hammer/BallPeenHammer,
+        keep Tongs,
+
+        Result:SuperMachete,
+        Time:1000.0,
+        Category:Perdition,
+        SkillRequired:MetalWelding=9,
+        OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
+        OnCreate:BSItem_OnCreate,
+        NeedToBeLearn:true,
+        }
+}
