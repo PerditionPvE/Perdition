@@ -161,7 +161,7 @@ module Perdition
         }
    recipe Make Notebook
         {
-        SheetPaper2=10,Twine 
+        SheetPaper2=10,Twine,
 
         Result:Notebook,
         Time:100.0,
