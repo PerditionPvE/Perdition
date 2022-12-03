@@ -231,7 +231,7 @@ module Perdition
         WorldStaticModel = BookClosedGround,
     }
 
-    item SuperPickAxe
+    item SuperPickaxe
         {
         MaxRange	=	1.6,
         WeaponSprite	=	PickAxe,
