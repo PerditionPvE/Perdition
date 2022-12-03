@@ -159,6 +159,14 @@ module Perdition
         OnCreate:BSItem_OnCreate,
         NeedToBeLearn:true,
         }
+   recipe Make Notebook
+        {
+        SheetPaper2=10,Twine 
+
+        Result:Notebook,
+        Time:100.0,
+        Category:Tailoring,
+        }    
    /*** Assemble ***/
     recipe Make Padlock Body Cast
         {
