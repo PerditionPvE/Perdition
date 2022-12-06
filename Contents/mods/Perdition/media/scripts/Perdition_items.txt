@@ -649,28 +649,33 @@ module Perdition
     }   */
 /****************************** Battery Pack ******************************/      
     item BatteryPack4   
+            {
             Weight		= 0.2,
             Type		= Normal,
             DisplayName	= 4 Battery Pack,
             Icon		= Battery,
-
+            }
     item BatteryPack8   
+            {
             Weight		= 0.4,
             Type		= Normal,
             DisplayName	= 8 Battery Pack,
             Icon		= Battery,
-
+            }
     item BatteryPack12   
+            {
             Weight		= 0.6,
             Type		= Normal,
             DisplayName	= 12 Battery Pack,
             Icon		= Battery,
-
+            }
     item BatteryPack16   
+            {
             Weight		= 0.8,
             Type		= Normal,
             DisplayName	= 16 Battery Pack,
-            Icon		= Battery,            
+            Icon		= Battery,
+            }      
 /****************************** Boxing(not the sport like boxing stuff up) ******************************/
 
 item 100ScrapBox
@@ -684,7 +689,7 @@ item 100ScrapBox
 
 /****************************** Misc Items ******************************/
 item ACDCAdapter
-            Weight		= 0.5,
+            Weight		= 0.3,
             Type		= Normal,
             DisplayName	= AC/DC Wall Adapter,
             Icon		= ElectronicsScrap,    
