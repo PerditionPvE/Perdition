@@ -90,8 +90,7 @@ module Perdition
     
         NoBrokenItems:true,
         Result:HamRadio1_AC,
-        SkillRequired:Electricity=1,
-        NeedToBeLearn:false,
+        SkillRequired:Electricity=1,        
         Time:80.0,
         Category:Electrical,
     }
@@ -106,13 +105,12 @@ module Perdition
 
         NoBrokenItems:true,
         Result:HamRadio2_AC,
-        SkillRequired:Electricity=1,
-        NeedToBeLearn:false,
+        SkillRequired:Electricity=1,        
         Time:80.0,
         Category:Electrical,
     }
 	
-    recipe Connect Makeshift Ham Radio to AC Power
+    recipe Convert Makeshift Ham Radio to AC Power
     {
         HamRadioMakeShift,
         ElectronicsScrap=2, 
@@ -121,8 +119,7 @@ module Perdition
 
         NoBrokenItems:true,
         Result:HamRadioMakeShift_AC,
-        SkillRequired:Electricity=1,
-        NeedToBeLearn:false,
+        SkillRequired:Electricity=1,        
         Time:80.0,
         Category:Electrical,
     }
