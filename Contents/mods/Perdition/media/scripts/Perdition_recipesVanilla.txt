@@ -326,12 +326,13 @@ recipe Build Baseball Bat
     recipe Disassemble AC/DC Adapter
         {
         ACDCAdapter,
-        Screwdriver,
+        Keep Screwdriver,
 
         Result:ElectronicsScrap=4,ScrapMetal=2,
         Time:75.0,
         AnimNode:Disassemble,
         Prop1:Screwdriver,
+        Prop2:CDplayer,
         Sound:Dismantle,
         }
     
