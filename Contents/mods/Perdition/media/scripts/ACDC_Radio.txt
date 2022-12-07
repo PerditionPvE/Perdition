@@ -82,7 +82,7 @@ module Perdition
 
     recipe Convert Premium Technologies Ham Radio to AC Power
     {
-        HamRadioMakeShift,
+        HamRadio2,
         ElectronicsScrap=2, 
         ACDCAdapter,
         keep Screwdriver,
@@ -97,7 +97,7 @@ module Perdition
 	
     recipe Convert US ARMY COMM. Ham Radio to AC Power
     {
-        HamRadioMakeShift,
+       HamRadio2,
         ElectronicsScrap=2, 
         ACDCAdapter,
         keep Screwdriver,
