@@ -27,16 +27,17 @@ local function updateRecentID()
 end
 
 ---@param owner IsoPlayer the player starting the shop
+---@param id number the ID of the shop
 ---@param isAdmin boolean is this shop only editable by admins?
-function Shop:new(owner, isAdmin)
+function Shop:new(owner, id, isAdmin)
     local o = {}
     setmetatable(o, self)
     self.__index = self
     o.name = "Shop"
     ---@type number
-    o.id = getAvailableID()
+    o.id = id or getAvailableID()
     o.owner = owner:getUsername()
-    o.isAdmin = isAdmin
+    o.isAdmin = isAdmin or false
     local square = owner:getSquare()
     o.core = { -- this is the core grid square of the store, is set to the register when it is created.  If the core is not in a room it will not work
         x = square:getX(),
@@ -323,4 +324,21 @@ end)
 
 Events.OnGameStart.Add(function()
     -- TODO: load all store metadata
+    local max = getAvailableID()
+    for i=1, i < max do
+        local file = Perdition.FileManager:open(Shop.directory .. "/shop_" .. tostring(i) .. ".txt")
+        if file then
+            local ownerName = parseLine(file.lines[1])
+            local owner = getPlayerFromUsername(ownerName)
+            local core = parseLine(file.lines[3])
+            if owner then -- if the player is removed from the whitelist, this will catch that
+                local shop = Shop:new(owner, i)
+                shop.core.x = core.x -- make sure this works
+                shop.core.y = core.y -- make sure this works
+                shop.core.z = core.z -- make sure this works
+                shop.name = parseLine(file.lines[2]) or "Shop"
+                shop.permissions = parseLine(files.lines[4])
+            end
+        end
+    end
 end)

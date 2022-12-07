@@ -1,5 +1,6 @@
 ---@class ShopMenu
 ShopMenu = {}
+local shop = nil
 
 ---@param player IsoPlayer
 ---@param context ISContextMenu
@@ -12,12 +13,13 @@ ShopMenu.doShopMenu = function(player, context, worldobjects, test)
     if region:isEnclosed() then
         local building = Building:get(square:getX(), square:getY(), square:getZ())
         local containers = building:getContainers(region:getID())
-        local shop = nil
         for _, container in pairs(containers) do
             local modData = container:getModData()
-            if modData['ShopID'] then
-                shop = modData['ShopID']
-                break
+            if modData['ShopID'] then -- check if shop in room
+                if Shop.list[modData['ShopID']] then -- check if the shop still exists
+                    shop = Shop.list[modData['ShopID']]
+                    break
+                end
             end
         end
         local option = context:addOption("Shop", nil, nil)
@@ -47,7 +49,7 @@ ShopMenu.goToRegister = function(_, player, building)
 end
 
 ShopMenu.setupShop = function(worldobjects, player, region)
-    local shop = Shop:new(player, region, false)
+    local shop = Shop:new(player, false)
 end
 
 function sendShopMenu(worldobjects, player)
