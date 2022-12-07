@@ -7,7 +7,9 @@ module Perdition
     
    recipe Make Notebook
         {
-        SheetPaper2=10,Twine,
+        SheetPaper2=10,
+        Twine=1,
+        Glue=1,
         
         Result:Notebook,
         Time:100.0,
@@ -32,8 +34,8 @@ module Perdition
         }    
     recipe Assemble Lock Assembly 
         {
-        Scrap=2,
-        Keep Hammer,
+        ScrapMetal=2,
+        keep [Recipe.GetItemTypes.Hammer],
         
         Result:PadlockShackle=1,
         Time:400.0,
@@ -42,7 +44,7 @@ module Perdition
    /*** Cast ***/
     recipe Cast Padlock Body Cast
         {
-        Scrap=5,
+        ScrapMetal=5,
         BlowTorch=6,
 
         Result:PadlockBody=2,
@@ -52,7 +54,7 @@ module Perdition
 
     recipe Cast Padlock Shackle Cast
         {
-        Scrap=4,
+        ScrapMetal=4,
         BlowTorch=6,
         
         Result:PadlockShackle=2,
@@ -62,9 +64,11 @@ module Perdition
         /*** Assemble ***/
     recipe Assemble Padlock
         {
-        LockAssembly=4,PadlockShackle=4,PadlockBody=4,
-        keep Screwdriver,
-        keep BallPeenHammer,
+        LockAssembly=4,
+        PadlockShackle=4,
+        PadlockBody=4,
+        keep [Recipe.GetItemTypes.Hammer],
+        keep BlowTorch=1,
         
         Result:Padlock=4,
         Time:550.0,
