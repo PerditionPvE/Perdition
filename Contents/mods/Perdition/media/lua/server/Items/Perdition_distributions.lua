@@ -14,7 +14,46 @@ local function preDistributionMerge()
                 "Perdition.CleaverUpgradeManual", 1,
                 "Perdition.ShovelUpgradeManual", 1,
             }
+        },
+        counter = {
+            rolls = 4,
+            items = {
+                "Battery", 2,
+                "BatteryPack4", 1,
+                "BatteryPack8", 1,
+                "BatteryPack12", 0.7,
+                "BatteryPack16", 0.4,
+                "ACDCAdapter", 0.2,
+                "BluePen", 8,
+                "Book", 10,
+                "Eraser", 6,
+                "Magazine", 10,
+                "Notebook", 10,
+                "Paperclip", 20,
+                "PaperclipBox", 0.1,
+                "Pen", 8,
+                "Pencil", 20,
+                "RedPen", 8,
+                "RubberBand", 6,
+                "SheetPaper2", 20,
+            },
+            junk = {
+                rolls = 1,
+                items = {
+                    "Glue", 2,
+                    "HandTorch", 4,
+                    "Radio.RadioBlack", 2,
+                    "Radio.RadioRed", 1,
+                    "Radio.WalkieTalkie2", 1,
+                    "Radio.WalkieTalkie3", 0.5,
+                    "Scissors", 2,
+                    "Scotchtape", 2,
+                    "Torch", 2,
+                }
+            }
+        },
         }
+
     }
     for roomDef, list in pairs(PerditionDistributions) do
         -- if not ProceduralDistributions.list[roomDef] then ProceduralDistributions.list[roomDef] = {}; end
