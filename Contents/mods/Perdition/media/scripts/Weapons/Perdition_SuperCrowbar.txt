@@ -1,0 +1,94 @@
+module Perdition
+{
+    imports {
+        Base
+    }
+
+    item SuperCrowbar
+            {
+                    /* Metadata */
+            DisplayName	              = pieetrr's skillshu,
+            DisplayCategory           = ToolWeapon,
+            WeaponSprite              = Crowbar,
+            Icon                      = Crowbar,
+            Type                      = Weapon,
+            Categories                = Blunt,
+            SubCategory	              = Swinging,
+            TwoHandWeapon             = TRUE,
+            Weight                    = 2,
+            Tags = Crowbar;RemoveBarricade,
+
+                    /* Damage */
+            MinDamage                 = 0.7,
+            MaxDamage                 = 1.15,
+            DoorDamage                = 8,
+            TreeDamage                = 0,
+            CriticalChance            = 35,
+            CritDmgMultiplier         = 6,
+            KnockBackOnNoDeath        = TRUE,
+            PushBackMod	              = 0.5,
+            KnockdownMod              = 0,
+
+                    /* Range */
+            WeaponLength              = 0.4,
+            MinRange                  = 0.61,
+            MaxRange	              = 1.25,
+            MinAngle                  = 0.75,
+            HitAngleMod               = -30,
+            MaxHitCount	              = 3,
+
+                    /* Speed */
+            BaseSpeed                 = 1,
+            SwingTime                 = 3,
+            MinimumSwingTime          = 3,
+            SwingAmountBeforeImpact	  = 0.02,
+
+                    /* Durability */
+            ConditionMax              = 22,
+            ConditionLowerChanceOneIn = 90,
+
+                    /* Animation */
+            RunAnim	                  = Run_Weapon2,
+            SwingAnim                 = Bat,
+
+                    /* Sound */
+            BreakSound                = CrowbarBreak,
+            DoorHitSound              = CrowbarHit,
+            HitSound                  = CrowbarHit,
+            HitFloorSound             = CrowbarHit,
+            SwingSound                = CrowbarSwing,
+
+                    /* Other */
+            MetalValue                = 150,
+            AttachmentType            = BigBlade,
+        }
+
+    recipe Masterwork Crowbar
+            {
+            MetalBar,
+            Charcoal=1,
+           	Matches/Lighter=2,
+            keep Hammer/BallPeenHammer,
+            keep Tongs,
+
+            Result:SuperCrowbar,
+            Time:1000.0,
+            Category:Perdition,
+            SkillRequired:MetalWelding=8,
+            OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
+            OnCreate:BSItem_OnCreate,
+            NeedToBeLearn:true,
+        }
+
+    item CrowbarUpgradeManual
+        {
+        DisplayName = The Master's Forge: Crowbar,
+        DisplayCategory = SkillBook,
+        Type = Literature,
+        Weight = 0.5,
+        Icon = Book,
+        TeachedRecipes = Masterwork Crowbar,
+        StaticModel = Book,
+        WorldStaticModel = BookClosedGround,
+    }
+}
