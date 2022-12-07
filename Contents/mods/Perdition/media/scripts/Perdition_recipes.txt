@@ -4,162 +4,78 @@ module Perdition
     {
         Base
     }
-
-/****************************** Masterwork weapons ******************************/
-	recipe Masterwork Crowbar
+    
+   recipe Make Notebook
         {
-        MetalBar,
-        Charcoal=1,
-       	Matches/Lighter=2,
-        keep Hammer/BallPeenHammer,
-        keep Tongs,
-
-        Result:SuperCrowbar,
-        Time:1000.0,
-        Category:Perdition,
-        SkillRequired:MetalWelding=8,
-        OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
-        OnCreate:Perdition.OnCreate.Masterwork,
-        NeedToBeLearn:true,
-    }
-    recipe Masterwork Axe
-        {
-        MetalBar,
-        Charcoal=1,
-        Matches/Lighter=1,
-        keep Hammer/BallPeenHammer,
-        keep Tongs,
-
-        Result:SuperAxe,
-        Time:1000.0,
-        Category:Perdition,
-        SkillRequired:MetalWelding=9,
-        OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
-        OnCreate:Perdition.OnCreate.Masterwork,
-        NeedToBeLearn:true,
+        SheetPaper2=10,
+        Twine=1,
+        Glue=1,
+        
+        Result:Notebook,
+        Time:100.0,
+        Category:Tailoring,
         }
-    recipe Masterwork Katana
+        
+    recipe Make Padlock Body Cast
         {
-        MetalBar,
-        Charcoal=1,
-        Matches/Lighter=1,
-        keep Hammer/BallPeenHammer,
-        keep Tongs,
+        Sandbag=2,
 
-        Result:SuperKatana,
-        Time:1000.0,
-        Category:Perdition,
-        SkillRequired:MetalWelding=10,
-        OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
-        OnCreate:Perdition.OnCreate.Masterwork,
-        NeedToBeLearn:true,
-        }
-    recipe Masterwork Pickaxe
+        Result:PadlockBodySandCast,
+        Time:200.0,
+        Category:Welding,
+        }    
+    recipe Make Padlock Shackle Cast
         {
-        MetalBar,
-        Charcoal=1,
-        Matches/Lighter=1,
-        keep Hammer/BallPeenHammer,
-        keep Tongs,
+        Sandbag=2,
 
-        Result:SuperPickaxe,
-        Time:1000.0,
-        Category:Perdition,
-        SkillRequired:MetalWelding=8,
-        OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
-        OnCreate:Perdition.OnCreate.Masterwork,
-        NeedToBeLearn:true,
-        }
-    recipe Masterwork Machete
+        Result:PadlockShackleSandCast,
+        Time:200.0,
+        Category:Welding,
+        }    
+    recipe Assemble Lock Assembly 
         {
-        MetalBar=2,
-        IronIngot,
-        Charcoal=1,
-        Matches/Lighter=1,
-        keep Hammer/BallPeenHammer,
-        keep Tongs,
+        ScrapMetal=2,
+        keep [Recipe.GetItemTypes.Hammer],
+        
+        Result:PadlockShackle=1,
+        Time:400.0,
+        Category:Welding,
+        }    
+   /*** Cast ***/
+    recipe Cast Padlock Body Cast
+        {
+        ScrapMetal=5,
+        BlowTorch=6,
 
-        Result:SuperMachete,
-        Time:1000.0,
-        Category:Perdition,
-        SkillRequired:MetalWelding=9,
-        OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
-        OnCreate:Perdition.OnCreate.Masterwork,
-        NeedToBeLearn:true,
+        Result:PadlockBody=2,
+        Time:400.0,
+        Category:Welding,
         }
 
-    recipe Masterwork Knife
+    recipe Cast Padlock Shackle Cast
         {
-        MetalBar=2,
-        IronIngot=1,
-        Charcoal=1,
-        Matches/Lighter=1,
-        keep Hammer/BallPeenHammer,
-        keep Tongs,
-
-        Result:SuperKnife,
-        Time:1000.0,
-        Category:Perdition,
-        SkillRequired:MetalWelding=9,
-        OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
-        OnCreate:Perdition.OnCreate.Masterwork,
-        NeedToBeLearn:true,
+        ScrapMetal=4,
+        BlowTorch=6,
+        
+        Result:PadlockShackle=2,
+        Time:400.0,
+        Category:Welding,
+        }      
+        /*** Assemble ***/
+    recipe Assemble Padlock
+        {
+        LockAssembly=4,
+        PadlockShackle=4,
+        PadlockBody=4,
+        keep [Recipe.GetItemTypes.Hammer],
+        keep BlowTorch=1,
+        
+        Result:Padlock=4,
+        Time:550.0,
+        Category:Welding,
         }
 
-    recipe Masterwork Cleaver
-        {
-        MetalBar=2,
-        IronIngot=1,
-        Charcoal=1,
-        Matches/Lighter=1,
-        keep Hammer/BallPeenHammer,
-        keep Tongs,
-
-        Result:SuperCleaver,
-        Time:1000.0,
-        Category:Perdition,
-        SkillRequired:MetalWelding=9,
-        OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
-        OnCreate:Perdition.OnCreate.Masterwork,
-        NeedToBeLearn:true,
-        }
-
-    recipe Masterwork Sledgehammer
-        {
-        MetalBar=2,
-        IronIngot=1,
-        Charcoal=1,
-        Matches/Lighter=1,
-        keep Hammer/BallPeenHammer,
-        keep Tongs,
-
-        Result:SuperSledgehammer,
-        Time:1000.0,
-        Category:Perdition,
-        SkillRequired:MetalWelding=9,
-        OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
-        OnCreate:Perdition.OnCreate.Masterwork,
-        NeedToBeLearn:true,
-        }
-
-    recipe Masterwork Shovel
-        {
-        MetalBar=2,
-        IronIngot=1,
-        Charcoal=1,
-        Matches/Lighter=1,
-        keep Hammer/BallPeenHammer,
-        keep Tongs,
-
-        Result:SuperShovel,
-        Time:1000.0,
-        Category:Perdition,
-        SkillRequired:MetalWelding=9,
-        OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
-        OnCreate:Perdition.OnCreate.Masterwork,
-        NeedToBeLearn:true,
-        }
-
+/****************************** Crating ******************************/
    recipe Unbox Scrap
     {
        100ScrapBox,
@@ -265,4 +181,5 @@ module Perdition
         Time:50.0,
         Category:Crate,
         } */
+    /****************************** Unassigned Recipes(Please place new recipes here for it to get sorted) ******************************/
 }

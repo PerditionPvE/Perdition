@@ -26,6 +26,7 @@ end
 
 function Perdition.GetItemTypes.Sack(scriptItems)
     scriptItems:addAll(getScriptManager():getItemsTag("HoldDirt"))
+    addExistingItemType(scriptItems, "EmptySandbag")
 end
 
 

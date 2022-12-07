@@ -1,0 +1,84 @@
+module Perdition
+{
+    imports {
+        Base
+    }
+
+    item SuperShovel
+        {
+        DisplayCategory 		= ToolWeapon,
+        Type 				= Weapon,
+        DisplayName 			= Lobo,
+        Icon				= Shovel,
+        Weight				= 2.0,
+        SubCategory			= Swinging,
+        MinAngle			= 0.85,
+        MaxRange			= 1.6,
+        MinRange			= 0.61,
+        PushBackMod			= 0.5,
+        HitAngleMod			= -30.0,
+        SwingAnim			= Bat,
+        MaxHitCount			= 3,
+        WeaponSprite			= Shovel,
+        IdleAnim			= Idle_Weapon2,
+        RunAnim				= Run_Weapon2,
+        Weight				= 1.5,
+        DoorDamage			= 10,
+        MinimumSwingTime		= 2.1,
+        SwingTime			= 2.1,
+        SwingAmountBeforeImpact		= 0.02,
+        ConditionLowerChanceOneIn	= 10,
+        ConditionMax			= 10,
+        Categories			= Blunt,
+        TwoHandWeapon			= TRUE,
+        BreakSound			= ShovelBreak,
+        DoorHitSound			= ShovelHit,
+        HitSound			= ShovelHit,
+        HitFloorSound			= ShovelHit,
+        SwingSound			= ShovelSwing,
+        KnockdownMod			= 2,
+        KnockBackOnNoDeath		= TRUE,
+        MetalValue			= 70,
+        TreeDamage			= 1,
+        CriticalChance			= 40,
+        CritDmgMultiplier		= 2,
+        MaxDamage			= 1.9,
+        MinDamage			= 0.8,
+        BaseSpeed			= 0.8,
+        WeaponLength			= 0.55,
+        DamageCategory			= Slash,
+        DamageMakeHole			= TRUE,
+        AttachmentType			= Shovel,
+        Tags				= ClearAshes;DigGrave;DigPlow;TakeDirt,
+    }
+
+    item ShovelUpgradeManual
+        {
+        DisplayName = The Master's Forge: Shovel,
+        DisplayCategory = SkillBook,
+        Type = Literature,
+        Weight = 0.5,
+        Icon = Book,
+        TeachedRecipes = Masterwork Shovel,
+        StaticModel = Book,
+        WorldStaticModel = BookClosedGround,
+    }
+
+    recipe Masterwork Shovel
+        {
+        MetalBar=2,
+        IronIngot=1,
+        Charcoal=1,
+        Matches/Lighter=1,
+        keep Hammer/BallPeenHammer,
+        keep Tongs,
+
+        Result:SuperShovel,
+        Time:1000.0,
+        Category:Perdition,
+        SkillRequired:MetalWelding=9,
+        OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
+        OnCreate:BSItem_OnCreate,
+        NeedToBeLearn:true,
+        }
+}

@@ -5,581 +5,18 @@ module Perdition
         Base
     }
 /****************************** Masterwork weapons ******************************/
-    item SuperCrowbar
+    item SkillIssue
         {
-                /* Metadata */
-        DisplayName	              = pieetrr's skillshu,
-        DisplayCategory           = ToolWeapon,
-        WeaponSprite              = Crowbar,
-        Icon                      = Crowbar,
-        Type                      = Weapon,
-        Categories                = Blunt,
-        SubCategory	              = Swinging,
-        TwoHandWeapon             = TRUE,
-        Weight                    = 2,
-        Tags = Crowbar;RemoveBarricade,
-
-                /* Damage */
-        MinDamage                 = 0.7,
-        MaxDamage                 = 1.15,
-        DoorDamage                = 8,
-        TreeDamage                = 0,
-        CriticalChance            = 35,
-        CritDmgMultiplier         = 6,
-        KnockBackOnNoDeath        = TRUE,
-        PushBackMod	              = 0.5,
-        KnockdownMod              = 0,
-
-                /* Range */
-        WeaponLength              = 0.4,
-        MinRange                  = 0.61,
-        MaxRange	              = 1.25,
-        MinAngle                  = 0.75,
-        HitAngleMod               = -30,
-        MaxHitCount	              = 3,
-
-                /* Speed */
-        BaseSpeed                 = 1,
-        SwingTime                 = 3,
-        MinimumSwingTime          = 3,
-        SwingAmountBeforeImpact	  = 0.02,
-
-                /* Durability */
-        ConditionMax              = 22,
-        ConditionLowerChanceOneIn = 90,
-
-                /* Animation */
-        RunAnim	                  = Run_Weapon2,
-        SwingAnim                 = Bat,
-
-                /* Sound */
-        BreakSound                = CrowbarBreak,
-        DoorHitSound              = CrowbarHit,
-        HitSound                  = CrowbarHit,
-        HitFloorSound             = CrowbarHit,
-        SwingSound                = CrowbarSwing,
-
-                /* Other */
-        MetalValue                = 150,
-        AttachmentType            = BigBlade,
-    }
-
-    item CrowbarUpgradeManual
-        {
-        DisplayName = The Master's Forge: Crowbar,
+        DisplayName = Skill Issue,
         DisplayCategory = SkillBook,
         Type = Literature,
         Weight = 0.5,
-        Icon = Book,
-        TeachedRecipes = Masterwork Crowbar,
-        StaticModel = Book,
-        WorldStaticModel = BookClosedGround,
-    }
-
-    item SuperAxe
-	    {
-	            /* Metadata */
-	    DisplayName = Helmsplitter,
-	    DisplayCategory = ToolWeapon,
-        Categories	=	Axe,
-        Type	=	Weapon,
-        SubCategory	=	Swinging,
-        WeaponSprite	=	FireAxe,
-        TwoHandWeapon = TRUE,
-        Icon	=	Axe,
-        Weight	=	3.5,
-        Tags = ChopTree;CutPlant,
-
-	            /* Damage */
-        MinDamage	=	1.6,
-        MaxDamage	=	4,
-        CriticalChance	=	20,
-        CritDmgMultiplier = 5,
-        KnockBackOnNoDeath	=	TRUE,
-        PushBackMod	=	0.3,
-        KnockdownMod	=	2,
-        DoorDamage	=	65,
-        TreeDamage  =   80,
-
-        DamageCategory = Slash,
-        DamageMakeHole = TRUE,
-
-	            /* Range */
-        WeaponLength = 0.38,
-        MinRange	=	0.67,
-        MaxRange	=	1.8,
-        MinAngle	=	0.72,
-        MaxHitCount	=	2,
-        HitAngleMod	=	-30,
-
-	            /* Speed */
-        BaseSpeed = 1,
-        SwingTime	=	2.5,
-        MinimumSwingTime	=	2.5,
-        SwingAmountBeforeImpact	=	0.002,
-
-	            /* Durability */
-        ConditionMax	=	26,
-        ConditionLowerChanceOneIn	=	15,
-
-	            /* Animation */
-        SplatBloodOnNoDeath	=	TRUE,
-        SplatNumber	=	3,
-        SplatSize	=	5,
-        IdleAnim	=	Idle_Weapon2,
-        SwingAnim	=	Bat,
-        RunAnim	=	Run_Weapon2,
-
-	            /* Sound */
-        DoorHitSound = AxeHit,
-        HitSound = AxeHit,
-        HitFloorSound = AxeHit,
-        SwingSound = AxeSwing,
-        BreakSound  =   AxeBreak,
-
-	            /* Other */
-        MetalValue = 120,
-		AttachmentType = BigWeapon,
-    }
-
-    item AxeUpgradeManual
-        {
-        DisplayName = The Master's Forge: Axes,
-        DisplayCategory = SkillBook,
-        Type = Literature,
-        Weight = 0.5,
-        Icon = Book,
-        TeachedRecipes = Masterwork Axe,
-        StaticModel = Book,
-        WorldStaticModel = BookClosedGround,
-    }
-
-    item SuperKatana
-        {
-                /* Metadata */
-        DisplayName = Dragonforged Katana,
-        DisplayCategory = Weapon,
-        WeaponSprite	=	Katana,
-
-                /* Damage */
-
-                /* Range */
-
-        MaxRange	=	1.4,
-        MinAngle	=	0.8,
-
-                /* Speed */
-
-                /* Durability */
-
-                /* Animation */
-
-                /* Sound */
-
-                /* Other */
-
-        Type	=	Weapon,
-        MinimumSwingTime	=	3,
-        HitFloorSound	=	KatanaHit,
-        ImpactSound	=	KatanaHit,
-        DoorHitSound = KatanaHit,
-        HitSound	=	KatanaHit,
-        SwingSound = KatanaSwing,
-        KnockBackOnNoDeath = TRUE,
-        SwingAmountBeforeImpact	=	0.02,
-        Categories	=	LongBlade,
-        Weight	=	2,
-        ConditionLowerChanceOneIn	=	60,
-        PushBackMod	=	0.5,
-        SubCategory	=	Swinging,
-        ConditionMax	=	10,
-        MaxHitCount	=	3,
-        DoorDamage	=	8,
-        SwingAnim	=	Bat,
-        CriticalChance	=	35,
-        CritDmgMultiplier = 6,
-        MinRange	=	0.61,
-        SwingTime	=	3,
-        HitAngleMod	=	-30,
-        KnockdownMod	=	0,
-        Icon	=	Katana,
-        RunAnim	=	Run_Weapon2,
-        BreakSound  =   KatanaBreak,
-        TreeDamage  =   1,
-        CriticalChance	=	30,
-        CritDmgMultiplier = 10,
-        MinDamage	=	8,
-        MaxDamage	=	8,
-        BaseSpeed = 1,
-        WeaponLength = 0.3,
-        DamageCategory = Slash,
-        DamageMakeHole = TRUE,
-        TwoHandWeapon = TRUE,
-        WeaponLength = 0.4,
-        AttachmentType = BigBlade,
-        }
-
-    item KatanaUpgradeManual
-        {
-        DisplayName = The Master's Forge: Katana,
-        DisplayCategory = SkillBook,
-        Type = Literature,
-        Weight = 0.5,
-        Icon = Book,
-        TeachedRecipes = Masterwork Katana,
-        StaticModel = Book,
-        WorldStaticModel = BookClosedGround,
-    }
-
-    item SuperPickAxe
-        {
-        MaxRange	=	1.6,
-        WeaponSprite	=	PickAxe,
-        MinAngle	=	0.65,
-        Type	=	Weapon,
-        MinimumSwingTime	=	3.0,
-        KnockBackOnNoDeath	=	TRUE,
-        SwingAmountBeforeImpact	=	0.002,
-        Categories	=	Axe,
-        ConditionLowerChanceOneIn	=	90,
-        Weight	=	3,
-        SplatNumber	=	3,
-        PushBackMod	=	0.3,
-        SubCategory	=	Swinging,
-        ConditionMax	=	13,
-        MaxHitCount	=	2,
-        DoorDamage	=	35,
-        IdleAnim	=	Idle_Weapon2,
-        SwingAnim	=	Bat,
-        DisplayName	=	PickAxe,
-        MinRange	=	0.61,
-        SwingTime	=	3.0,
-        HitAngleMod	=	-30,
-        SplatSize	=	5,
-        KnockdownMod	=	2,
-        SplatBloodOnNoDeath	=	TRUE,
-        Icon	=	PickAxe,
-        RunAnim	=	Run_Weapon2,
-        TwoHandWeapon = TRUE,
-        BreakSound  =   BreakWoodItem,
-        TreeDamage  =   35,
-        MetalValue = 120,
-        CriticalChance	=	25,
-        CritDmgMultiplier = 9,
-        MinDamage	=	1,
-        MaxDamage	=	2.2,
-        BaseSpeed = 0.8,
-        DamageCategory = Slash,
-        DamageMakeHole = TRUE,
-        AttachmentType = BigBlade,
-        Tags = DigPlow,
-    }
-
-    item PickaxeUpgradeManual
-        {
-        DisplayName = The Master's Forge: Pickaxe,
-        DisplayCategory = SkillBook,
-        Type = Literature,
-        Weight = 0.5,
-        Icon = Book,
-        TeachedRecipes = Masterwork Pickaxe,
-        StaticModel = Book,
-        WorldStaticModel = BookClosedGround,
-    }
-
-    item SuperMachete
-        {
-        MaxRange	=	1.23,
-        WeaponSprite	=	Machete,
-        MinAngle	=	0.7,
-        Type	=	Weapon,
-        SwingSound = MacheteSwing,
-        HitFloorSound	=	MacheteHit,
-        ImpactSound	=	MacheteHit,
-        DoorHitSound = MacheteHit,
-        HitSound	=	MacheteHit,
-        MinimumSwingTime	=	4,
-        KnockBackOnNoDeath	=	FALSE,
-        SwingAmountBeforeImpact	=	0.02,
-        Categories	=	LongBlade,
-        ConditionLowerChanceOneIn	=	25,
-        Weight	=	2,
-        SplatNumber	=	2,
-        PushBackMod	=	0.3,
-        SubCategory	=	Swinging,
-        ConditionMax	=	13,
-        MaxHitCount	=	2,
-        DoorDamage	=	10,
-        SwingAnim	=	Bat,
-        DisplayName	=	Explorer Machete,
-        MinRange	=	0.61,
-        SwingTime	=	4,
-        KnockdownMod	=	2,
-        SplatBloodOnNoDeath	=	FALSE,
-        Icon	=	Machete,
-        TreeDamage  =   10,
-        CriticalChance	=	20,
-        CritDmgMultiplier = 5,
-        MinDamage	=	2,
-        MaxDamage	=	3,
-        BaseSpeed = 1,
-        WeaponLength = 0.3,
-        DamageCategory = Slash,
-        DamageMakeHole = TRUE,
-        AttachmentType = BigBlade,
-        Tags = CutPlant,
-        DoorHitSound = MacheteHit,
-        HitSound = MacheteHit,
-        HitFloorSound = MacheteHit,
-        BreakSound  =   MacheteBreak,
-        SwingSound = MacheteSwing,
-    }
-
-    item MacheteUpgradeManual
-        {
-        DisplayName = The Master's Forge: Machete,
-        DisplayCategory = SkillBook,
-        Type = Literature,
-        Weight = 0.5,
-        Icon = Book,
-        TeachedRecipes = Masterwork Machete,
-        StaticModel = Book,
-        WorldStaticModel = BookClosedGround,
-    }
-
-    item SuperKnife
-        {
-        DisplayCategory = Weapon
-        MaxRange			= 0.9,
-        WeaponSprite			= HuntingKnife,
-        MinAngle			= 0.65,
-        Type				= Weapon,
-        MinimumSwingTime		= 2,
-        KnockBackOnNoDeath		= FALSE,
-        SwingAmountBeforeImpact		= 0.02,
-        Categories			= SmallBlade,
-        ConditionLowerChanceOneIn	= 15,
-        Weight				= 0.5,
-        SplatNumber			= 4,
-        PushBackMod			= 0.3,
-        SubCategory			= Stab,
-        AimingMod			= 0.8,
-        ConditionMax			= 10,
-        MaxHitCount			= 1,
-        IsAimedHandWeapon		= TRUE,
-        DoorDamage			= 1,
-        SwingAnim			= Stab,
-        DisplayName			= Silkhand,
-        MinRange			= 0.61,
-        CloseKillMove			= Jaw_Stab,
-        SwingTime			= 2,
-        KnockdownMod			= 0,
-        SplatBloodOnNoDeath		= TRUE,
-        Icon				= HuntingKnife,
-        RunAnim				= Run_Weapon2,
-        IdleAnim			= Idle_Weapon2,
-        TreeDamage			= 2,
-        EnduranceMod			= 0.5,
-        BreakSound			= HuntingKnifeBreak,
-        MetalValue			= 30,
-        CriticalChance			= 50,
-        CritDmgMultiplier		= 3,
-        MinDamage			= 0.6,
-        MaxDamage			= 1.2,
-        WeaponLength			= 0.25,
-        DamageCategory			= Slash,
-        DamageMakeHole			= TRUE,
-        HitFloorSound			= HuntingKnifeHit,
-        ImpactSound			= HuntingKnifeHit,
-        DoorHitSound			= HuntingKnifeHit,
-        HitSound			= HuntingKnifeHit,
-        SwingSound			= HuntingKnifeSwing,
-        AttachmentType			= Knife,
-        Tags				= CutPlant,
-    }
-
-    item KnifeUpgradeManual
-        {
-        DisplayName = The Master's Forge: Knives,
-        DisplayCategory = SkillBook,
-        Type = Literature,
-        Weight = 0.5,
-        Icon = Book,
-        TeachedRecipes = Masterwork Knife,
-        StaticModel = Book,
-        WorldStaticModel = BookClosedGround,
-    }
-
-    item SuperCleaver
-    	{
-    	MaxRange	=	1,
-    	WeaponSprite	=	MeatCleaver,
-    	MinAngle	=	0.65,
-    	Type	=	Weapon,
-    	MinimumSwingTime	=	4,
-    	KnockBackOnNoDeath	=	FALSE,
-    	SwingAmountBeforeImpact	=	0.02,
-    	Categories	=	SmallBlade,
-    	ConditionLowerChanceOneIn	=	15,
-    	Weight	=	1,
-    	SplatNumber	=	3,
-    	PushBackMod	=	0.3,
-    	SubCategory	=	Swinging,
-    	ConditionMax	=	10,
-    	MaxHitCount	=	2,
-    	DoorDamage	=	20,
-    	SwingAnim	=	Bat,
-    	DisplayName	=	The Butcher,
-    	DisplayCategory = Weapon,
-    	MinRange	=	0.61,
-    	SwingTime	=	4,
-    	KnockdownMod	=	2,
-    	SplatBloodOnNoDeath	=	FALSE,
-    	Icon	=	Cleaver,
-        BreakSound  =   BreakWoodItem,
-        TreeDamage  =   15,
-        CriticalChance	=	15,
-        CritDmgMultiplier = 5,
-        MinDamage	=	0.4,
-        MaxDamage	=	0.8,
-        BaseSpeed = 1.2,
-        WeaponLength = 0.2,
-        DamageCategory = Slash,
-        DamageMakeHole = TRUE,
-        AttachmentType = MeatCleaver,
-    }
-
-    item CleaverUpgradeManual
-        {
-        DisplayName = The Master's Forge: Butchering,
-        DisplayCategory = SkillBook,
-        Type = Literature,
-        Weight = 0.5,
-        Icon = Book,
-        TeachedRecipes = Masterwork Cleaver,
-        StaticModel = Book,
-        WorldStaticModel = BookClosedGround,
-    }
-
-    item SuperSledgehammer
-    	{
-        DisplayCategory = ToolWeapon,
-        MaxRange	=	1.35,
-        WeaponSprite	=	SledgeHammer,
-        MinAngle	=	0.8,
-        Type	=	Weapon,
-        MinimumSwingTime	=	4,
-        EnduranceMod	=	4,
-        KnockBackOnNoDeath	=	TRUE,
-        SwingAmountBeforeImpact	=	0.04,
-        Categories	=	Blunt,
-        ConditionLowerChanceOneIn	=	40,
-        Weight	=	6,
-        SplatNumber	=	3,
-        PushBackMod	=	1,
-        SubCategory	=	Swinging,
-        ConditionMax	=	10,
-        MaxHitCount	=	3,
-        DoorDamage	=	40,
-        IdleAnim	=	Idle_Weapon2,
-        CantAttackWithLowestEndurance	=	TRUE,
-        SwingAnim	=	Heavy,
-        DisplayName	=	Super Sledgehammer,
-        MinRange	=	0.7,
-        SwingTime	=	2,
-        HitSound = SledgehammerHit,
-        HitFloorSound = SledgehammerHit,
-        SwingSound = SledgehammerSwing,
-        DoorHitSound	=	SledgehammerHit,
-        KnockdownMod	=	3,
-        SplatBloodOnNoDeath	=	FALSE,
-        Icon	=	Sledgehamer,
-        RunAnim	=	Run_Weapon2,
-        TwoHandWeapon = TRUE,
-        BreakSound  =   SledgehammerBreak,
-        TreeDamage  =   10,
-        MinDamage	=	2,
-        MaxDamage	=	3,
-        MetalValue = 120,
-        AlwaysKnockdown = TRUE,
-        CritDmgMultiplier = 2
-        BaseSpeed = 0.9,
-        WeaponLength = 0.65,
-        RequiresEquippedBothHands = TRUE,
-        AttachmentType = BigBlade,
-        Tags = Sledgehammer,
-    	}
-
-    item SHammerUpgradeManual
-        {
-        DisplayName = The Master's Forge: The Maul,
-        DisplayCategory = SkillBook,
-        Type = Literature,
-        Weight = 0.5,
-        Icon = Book,
-        TeachedRecipes = Masterwork Sledgehammer,
-        StaticModel = Book,
-        WorldStaticModel = BookClosedGround,
-    }
-
-    item SuperShovel
-        {
-        DisplayCategory 		= ToolWeapon,
-        Type 				= Weapon,
-        DisplayName 			= Lobo,
-        Icon				= Shovel,
-        Weight				= 2.0,
-        SubCategory			= Swinging,
-        MinAngle			= 0.85,
-        MaxRange			= 1.6,
-        MinRange			= 0.61,
-        PushBackMod			= 0.5,
-        HitAngleMod			= -30.0,
-        SwingAnim			= Bat,
-        MaxHitCount			= 3,
-        WeaponSprite			= Shovel,
-        IdleAnim			= Idle_Weapon2,
-        RunAnim				= Run_Weapon2,
-        Weight				= 1.5,
-        DoorDamage			= 10,
-        MinimumSwingTime		= 2.1,
-        SwingTime			= 2.1,
-        SwingAmountBeforeImpact		= 0.02,
-        ConditionLowerChanceOneIn	= 10,
-        ConditionMax			= 10,
-        Categories			= Blunt,
-        TwoHandWeapon			= TRUE,
-        BreakSound			= ShovelBreak,
-        DoorHitSound			= ShovelHit,
-    	HitSound			= ShovelHit,
-    	HitFloorSound			= ShovelHit,
-    	SwingSound			= ShovelSwing,
-        KnockdownMod			= 2,
-        KnockBackOnNoDeath		= TRUE,
-        MetalValue			= 70,
-        TreeDamage			= 1,
-        CriticalChance			= 40,
-        CritDmgMultiplier		= 2,
-        MaxDamage			= 1.9,
-        MinDamage			= 0.8,
-        BaseSpeed			= 0.8,
-        WeaponLength			= 0.55,
-        DamageCategory			= Slash,
-        DamageMakeHole			= TRUE,
-        AttachmentType			= Shovel,
-        Tags				= ClearAshes;DigGrave;DigPlow;TakeDirt,
-    }
-
-    item ShovelUpgradeManual
-        {
-        DisplayName = The Master's Forge: Shovel,
-        DisplayCategory = SkillBook,
-        Type = Literature,
-        Weight = 0.5,
-        Icon = Book,
-        TeachedRecipes = Masterwork Shovel,
-        StaticModel = Book,
-        WorldStaticModel = BookClosedGround,
+        Icon = ComicBook,
+        StressChange	= 10,
+        BoredomChange	= 80,
+        UnhappyChange	= 100,
+        StaticModel = Magazine,
+        WorldStaticModel = Magazine,
     }
 
 /********************************************** Ammo Crates **********************************************/
@@ -633,8 +70,35 @@ module Perdition
         ConsolidateOption = ContextMenu_Merge,
         Icon		= 223Box,
     }   */
-      
-
+/****************************** Battery Pack ******************************/      
+    item BatteryPack4   
+            {
+            Weight		= 0.2,
+            Type		= Normal,
+            DisplayName	= 4 Battery Pack,
+            Icon		= Battery,
+            }
+    item BatteryPack8   
+            {
+            Weight		= 0.4,
+            Type		= Normal,
+            DisplayName	= 8 Battery Pack,
+            Icon		= Battery,
+            }
+    item BatteryPack12   
+            {
+            Weight		= 0.6,
+            Type		= Normal,
+            DisplayName	= 12 Battery Pack,
+            Icon		= Battery,
+            }
+    item BatteryPack16   
+            {
+            Weight		= 0.8,
+            Type		= Normal,
+            DisplayName	= 16 Battery Pack,
+            Icon		= Battery,
+            }      
 /****************************** Boxing(not the sport like boxing stuff up) ******************************/
 
 item 100ScrapBox
@@ -645,4 +109,11 @@ item 100ScrapBox
     Icon		= Box,
     DisplayCategory = Crate,
     }
+
+/****************************** Misc Items ******************************/
+item ACDCAdapter
+            Weight		= 0.3,
+            Type		= Normal,
+            DisplayName	= AC/DC Wall Adapter,
+            Icon		= ElectronicsScrap,    
 }

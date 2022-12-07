@@ -1,0 +1,82 @@
+/****************************** Crating ******************************/
+/**
+recipe Crate Gunpowder
+    {
+    GunPowder=600,
+    Result:Ammocrate_GunPowder,
+    Time:500.0,
+    }
+
+
+recipe Crate 5.56 Ammo
+    {
+    556Bullets=300,
+    Result:Ammocrate_556,
+    Time:500.0,
+    }
+
+recipe Crate 9mm Ammo
+    {
+    Bullets9mm=300,
+    Result:Ammocrate_9mm,
+    Time:500.0,
+    }
+
+recipe Crate .45 Ammo
+    {
+    Bullets45=300,
+    Result:Ammocrate_45,
+    Time:500.0,
+    }  
+
+recipe Crate .308 Ammo
+    {
+    556Bullets=300,
+    Result:308Bullets_308,
+    Time:500.0,
+    }
+
+recipe Crate .223 Ammo
+    {
+    223Bullets=300,
+    Result:Ammocrate_223,
+    Time:500.0, 
+    } 
+    /****************************** Uncrate ******************************/
+    
+recipe Take 5.56 from Crate
+    {
+    Ammocrate_556=1,
+    Result:556Bullets=30,
+    Time:50.0, 
+    } 
+
+recipe Take 9mm from Crate
+    {
+    Ammocrate_9mm=1,
+    Result:Bullets9mm=30,
+    Time:50.0, 
+    }
+
+recipe Take .45 from Crate
+    {
+    Ammocrate_45=1,
+    Result:Bullets45=30,
+    Time:50.0, 
+    } 
+
+recipe Take .308 from Crate
+    {
+    Ammocrate_308=1,
+    Result:308Bullets=30,
+    Time:50.0, 
+    } 
+
+recipe Take .223 from Crate
+    {
+    Ammocrate_223=1,
+    Result:223Bullets=30,
+    Time:50.0, 
+    } 
+    
+    **/

@@ -287,6 +287,55 @@ recipe Build Baseball Bat
         SkillRequired:Tailoring=6,
         }
         /***************************** Misc Recipes  ******************************/
+    recipe Open 4 Battery Pack
+        {
+        BatteryPack4,
+
+        Result:Battery=4,
+        Time:50.0,
+        Sound:Dismantle,
+        }
+    
+    recipe Open 8 Battery Pack
+        {
+        BatteryPack8,
+
+        Result:Battery=8,
+        Time:50.0,
+        Sound:Dismantle,
+        }
+    
+    recipe Open 12 Battery Pack
+        {
+        BatteryPack12,
+
+        Result:Battery=12,
+        Time:50.0,
+        Sound:Dismantle,
+        }
+    
+    recipe Open 16 Battery Pack
+        {
+        BatteryPack16,
+
+        Result:Battery=16,
+        Time:50.0,
+        Sound:Dismantle,
+        }
+    
+    recipe Disassemble AC/DC Adapter
+        {
+        ACDCAdapter,
+        Keep Screwdriver,
+
+        Result:ElectronicsScrap=4,ScrapMetal=2,
+        Time:75.0,
+        AnimNode:Disassemble,
+        Prop1:Screwdriver,
+        Prop2:CDplayer,
+        Sound:Dismantle,
+        }
+    
     recipe Make Rubber Duck
 	{
         RubberBand=20,
@@ -445,5 +494,9 @@ recipe Build Baseball Bat
         Time:250.0,
         Category:Farming,
         }
+    /****************************** Unassigned Recipes(Please place new recipes here for it to get sorted) ******************************/
+
+
+
 }
 
