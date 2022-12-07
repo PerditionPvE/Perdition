@@ -1,0 +1,267 @@
+module ATM
+{
+    imports
+    {
+        Base
+    }
+    recipe Katana
+        {
+        Money=1500,
+        keep WeaponTrader,
+
+        Result:Katana,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        }
+    recipe Machete
+        {
+        Money=1000,
+        keep WeaponTrader,
+
+        Result:Machete,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        }
+    recipe Fireaxe
+        {
+        Money=1000,
+        keep WeaponTrader,
+
+        Result:Axe,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        }
+    recipe Hunting Knife
+        {
+        Money=500,
+        keep WeaponTrader,
+
+        Result:HuntingKnife,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        }
+    recipe 5.56 ammo box
+        {
+        Money=150,
+        keep WeaponTrader,
+
+        Result:556Box,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        }
+    recipe 12g shell box
+        {
+        Money=200,
+        keep WeaponTrader,
+
+        Result:ShotgunShellsBox,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        }
+    recipe .45 ammo box
+        {
+        Money=150,
+        keep WeaponTrader,
+
+        Result:Bullets45Box,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        }
+    recipe 9mm ammo box
+        {
+        Money=150,
+        keep WeaponTrader,
+
+        Result:Bullets9mmBox,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        }
+    recipe 7.62x39 ammo box
+        {
+        Money=200,
+        keep WeaponTrader,
+
+        Result:762x39Box,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        }
+    recipe 7.62x51 ammo box
+        {
+        Money=200,
+        keep WeaponTrader,
+
+        Result:762x51Box,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        }
+    recipe .44 ammo box
+        {
+        Money=150,
+        keep WeaponTrader,
+
+        Result:Bullets44Box,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        }
+    recipe .44-40 ammo box
+        {
+        Money=150,
+        keep WeaponTrader,
+
+        Result:Bullets4440Box,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        }
+    recipe .38 ammo box
+        {
+        Money=150,
+        keep WeaponTrader,
+
+        Result:Bullets38Box,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        }
+    recipe .357 ammo box
+        {
+        Money=150,
+        keep WeaponTrader,
+
+        Result:Bullets357Box,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        }
+    recipe .223 ammo box
+        {
+        Money=150,
+        keep WeaponTrader,
+
+        Result:223Box,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        }
+    recipe .308 ammo box
+        {
+        Money=150,
+        keep WeaponTrader,
+
+        Result:308Box,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        }
+    recipe .22LR ammo box
+        {
+        Money=150,
+        keep WeaponTrader,
+
+        Result:Bullets22Box,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        }
+    recipe .30-06 ammo box
+        {
+        Money=150,
+        keep WeaponTrader,
+
+        Result:Bullets3006Box,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        }
+    recipe .22 Silencer
+        {
+        Money=3000,
+        keep WeaponTrader,
+
+        Result:22Silencer,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        }
+    recipe 9mm Silencer
+        {
+        Money=3000,
+        keep WeaponTrader,
+
+        Result:9mmSilencer,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        }
+    recipe .45 Silencer
+        {
+        Money=2500,
+        keep WeaponTrader,
+
+        Result:45Silencer,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        }
+    recipe .38 Silencer
+        {
+        Money=2500,
+        keep WeaponTrader,
+
+        Result:38Silencer,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        }
+    recipe .223 Silencer
+        {
+        Money=2500,
+        keep WeaponTrader,
+
+        Result:223Silencer,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        }
+    recipe .308 Silencer
+        {
+        Money=2500,
+        keep WeaponTrader,
+
+        Result:308Silencer,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        }
+    recipe Shotgun Silencer
+        {
+        Money=2500,
+        keep WeaponTrader,
+
+        Result:ShotgunSilencer,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        }
+    recipe Double Barrel Shotgun
+        {
+        Money=1200,
+        keep WeaponTrader,
+
+        Result:DoubleBarrelShotgun,
+        CanBeDoneFromFloor:true,
+        Category:Money,
+        Time:5,
+        }
+}

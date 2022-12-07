@@ -1,0 +1,72 @@
+module ATM
+{
+    imports
+    {
+        Base
+    }
+
+    item VehicleTrader
+        {
+        Weight = 60,
+        Type = Normal,
+        DisplayName = Mechanic Vendor,
+        icon = VehicleTrader,
+        StaticModel = VehicleTrader,
+        WorldStaticModel = VehicleTrader,
+        DisplayCategory = Money,
+    }
+
+    item FoodTrader
+        {
+        Weight          = 60.0,
+        Type            = Normal,
+        DisplayName     = Food Vendor,
+        icon            = FoodTrader,
+        StaticModel = FoodTrader,
+        WorldStaticModel = FoodTrader,
+        DisplayCategory	= Money,
+    }
+
+    item WeaponTrader
+        {
+        Weight          = 60.0,
+        Type            = Normal,
+        DisplayName     = Weapons Vendor,
+        icon            = WeaponTrader,
+        StaticModel = WeaponTrader,
+        WorldStaticModel = WeaponTrader,
+        DisplayCategory	= Money,
+    }
+
+	item ToolTrader
+    {
+        Weight          = 60.0,
+        Type            = Normal,
+        DisplayName     = Tool Vendor,
+        icon            = ToolTrader,
+		StaticModel = ToolTrader,
+		WorldStaticModel = ToolTrader,
+		DisplayCategory	= Money,
+    }
+
+    item MoneyTrader
+        {
+        Weight          = 60.0,
+        Type            = Normal,
+        DisplayName     = Pawn Vending Machine,
+        icon            = MoneyDispenser,
+        StaticModel = MoneyTrader,
+        WorldStaticModel = MoneyTrader,
+        DisplayCategory	= Money,
+    }
+	item BookTrader
+        {
+        Weight          = 60.0,
+        Type            = Normal,
+        DisplayName     = Book Vendor,
+        icon            = WeaponTrader,
+		StaticModel = BookTrader,
+		WorldStaticModel = BookTrader,
+		DisplayCategory	= Money,
+        }
+}
