@@ -1,0 +1,21 @@
+name: Mod Update
+on:
+  push:
+    branches: [ stable ]
+
+jobs:
+
+  steam-workshop-upload:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: steam-workshop-upload
+      uses: weilbyte/steam-workshop-upload@v1
+      with: 
+        appid: 108600 # Game's Steam App IDhttps://store.steampowered.com/app/108600/Project_Zomboid/
+        itemid: 2890762154 # Your mod's Steam Workshop ID https://steamcommunity.com/sharedfiles/filedetails/?id=2890762154
+        path: '.' # Path to your mod's folder from repository root
+      env:
+        STEAM_USERNAME: ${{ secrets.STEAM_USERNAME }} # Your Steam username
+        STEAM_PASSWORD: ${{ secrets.STEAM_PASSWORD }} # Your Steam password
+        STEAM_TFASEED: ${{ secrets.STEAM_TFASEED }} # Your Steam Guard 2FA shared secret (Optional)
