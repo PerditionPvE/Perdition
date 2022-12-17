@@ -93,7 +93,7 @@ module Perdition
         Category:Perdition,
         SkillRequired:MetalWelding=10,
         OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
-        OnCreate:BSItem_OnCreate,
+        OnCreate:Perdition.OnCreate.Masterwork,
         NeedToBeLearn:true,
     }
 }
