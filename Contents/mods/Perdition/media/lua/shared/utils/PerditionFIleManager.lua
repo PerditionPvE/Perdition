@@ -47,5 +47,5 @@ function Perdition.FileManager:save()
     for _, line in ipairs(self.lines) do
         file:write(line .. "\n")
     end
-    file:closer()
+    file:close()
 end

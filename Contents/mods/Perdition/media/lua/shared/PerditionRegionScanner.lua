@@ -44,21 +44,29 @@ end
 ---@param room_id number the ID of the room, optional
 function Building:getContainers(room_id)
     local function parseContainers(room)
-        local containers = {}
+        local result = {}
         for _, sq in ipairs(room) do
             local objects = sq:getObjects()
             for i=0, objects:size()-1 do
                 local object = objects:get(i)
-                local subcon = {object=object, containers={}}
-                for c=0, object:getContainerCount()-1 do
-                    table.insert(subcon.containers, object:getContainerByIndex(c))
+                local container = object:getContainer()
+                if container then
+                    local subcon = {object=object, containers={}}
+                    local items = container:getItems()
+                    for c=0, items:size()-1 do
+                        local item = items:get(c)
+                        local inv = item:getContainer()
+                        if inv then
+                            table.insert(subcon.containers, inv)
+                        end
+                    end
+                    table.insert(result, subcon)
                 end
-                table.insert(containers, subcon)
             end
         end
-        return containers
+        return result
     end
-    if room_id then return parseContainers(self.rooms[id]) end
+    if room_id then return parseContainers(self.rooms[room_id]) end
     local cons = {}
     for room_id, room in pairs(self.rooms) do
         cons[room_id] = parseContainers(room)

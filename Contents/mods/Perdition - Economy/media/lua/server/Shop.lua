@@ -8,6 +8,75 @@ Shop.component.core = 1
 Shop.component.stockpile = 2
 Shop.component.display = 3
 
+function table.slice(t, start, stop, step)
+    local sliced = {}
+    for i=start or 1, stop or #t, step or 1 do
+        sliced[#sliced+1] = t[i]
+    end
+    return sliced
+end
+
+local function split(input, separator)
+    separator = separator or "%s"
+    local result = {}
+    for str in string.gmatch(input, "([^" .. separator .. "]+)") do
+        table.insert(result, str)
+    end
+    return result
+end
+
+local function parseTable(t)
+    local result = ""
+    for key, value in pairs(t) do
+        if type(key) == "string" then
+            if type(value) == "table" then
+                for k,_ in pairs(value) do
+                    if type(k) == "number" then -- this is a list
+                        return key .. ":" .. parseTable(value) -- EOL
+                    elseif type(k) == "string" then -- this is an object
+                        return key .. "." .. parseTable(value)
+                    end
+                end
+            else
+                return key .. "=" .. tostring(value) -- EOL
+            end
+        elseif type(key) == "number" then -- process a list
+            result = result .. tostring(value) .. ";"
+        end
+    end
+    return result -- this does not return to origin, but when parsing a list of values
+end
+
+---@param line string
+---@return table
+local function parseLine(line)
+    if string.find(line, "[.]") then
+        local data = split(line, ".")
+        local node = data[1]
+        local newline = table.concat(table.slice(data, 2))
+        return {[node]=parseLine(newline)}
+    end
+    if string.find(line, "[:]") then
+        local data = split(line, ":")
+        local node = data[1]
+        local list = table.concat(table.slice(data, 2))
+        return {[node]=parseLine(list)}
+    end
+    if string.find(line, "[=]") then -- this is a key value
+        local data = split(line, "=")
+        local node = data[1]
+        local value = data[2]
+        return {[node]=value}
+    end
+    if string.find(line, "[;]") then
+        local data = split(line, ";")
+        local result = {}
+        for _, v in ipairs(data) do
+            table.insert(result, v)
+        end
+        return result
+    end
+end
 
 ---@return number the nearest available ID
 local function getAvailableID()
@@ -16,7 +85,8 @@ local function getAvailableID()
         file.lines[1] = "recentID=0"
         file:save()
     end
-    local recentID = tonumber(parseLine(file.lines[1])['recentID'])
+    local data = parseLine(file.lines[1])
+    local recentID = tonumber(data['recentID'])
     return recentID + 1
 end
 
@@ -25,6 +95,13 @@ local function updateRecentID()
     file:editLine("recentID=" .. getAvailableID(), 1)
     file:save()
 end
+
+
+--[[
+
+            SHOP INSTANCE METHODS
+
+  ]]
 
 ---@param owner IsoPlayer the player starting the shop
 ---@param id number the ID of the shop
@@ -57,11 +134,7 @@ function Shop:new(owner, id, isAdmin)
             factionAllowed = false,
             whitelist = {}
         },
-        registerCashier = {
-            factionAllowed = false,
-            whitelist = {}
-        },
-        registerStockpile = {
+        setStockpile = {
             factionAllowed = false,
             whitelist = {}
         },
@@ -99,8 +172,8 @@ end
 function Shop:setRegister(object)
     local modData = object:getModData()
     if modData then
-        modData.ShopID = self.id
-        modData.ShopComponent = Shop.component.core
+        modData["ShopID"] = self.id
+        modData["ShopComponent"] = Shop.component.core
     end
 end
 
@@ -108,13 +181,28 @@ end
 function Shop:setStockpile(object)
     local modData = object:getModData()
     if modData then
-        modData.ShopID = self.id
-        modData.ShopComponent = Shop.component.stockpile
+        modData["ShopID"] = tostring(self.id)
+        modData["ShopComponent"] = Shop.component.stockpile
     end
 end
 
 function Shop:getSquare()
     return getCell():getGridSquare(self.core.x, self.core.y, self.core.z)
+end
+
+function Shop:getRegister()
+    local square = self:getSquare()
+    local objects = square:getObjects()
+        for i=0, objects:size()-1 do
+            local object = objects:get(i)
+            local modData = object:getModData()
+            if modData then
+                if modData['ShopID'] == self.id and modData['ShopComponent'] == Shop.component.core then
+                    return object
+                end
+            end
+        end
+    return nil
 end
 
 function Shop:isValid()
@@ -150,6 +238,7 @@ function Shop:getStock()
     end
 end
 
+---@return table
 function Shop:getItemStock(item)
     local stock = Shop:getStock()
     local all = {}
@@ -165,6 +254,7 @@ function Shop:getItemStock(item)
     return all
 end
 
+---@return Building
 function Shop:getBuilding()
     return Building:get(self.core.x, self.core.y, self.core.z)
 end
@@ -196,73 +286,6 @@ end
 ---@param player IsoPlayer the owner to look for
 function Shop.fromPlayer(player)
     return Shop.list[player]
-end
-
-function table.slice(t, start, stop, step)
-    local sliced = {}
-    for i=start or 1, stop or #t, step or 1 do
-        sliced[#sliced+1] = t[i]
-    end
-    return sliced
-end
-
-local function split(input, separator)
-    separator = separator or "%s"
-    local result = {}
-    for str in string.gmatch(input, "([^" .. separator .. "]+)") do
-        table.insert(result, str)
-    end
-    return result
-end
-
----@param line string
----@return table
-local function parseLine(line)
-    if string.match(line, ".") then
-        local data = split(line, ".")
-        local node = data[1]
-        local newline = table.concat(table.slice(data, 2))
-        return {[node]=parseLine(newline)}
-    elseif string.match(line, ":") then
-        local data = split(line, ":")
-        local node = data[1]
-        local list = table.concat(table.slice(data, 2))
-        return {[node]=parseLine(list)}
-    elseif string.match(line, "=") then -- this is a key value
-        local data = split(line, "=")
-        local node = data[1]
-        local value = data[2]
-        return {[node]=value}
-    elseif string.match(line, ";") then
-        local data = split(line, ";")
-        local result = {}
-        for _, v in ipairs(data) do
-            table.insert(result, v)
-        end
-        return result
-    end
-end
-
-local function parseTable(t)
-    local result = ""
-    for key, value in pairs(t) do
-        if type(key) == "string" then
-            if type(value) == "table" then
-                for k,_ in pairs(value) do
-                    if type(k) == "number" then -- this is a list
-                        return key .. ":" .. parseTable(value) -- EOL
-                    elseif type(k) == "string" then -- this is an object
-                        return key .. "." .. parseTable(value)
-                    end
-                end
-            else
-                return key .. "=" .. tostring(value) -- EOL
-            end
-        elseif type(key) == "number" then -- process a list
-            result = result .. tostring(value) .. ";"
-        end
-    end
-    return result -- this does not return to origin, but when parsing a list of values
 end
 
 ---load the instance from a file
@@ -322,23 +345,23 @@ Events.OnTick.Add(function()
     end
 end)
 
-Events.OnGameStart.Add(function()
-    -- TODO: load all store metadata
-    local max = getAvailableID()
-    for i=1, i < max do
-        local file = Perdition.FileManager:open(Shop.directory .. "/shop_" .. tostring(i) .. ".txt")
-        if file then
-            local ownerName = parseLine(file.lines[1])
-            local owner = getPlayerFromUsername(ownerName)
-            local core = parseLine(file.lines[3])
-            if owner then -- if the player is removed from the whitelist, this will catch that
-                local shop = Shop:new(owner, i)
-                shop.core.x = core.x -- make sure this works
-                shop.core.y = core.y -- make sure this works
-                shop.core.z = core.z -- make sure this works
-                shop.name = parseLine(file.lines[2]) or "Shop"
-                shop.permissions = parseLine(files.lines[4])
-            end
-        end
-    end
-end)
+--Events.OnGameStart.Add(function()
+--    -- TODO: load all store metadata
+--    local max = getAvailableID()
+--    for i=1, i < max do
+--        local file = Perdition.FileManager:open(Shop.directory .. "/shop_" .. tostring(i) .. ".txt")
+--        if file then
+--            local ownerName = parseLine(file.lines[1])
+--            local owner = getPlayerFromUsername(ownerName)
+--            local core = parseLine(file.lines[3])
+--            if owner then -- if the player is removed from the whitelist, this will catch that
+--                local shop = Shop:new(owner, i)
+--                shop.core.x = core.x -- make sure this works
+--                shop.core.y = core.y -- make sure this works
+--                shop.core.z = core.z -- make sure this works
+--                shop.name = parseLine(file.lines[2]) or "Shop"
+--                shop.permissions = parseLine(files.lines[4])
+--            end
+--        end
+--    end
+--end)
