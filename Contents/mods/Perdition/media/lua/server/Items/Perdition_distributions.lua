@@ -13,7 +13,17 @@ local function preDistributionMerge()
                 "Perdition.SHammerUpgradeManual", 1,
                 "Perdition.CleaverUpgradeManual", 1,
                 "Perdition.ShovelUpgradeManual", 1,
-            }
+                }
+         GigamartHouseElectronics = {
+            rolls = 2,
+            items = {
+                "Battery", 2,
+                "BatteryPack4", 1,
+                "BatteryPack8", 1,
+                "BatteryPack12", 0.8,
+                "BatteryPack4", 0.5,
+                }
+            },
         }
     }
     for roomDef, list in pairs(PerditionDistributions) do
