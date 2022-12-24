@@ -32,8 +32,8 @@ ShopMenu.doShopMenu = function(player, context, worldobjects, test)
         else
             if shop:getRegister() ~= nil then
                 local register = shop:getRegister()
-                local goToRegister = submenu:addOption("Go to Register", nil, ShopMenu.walkToRegister, player, building)
-                if shop:hasPermission(player, "setStockpiles") then
+                local goToRegister = submenu:addOption("Go to Register", nil, ShopMenu.goToRegister, player, building)
+                if shop:hasPermission(player, "setStockpile") then
                     local addStockpileOption = submenu:addOption("Add to Stockpiles", worldobjects, nil)
                     local stockpileContainer = submenu;getNew(submenu)
                     context:addSubMenu(addStockpileOption, stockpileContainer)

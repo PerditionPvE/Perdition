@@ -99,7 +99,7 @@ end
 
 --[[
 
-            SHOP INSTANCE METHODS
+        SHOP INSTANCE METHODS
 
   ]]
 
@@ -157,8 +157,9 @@ function Shop:hasPermission(player, permission)
     -- check if player is owner
     if player == self.owner then return true; end
     -- check if player in same faction
-    if (self.permissions[permission].factionAllowed
-    and playerFaction == ownerFaction) then
+    if self.permissions[permission].factionAllowed
+    and playerFaction == ownerFaction
+    then
         return true
     end
     -- check if player in whitelist
@@ -171,17 +172,24 @@ end
 ---@param object IsoObject|IsoThumpable
 function Shop:setRegister(object)
     local modData = object:getModData()
+    local movprops = ISMoveableSpriteProps.fromObject(object)
+    print(movprops.name)
+    print('ID: ', self.id)
+    print('Component: ', Shop.component.core)
     if modData then
         modData["ShopID"] = self.id
         modData["ShopComponent"] = Shop.component.core
     end
+    self.core.x = object:getX()
+    self.core.y = object:getY()
+    self.core.z = object:getZ()
 end
 
 ---@param object IsoObject|IsoThumpable
 function Shop:setStockpile(object)
     local modData = object:getModData()
     if modData then
-        modData["ShopID"] = tostring(self.id)
+        modData["ShopID"] = self.id
         modData["ShopComponent"] = Shop.component.stockpile
     end
 end
@@ -196,7 +204,14 @@ function Shop:getRegister()
         for i=0, objects:size()-1 do
             local object = objects:get(i)
             local modData = object:getModData()
+            local movprops = ISMoveableSpriteProps.fromObject(object)
+            print("=======[OBJECT]=======")
+            print("Name: ", movprops.name)
             if modData then
+                print("Mod data:")
+                for k,v in pairs(modData) do
+                    print(k, ": ", v)
+                end
                 if modData['ShopID'] == self.id and modData['ShopComponent'] == Shop.component.core then
                     return object
                 end
