@@ -6,7 +6,7 @@ module ATM
     }
     recipe Money from Jewelry
         {
-        destroy [Perdition.GetItemTypes.Jewelry],
+        destroy [Perdition.GetItemTypes.Jewelry]/Necklace_Gold/Necklace_Silver/Necklace_Pearl,
         keep MoneyTrader,
 
         Result:Money=3,
@@ -76,7 +76,7 @@ module ATM
 		}
     recipe Money from Medicine
         {
-        destroy PillsBeta/PillsSleepingTablets/Pills/PillsVitamins,
+        destroy PillsBeta/PillsSleepingTablets/Pills/PillsVitamins/PillsAntiDep,
         keep MoneyTrader,
 
         Result:Money=10,

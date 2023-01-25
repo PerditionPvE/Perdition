@@ -19,20 +19,6 @@ module Perdition
         WorldStaticModel = Magazine,
     }
 
-    item SkillIssue
-        {
-        DisplayName = Skill Issue,
-        DisplayCategory = SkillBook,
-        Type = Literature,
-        Weight = 0.5,
-        Icon = ComicBook,
-        StressChange	= 10,
-        BoredomChange	= 80,
-        UnhappyChange	= 100,
-        StaticModel = Magazine,
-        WorldStaticModel = Magazine,
-    }
-
 /********************************************** Ammo Crates **********************************************/
     /* TODO: fix quacc's weird system
     item Ammocrate556

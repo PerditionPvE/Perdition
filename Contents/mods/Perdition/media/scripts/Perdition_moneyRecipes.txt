@@ -2,7 +2,7 @@ module Base
 {
 	recipe Combine into $10000 Bill (with $1000)
     {
-       bill1000=10,
+       1000bill=10,
 
   	   Result:10000bill,
        Time:50.0,
@@ -29,7 +29,7 @@ module Base
 
 	recipe Combine into $1000 Bill
     {
-       bill100=10,
+       100bill=10,
 
   	   Result:1000bill,
        Time:50.0,
