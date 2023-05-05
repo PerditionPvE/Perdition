@@ -28,6 +28,7 @@ end
 local function parseTable(t)
     local result = ""
     for key, value in pairs(t) do
+        print("Parsing table: " .. type(key) == "string")
         if type(key) == "string" then
             if type(value) == "table" then
                 for k,_ in pairs(value) do
@@ -81,6 +82,7 @@ end
 ---@return number the nearest available ID
 local function getAvailableID()
     local file = Perdition.FileManager:open(Shop.directory .. "/shop_meta.txt")
+    assert(file, "Unable to get file")
     if #file.lines == 0 then
         file.lines[1] = "recentID=0"
         file:save()
@@ -112,7 +114,7 @@ function Shop:new(owner, id, isAdmin)
     self.__index = self
     o.name = "Shop"
     ---@type number
-    o.id = id or getAvailableID()
+    o.id = id or getAvailableID() -- gets the next number from shop_meta.txt
     o.owner = owner:getUsername()
     o.isAdmin = isAdmin or false
     local square = owner:getSquare()
@@ -156,12 +158,14 @@ function Shop:hasPermission(player, permission)
     local playerFaction = Faction.getPlayerFaction(player)
     -- check if player is owner
     if player == self.owner then return true; end
+
     -- check if player in same faction
     if self.permissions[permission].factionAllowed
     and playerFaction == ownerFaction
     then
         return true
     end
+
     -- check if player in whitelist
     for _, p in ipairs(self.permissions[permission].whitelist) do
         if p == player then return true; end
@@ -172,14 +176,16 @@ end
 ---@param object IsoObject|IsoThumpable
 function Shop:setRegister(object)
     local modData = object:getModData()
-    local movprops = ISMoveableSpriteProps.fromObject(object)
+    local movprops = ISMoveableSpriteProps.fromObject(object) -- this gets the moveable's sprite info, which also contains its name
     print(movprops.name)
     print('ID: ', self.id)
     print('Component: ', Shop.component.core)
-    if modData then
+    if modData then -- set this moveable to be a register
         modData["ShopID"] = self.id
         modData["ShopComponent"] = Shop.component.core
     end
+
+    -- set the core position to this
     self.core.x = object:getX()
     self.core.y = object:getY()
     self.core.z = object:getZ()
@@ -222,6 +228,7 @@ end
 
 function Shop:isValid()
     -- check if shop is in valid location
+    -- a shop must be in a player-built room or world room
     local square = self:getSquare()
     local region = square:getIsoWorldRegion()
     local room = square:getRoom()
@@ -312,16 +319,14 @@ function Shop:load()
     end
     for key, value in pairs(data) do
         self[key] = value
+        print(key, ": ", value)
     end
 end
 
 function Shop:save()
     local file = Perdition.FileManager:open(Shop.directory .. "/shop_"..tostring(self.id)..".txt")
-    if not self.isAdmin then -- admin shops go into a special file
-        for line in parseTable{owner=self.owner, name=self.name, permissions=self.permissions, core=self.core} do
-            file:editLine(line .. "\n")
-        end
-        file:save()
+    if not self.isAdmin then -- admin shops go into a special category
+        file:setLines(parseTable{owner=self.owner, name=self.name, permissions=self.permissions, core=self.core})
     end
 end
 

@@ -17,7 +17,7 @@ function Perdition.FileManager:open(path)
         reader:close()
     else
         getFileWriter(path, true, false)
-        self:open(path) -- attempt recursive call
+        return self:open(path) -- attempt recursive call
     end
     return file
 end
@@ -40,6 +40,12 @@ function Perdition.FileManager:editLine(line, index)
     else
         self:addLine(line)
     end
+end
+
+function Perdition.FileManager:setLines(stringData)
+    local file = getFileWriter(self.path, true, false)
+    file:write(stringData)
+    file:close()
 end
 
 function Perdition.FileManager:save()

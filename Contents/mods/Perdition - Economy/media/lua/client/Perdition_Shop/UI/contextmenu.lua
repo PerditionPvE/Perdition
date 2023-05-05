@@ -7,7 +7,7 @@ local shop = nil
 ---@param worldobjects KahluaTable
 ---@param test boolean
 ShopMenu.doShopMenu = function(player, context, worldobjects, test)
-    local player = getSpecificPlayer(player)
+    player = getSpecificPlayer(player)
     local square = player:getSquare()
     local region = square:getIsoWorldRegion()
     if region:isEnclosed() then
@@ -75,8 +75,9 @@ ShopMenu.goToRegister = function(_, player, building)
     for room_id, _ in pairs(building.rooms) do
         local containers = building:getContainers(room_id)
         for _, container in pairs(containers) do
+            -- container is the IsoObject that has the containers
             local modData = container:getModData()
-            if modData["ShopID"] then
+            if modData["ShopID"] ~= nil then
                 if modData['ShopComponent'] == Shop.component.core then
                     luautils.walkToContainer(container, getSpecificPlayer(player))
                     break
@@ -104,6 +105,7 @@ end
 
 ShopMenu.setupShop = function(worldobjects, player, region)
     shop = Shop:new(player)
+    shop:save()
 end
 
 function sendShopMenu(worldobjects, player)
