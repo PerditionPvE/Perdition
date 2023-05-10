@@ -1,7 +1,7 @@
 require "Economy"
 ---@class ShopUI : ISPanel
-ShopUI = ISPanel:derive("ShopUI")
-ShopUI.windows = {}
+ShopMenu = ISPanel:derive("ShopUI")
+ShopMenu.windows = {}
 
 local good = {
     r = getCore():getGoodHighlitedColor():getR(),
@@ -15,7 +15,7 @@ local bad = {
     b = getCore():getBadHighlitedColor():getB()
 }
 
-function ShopUI:initialise()
+function ShopMenu:initialise()
     ISPanel.initialise(self)
 
     -- style
@@ -34,7 +34,7 @@ function ShopUI:initialise()
     local defaultZomboidBorder = {r=1, g=1, b=1, a=0.4}
 
     -- close menu button
-    self.no = ISButton:new(10, self:getHeight() - padding.bottom - buttonHeight, buttonWidth, buttonHeight,"Cancel", self, ShopUI.onClick)
+    self.no = ISButton:new(10, self:getHeight() - padding.bottom - buttonHeight, buttonWidth, buttonHeight,"Cancel", self, ShopMenu.onClick)
     self.no.internal = "CANCEL"
     self.no:initialise()
     self.no:instantiate()
@@ -42,7 +42,7 @@ function ShopUI:initialise()
     self:addChild(self.no)
 
     -- the confirm button buy/sell
-    self.yes = ISButton:new(120, self:getHeight() - padding.bottom - buttonHeight, buttonWidth, buttonHeight, "Checkout", self, ShopUI.onClick)
+    self.yes = ISButton:new(120, self:getHeight() - padding.bottom - buttonHeight, buttonWidth, buttonHeight, "Checkout", self, ShopMenu.onClick)
     self.yes.internal = "CONFIRM"
     self.yes:initialise()
     self.yes:instantiate()
@@ -77,7 +77,7 @@ function ShopUI:initialise()
             tabWidth,
             tabHeight,
             "Edit",
-            self, ShopUI.onClick)
+            self, ShopMenu.onClick)
     self.edititems:initialise()
     self.edititems:instantiate()
     self.edititems.borderColor = defaultZomboidBorder
@@ -101,7 +101,7 @@ function ShopUI:initialise()
     self.cost = nil -- how much the cart costs total
 end
 
-function ShopUI:new(x, y, width, height, player)
+function ShopMenu:new(x, y, width, height, player)
     local o = {}
     x = getCore():getScreenWidth() / 2 - (width / 2)
     y = getCore():getScreenHeight() / 2 - (height / 2)
@@ -120,11 +120,11 @@ function ShopUI:new(x, y, width, height, player)
     o.offers = nil
     o.cart = nil
     o.shop = nil
-    ShopUI.windows[player] = o
+    ShopMenu.windows[player] = o
     return o
 end
 
-function ShopUI:prerender()
+function ShopMenu:prerender()
     self:drawRect(0, 0, self.width, self.height, self.backgroundColor.a, self.backgroundColor.r, self.backgroundColor.g, self.backgroundColor.b)
     -- draw the shop name
     self:drawText(
@@ -153,7 +153,7 @@ function ShopUI:prerender()
             cartEnd + (totalsHeight + padding.bottom) * 3, 1, 1, 1, 1, UIFont.Medium)
 end
 
-function ShopUI.onClick(button)
+function ShopMenu.onClick(button)
     if button.internal == "CANCEL" then
         self:removeFromUIManager()
         self:setVisible(false)
@@ -169,20 +169,18 @@ function ShopUI.onClick(button)
     end
 end
 
-function ShopUI:getFunds()
+function ShopMenu:getFunds()
 
 end
 
-function ShopUI:onPurchase(option, enabled)
+function ShopMenu:onPurchase(option, enabled)
     -- TODO: when a player buys something
 end
 
-function ShopUI:onSell(option, enabled)
+function ShopMenu:onSell(option, enabled)
     -- TODO: idk
 end
 
-function ShopUI:populate()
+function ShopMenu:populate()
     -- TODO: load all items
 end
-
-

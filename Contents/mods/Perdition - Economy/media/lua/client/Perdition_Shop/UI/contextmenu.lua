@@ -11,19 +11,7 @@ ShopMenu.doShopMenu = function(player, context, worldobjects, test)
     local square = player:getSquare()
     local region = square:getIsoWorldRegion()
     if region:isEnclosed() then
-        local building = Building:get(square:getX(), square:getY(), square:getZ())
-        local containers = building:getContainers(region:getID())
-        for _, container in pairs(containers) do
-            local modData = container.object:getModData()
-            if modData then -- check if shop in room
-                if modData['ShopID'] then
-                    if Shop.list[modData['ShopID']] then -- check if the shop still exists
-                        shop = Shop.list[modData['ShopID']]
-                        break
-                    end
-                end
-            end
-        end
+        shop = Shop.find(square)
         local option = context:addOption("Shop", worldobjects, nil)
         local submenu = ISContextMenu:getNew(context)
         context:addSubMenu(option, submenu)
@@ -109,8 +97,8 @@ ShopMenu.setupShop = function(worldobjects, player, region)
 end
 
 function sendShopMenu(worldobjects, player)
-    print(ShopUI)
-    local ui = ShopUI:new(50, 50, 500, 150, player)
+    print(ShopMenu)
+    local ui = ShopMenu:new(50, 50, 500, 150, player)
     ui:initialise()
     ui:addToUIManager()
 end

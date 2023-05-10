@@ -11,16 +11,20 @@ function Label:new(object, heightOffset, text)
     local o = {}
     setmetatable(self, o)
     self.__index = self
-    o.text = text
+    self.text = text
     o.textWidth = TextManager:MeasureStringX(UIFont.NewSmall, text)
     o.textHeight = TextManager:MeasureStringY(UIFont.NewSmall, text)
     o.attache = object
+    self:initialise()
+    self:instantiate()
+    self:prerender()
     self:update()
     return o
 end
 
 function Label:update()
     local object = self.attache
+    --TODO: determine how height offset is used
     self:setX(isoToScreenX(object:getX(), object:getY(), object:getY()))
     self:setY(isoToScreenY(object:getX(), object:getY(), object:getY()))
 end
@@ -33,6 +37,10 @@ end
 
 function Label:hide()
     self:setVisible(false)
+end
+
+function Label:show()
+    self:setVisible(true)
 end
 
 function Label:initialise()

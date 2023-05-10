@@ -148,7 +148,7 @@ function Shop:new(owner, id, isAdmin)
     Shop.list[o.id] = o
     updateRecentID()
     return o
-    -- TODO write metavalues for a shop and define player vs admin
+    -- TODO write meta values for a shop and define player vs admin
 end
 
 ---@param player IsoPlayer can the player edit this?
@@ -308,6 +308,25 @@ end
 ---@param player IsoPlayer the owner to look for
 function Shop.fromPlayer(player)
     return Shop.list[player]
+end
+
+---@param square IsoGridSquare the square to search from
+function Shop.find(square)
+    local region = square:getIsoWorldRegion()
+    if region:isEnclosed() then
+        local building = Building:get(square:getX(), square:getY(), square:getZ())
+        local containers = building:getContainers(region:getID())
+        for _, container in pairs(containers) do
+            local modData = container.object:getModData()
+            if modData then -- check if shop in room
+                if modData['ShopID'] then
+                    if Shop.list[modData['ShopID']] then -- check if the shop still exists
+                        return Shop.list[modData['ShopID']]
+                    end
+                end
+            end
+        end
+    end
 end
 
 ---load the instance from a file
